@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://www.kofax.com/agility/services/sdk" elementFormDefault="qualified" targetNamespace="http://www.kofax.com/agility/services/sdk" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="AddBusinessRule">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="businessRule" nillable="true" type="tns:BusinessRule" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="BusinessRule">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Identity" nillable="true" type="tns:BusinessRuleIdentity" />
+      <xs:element minOccurs="0" name="ProcessIdentity" nillable="true" type="tns:ProcessIdentity" />
+      <xs:element minOccurs="0" name="RuleType" type="xs:short" />
+      <xs:element minOccurs="0" name="CategoryIdentity" nillable="true" type="tns:CategoryIdentity" />
+      <xs:element minOccurs="0" name="LastModifiedUser" nillable="true" type="tns:ResourceIdentity" />
+      <xs:element minOccurs="0" name="LastModifiedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="WorkInProgressRuleData" nillable="true" type="tns:BusinessRuleData" />
+      <xs:element minOccurs="0" name="ReleasedRuleData" nillable="true" type="tns:BusinessRuleData" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LockedBy" nillable="true" type="tns:ResourceIdentity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BusinessRule" nillable="true" type="tns:BusinessRule" />
+  <xs:complexType name="BusinessRuleIdentity">
+    <xs:sequence>
+      <xs:element name="Id" nillable="true" type="xs:string" />
+      <xs:element name="Name" nillable="true" type="xs:string" />
+      <xs:element name="Version" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BusinessRuleIdentity" nillable="true" type="tns:BusinessRuleIdentity" />
+  <xs:complexType name="ProcessIdentity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Version" type="xs:double" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProcessIdentity" nillable="true" type="tns:ProcessIdentity" />
+  <xs:complexType name="CategoryIdentity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CategoryIdentity" nillable="true" type="tns:CategoryIdentity" />
+  <xs:complexType name="ResourceIdentity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ResourceType" type="xs:short" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResourceIdentity" nillable="true" type="tns:ResourceIdentity" />
+  <xs:complexType name="BusinessRuleData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Inputs" nillable="true" type="tns:ParameterDetailsCollection" />
+      <xs:element minOccurs="0" name="Output" nillable="true" type="tns:ParameterDetails" />
+      <xs:element minOccurs="0" name="Outputs" nillable="true" type="tns:ParameterDetailsCollection" />
+      <xs:element minOccurs="0" name="Variables" nillable="true" type="tns:VariableDetailsCollection" />
+      <xs:element minOccurs="0" name="Outcomes" nillable="true" type="tns:OutcomeCollection" />
+      <xs:element minOccurs="0" name="defaultoutcome" nillable="true" type="xs:anyType" />
+      <xs:element minOccurs="0" name="BusinessRuleCalculations" nillable="true" type="tns:BusinessRuleCalculationCollection" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BusinessRuleData" nillable="true" type="tns:BusinessRuleData" />
+  <xs:complexType name="ParameterDetailsCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ParameterDetails" nillable="true" type="tns:ParameterDetails" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ParameterDetailsCollection" nillable="true" type="tns:ParameterDetailsCollection" />
+  <xs:complexType name="ParameterDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ParameterDetailsType" type="xs:short" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DefaultValue" nillable="true" type="xs:anyType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ParameterDetails" nillable="true" type="tns:ParameterDetails" />
+  <xs:complexType name="VariableDetailsCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="VariableDetails" nillable="true" type="tns:VariableDetails" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VariableDetailsCollection" nillable="true" type="tns:VariableDetailsCollection" />
+  <xs:complexType name="VariableDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VariableDetailsType" type="xs:short" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DefaultValue" nillable="true" type="xs:anyType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VariableDetails" nillable="true" type="tns:VariableDetails" />
+  <xs:complexType name="OutcomeCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Outcome" nillable="true" type="tns:Outcome" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OutcomeCollection" nillable="true" type="tns:OutcomeCollection" />
+  <xs:complexType name="Outcome">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:anyType" />
+      <xs:element minOccurs="0" name="Position" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Conditions" nillable="true" type="tns:RuleConditionCollection" />
+      <xs:element minOccurs="0" name="OutcomeType" type="xs:short" />
+      <xs:element minOccurs="0" name="BusinessRuleCalculation" nillable="true" type="tns:BusinessRuleCalculation" />
+      <xs:element minOccurs="0" name="EmbeddedCalculations" nillable="true" type="tns:BusinessRuleCalculationCollection" />
+      <xs:element minOccurs="0" name="FallThrough" type="xs:boolean" />
+      <xs:element minOccurs="0" name="EmbeddedElseCalculations" nillable="true" type="tns:BusinessRuleCalculationCollection" />
+      <xs:element minOccurs="0" name="ElseFallThrough" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Outcome" nillable="true" type="tns:Outcome" />
+  <xs:complexType name="RuleConditionCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RuleCondition" nillable="true" type="tns:RuleCondition" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RuleConditionCollection" nillable="true" type="tns:RuleConditionCollection" />
+  <xs:complexType name="RuleCondition">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="StartParenthesis" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:anyType" />
+      <xs:element minOccurs="0" name="_x0040_Operator" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:anyType" />
+      <xs:element minOccurs="0" name="Source" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EndParenthesis" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Logicalop" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Sourceip" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RuleCondition" nillable="true" type="tns:RuleCondition" />
+  <xs:complexType name="BusinessRuleCalculation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CalculationElements" nillable="true" type="tns:BusinessRuleCalculationElementCollection" />
+      <xs:element minOccurs="0" name="VariableName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Source" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BusinessRuleCalculation" nillable="true" type="tns:BusinessRuleCalculation" />
+  <xs:complexType name="BusinessRuleCalculationElementCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BusinessRuleCalculationElement" nillable="true" type="tns:BusinessRuleCalculationElement" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BusinessRuleCalculationElementCollection" nillable="true" type="tns:BusinessRuleCalculationElementCollection" />
+  <xs:complexType name="BusinessRuleCalculationElement">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="StartParenthesis" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Source" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:anyType" />
+      <xs:element minOccurs="0" name="_x0040_Operator" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EndParenthesis" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ElementType" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BusinessRuleCalculationElement" nillable="true" type="tns:BusinessRuleCalculationElement" />
+  <xs:complexType name="BusinessRuleCalculationCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BusinessRuleCalculation" nillable="true" type="tns:BusinessRuleCalculation" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BusinessRuleCalculationCollection" nillable="true" type="tns:BusinessRuleCalculationCollection" />
+  <xs:element name="AddBusinessRuleResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateBusinessRule">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="revert" type="xs:boolean" />
+        <xs:element minOccurs="0" name="businessRule" nillable="true" type="tns:BusinessRule" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateBusinessRuleResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteBusinessRule">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="businessRuleIdentity" nillable="true" type="tns:BusinessRuleIdentity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteBusinessRuleResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoesBusinessRuleExist">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="businessRuleIdentity" nillable="true" type="tns:BusinessRuleIdentity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DoesBusinessRuleExistResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DoesBusinessRuleExistResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBusinessRuleAssociations">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="businessRuleIdentity" nillable="true" type="tns:BusinessRuleIdentity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBusinessRuleAssociationsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetBusinessRuleAssociationsResult" nillable="true" type="tns:BusinessRuleAssociations" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="BusinessRuleAssociations">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BusinessRuleIdentity" nillable="true" type="tns:BusinessRuleIdentity" />
+      <xs:element minOccurs="0" name="ProcessActivities" nillable="true" type="tns:ProcessActivityIdentityCollection" />
+      <xs:element minOccurs="0" name="Forms" nillable="true" type="tns:FormIdentityCollection" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BusinessRuleAssociations" nillable="true" type="tns:BusinessRuleAssociations" />
+  <xs:complexType name="ProcessActivityIdentityCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProcessActivityIdentity" nillable="true" type="tns:ProcessActivityIdentity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProcessActivityIdentityCollection" nillable="true" type="tns:ProcessActivityIdentityCollection" />
+  <xs:complexType name="ProcessActivityIdentity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ProcessIdentity" nillable="true" type="tns:ProcessIdentity" />
+      <xs:element minOccurs="0" name="NodeId" type="xs:short" />
+      <xs:element minOccurs="0" name="ActivityName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProcessActivityIdentity" nillable="true" type="tns:ProcessActivityIdentity" />
+  <xs:complexType name="FormIdentityCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FormIdentity" nillable="true" type="tns:FormIdentity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FormIdentityCollection" nillable="true" type="tns:FormIdentityCollection" />
+  <xs:complexType name="FormIdentity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Version" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FormIdentity" nillable="true" type="tns:FormIdentity" />
+  <xs:element name="EvaluateBusinessRule">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="businessRuleIdentity" nillable="true" type="tns:BusinessRuleIdentity" />
+        <xs:element minOccurs="0" name="ruleInputs" nillable="true" type="tns:BusinessRuleInputCollection" />
+        <xs:element minOccurs="0" name="verifyReleasedStatus" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="BusinessRuleInputCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BusinessRuleInput" nillable="true" type="tns:BusinessRuleInput" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BusinessRuleInputCollection" nillable="true" type="tns:BusinessRuleInputCollection" />
+  <xs:complexType name="BusinessRuleInput">
+    <xs:sequence>
+      <xs:element name="Name" nillable="true" type="xs:string" />
+      <xs:element name="Type" type="xs:short" />
+      <xs:element name="Value" nillable="true" type="xs:anyType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BusinessRuleInput" nillable="true" type="tns:BusinessRuleInput" />
+  <xs:element name="EvaluateBusinessRuleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EvaluateBusinessRuleResult" nillable="true" type="tns:BusinessRuleOutputCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="BusinessRuleOutputCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BusinessRuleOutput" nillable="true" type="tns:BusinessRuleOutput" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BusinessRuleOutputCollection" nillable="true" type="tns:BusinessRuleOutputCollection" />
+  <xs:complexType name="BusinessRuleOutput">
+    <xs:sequence>
+      <xs:element name="Name" nillable="true" type="xs:string" />
+      <xs:element name="Type" type="xs:short" />
+      <xs:element name="Value" nillable="true" type="xs:anyType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BusinessRuleOutput" nillable="true" type="tns:BusinessRuleOutput" />
+  <xs:element name="ExecuteBusinessRule">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="businessRuleRuntimeIdentity" nillable="true" type="tns:BusinessRuleRuntimeIdentity" />
+        <xs:element minOccurs="0" name="ruleInputs" nillable="true" type="tns:BusinessRuleInputCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="BusinessRuleRuntimeIdentity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BusinessRuleRuntimeIdentity" nillable="true" type="tns:BusinessRuleRuntimeIdentity" />
+  <xs:element name="ExecuteBusinessRuleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ExecuteBusinessRuleResult" nillable="true" type="tns:BusinessRuleOutputCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBusinessRuleVersions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="businessRuleIdentity" nillable="true" type="tns:BusinessRuleIdentity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBusinessRuleVersionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetBusinessRuleVersionsResult" nillable="true" type="tns:BusinessRuleIdentityCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="BusinessRuleIdentityCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BusinessRuleIdentity" nillable="true" type="tns:BusinessRuleIdentity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BusinessRuleIdentityCollection" nillable="true" type="tns:BusinessRuleIdentityCollection" />
+  <xs:element name="GetBusinessRule">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="businessRuleIdentity" nillable="true" type="tns:BusinessRuleIdentity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBusinessRuleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetBusinessRuleResult" nillable="true" type="tns:BusinessRule" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBusinessRules">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="businessRuleFilter" nillable="true" type="tns:BusinessRuleFilter" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="BusinessRuleFilter">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CategoryIdentity" nillable="true" type="tns:CategoryIdentity" />
+      <xs:element minOccurs="0" name="SearchText" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" type="xs:short" />
+      <xs:element minOccurs="0" name="UseStatus" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IgnoreMaintenanceAccess" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BusinessRuleFilter" nillable="true" type="tns:BusinessRuleFilter" />
+  <xs:element name="GetBusinessRulesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetBusinessRulesResult" nillable="true" type="tns:BusinessRuleSummaryCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="BusinessRuleSummaryCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BusinessRuleSummary" nillable="true" type="tns:BusinessRuleSummary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BusinessRuleSummaryCollection" nillable="true" type="tns:BusinessRuleSummaryCollection" />
+  <xs:complexType name="BusinessRuleSummary">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="LockedBy" nillable="true" type="tns:ResourceIdentity" />
+      <xs:element minOccurs="0" name="ProcessIdentity" nillable="true" type="tns:ProcessIdentity" />
+      <xs:element minOccurs="0" name="RuleIdentity" nillable="true" type="tns:BusinessRuleIdentity" />
+      <xs:element minOccurs="0" name="RuleType" type="xs:short" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BusinessRuleSummary" nillable="true" type="tns:BusinessRuleSummary" />
+  <xs:element name="EvaluateBusinessRule2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="businessRuleIdentity" nillable="true" type="tns:BusinessRuleIdentity" />
+        <xs:element minOccurs="0" name="ruleInputs" nillable="true" type="tns:BusinessRuleInputCollection" />
+        <xs:element minOccurs="0" name="verifyReleasedStatus" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EvaluateBusinessRule2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EvaluateBusinessRule2Result" nillable="true" type="tns:BusinessRuleOutputCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLoggingConfig">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="categoryIdentity" nillable="true" type="tns:CategoryIdentity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLoggingConfigResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetLoggingConfigResult" nillable="true" type="tns:RuleLoggingConfigCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="RuleLoggingConfigCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RuleLoggingConfig" nillable="true" type="tns:RuleLoggingConfig" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RuleLoggingConfigCollection" nillable="true" type="tns:RuleLoggingConfigCollection" />
+  <xs:complexType name="RuleLoggingConfig">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" type="xs:short" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RuleLoggingConfig" nillable="true" type="tns:RuleLoggingConfig" />
+  <xs:element name="UpdateLoggingConfig">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="loggingCollection" nillable="true" type="tns:RuleLoggingConfigCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateLoggingConfigResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteLogging">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="loggingCollection" nillable="true" type="tns:RuleLoggingConfigCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteLoggingResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,427 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B60C81A5-7E0A-4BF8-B081-6703489BD865}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KTA_REST_API_Example</RootNamespace>
+    <AssemblyName>KTA_REST_API_Example</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Connected Services\BusinessRuleService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\CaptureDocumentService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\JobService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BusinessRuleService\BusinessRuleService.wsdl" />
+    <None Include="Connected Services\BusinessRuleService\BusinessRuleService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BusinessRuleService\BusinessRuleService1.wsdl" />
+    <None Include="Connected Services\BusinessRuleService\BusinessRuleService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BusinessRuleService\BusinessRuleService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BusinessRuleService\BusinessRuleService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BusinessRuleService\BusinessRuleService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BusinessRuleService\KTA_REST_API_Example.BusinessRuleService.BusinessRule.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BusinessRuleService\KTA_REST_API_Example.BusinessRuleService.BusinessRuleAssociations.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BusinessRuleService\KTA_REST_API_Example.BusinessRuleService.BusinessRuleIdentityCollection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BusinessRuleService\KTA_REST_API_Example.BusinessRuleService.BusinessRuleOutputCollection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BusinessRuleService\KTA_REST_API_Example.BusinessRuleService.BusinessRuleSummaryCollection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\BusinessRuleService\KTA_REST_API_Example.BusinessRuleService.RuleLoggingConfigCollection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CaptureDocumentService\CaptureDocumentService.wsdl" />
+    <None Include="Connected Services\CaptureDocumentService\CaptureDocumentService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CaptureDocumentService\CaptureDocumentService1.wsdl" />
+    <None Include="Connected Services\CaptureDocumentService\CaptureDocumentService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CaptureDocumentService\CaptureDocumentService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CaptureDocumentService\CaptureDocumentService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CaptureDocumentService\CaptureDocumentService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CaptureDocumentService\CaptureDocumentService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CaptureDocumentService\CaptureDocumentService6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CaptureDocumentService\CaptureDocumentService7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CaptureDocumentService\CaptureDocumentService8.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CaptureDocumentService\CaptureDocumentService9.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\CaptureDocumentService\KTA_REST_API_Example.CaptureDocumentService.AnnotationDataCollection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CaptureDocumentService\KTA_REST_API_Example.CaptureDocumentService.BinaryData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CaptureDocumentService\KTA_REST_API_Example.CaptureDocumentService.DeletionResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CaptureDocumentService\KTA_REST_API_Example.CaptureDocumentService.Document.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CaptureDocumentService\KTA_REST_API_Example.CaptureDocumentService.DocumentFieldValue.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CaptureDocumentService\KTA_REST_API_Example.CaptureDocumentService.DocumentFieldValueCollection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CaptureDocumentService\KTA_REST_API_Example.CaptureDocumentService.DocumentIdentity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CaptureDocumentService\KTA_REST_API_Example.CaptureDocumentService.DocumentIdentityCollection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CaptureDocumentService\KTA_REST_API_Example.CaptureDocumentService.DocumentImage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CaptureDocumentService\KTA_REST_API_Example.CaptureDocumentService.DocumentSortResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CaptureDocumentService\KTA_REST_API_Example.CaptureDocumentService.DocumentSourceFile.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CaptureDocumentService\KTA_REST_API_Example.CaptureDocumentService.FieldAlternative2Collection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CaptureDocumentService\KTA_REST_API_Example.CaptureDocumentService.FieldAlternativeCollection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CaptureDocumentService\KTA_REST_API_Example.CaptureDocumentService.FieldAlternatives2Collection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CaptureDocumentService\KTA_REST_API_Example.CaptureDocumentService.FieldAlternativesCollection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CaptureDocumentService\KTA_REST_API_Example.CaptureDocumentService.FieldPropertiesCollection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CaptureDocumentService\KTA_REST_API_Example.CaptureDocumentService.FieldValidationResult2Collection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CaptureDocumentService\KTA_REST_API_Example.CaptureDocumentService.Folder.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CaptureDocumentService\KTA_REST_API_Example.CaptureDocumentService.FolderFieldValue.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CaptureDocumentService\KTA_REST_API_Example.CaptureDocumentService.FolderFieldValueCollection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CaptureDocumentService\KTA_REST_API_Example.CaptureDocumentService.FormattingResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CaptureDocumentService\KTA_REST_API_Example.CaptureDocumentService.ImageSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CaptureDocumentService\KTA_REST_API_Example.CaptureDocumentService.LockedItemCollection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CaptureDocumentService\KTA_REST_API_Example.CaptureDocumentService.PageImageData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CaptureDocumentService\KTA_REST_API_Example.CaptureDocumentService.PagePropertiesCollection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CaptureDocumentService\KTA_REST_API_Example.CaptureDocumentService.PageSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CaptureDocumentService\KTA_REST_API_Example.CaptureDocumentService.RejectedPages.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CaptureDocumentService\KTA_REST_API_Example.CaptureDocumentService.ReviewValidationResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CaptureDocumentService\KTA_REST_API_Example.CaptureDocumentService.RuntimeField2Collection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CaptureDocumentService\KTA_REST_API_Example.CaptureDocumentService.SearchResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CaptureDocumentService\KTA_REST_API_Example.CaptureDocumentService.ValidationExecutionContext.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CaptureDocumentService\KTA_REST_API_Example.CaptureDocumentService.ValidationResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CaptureDocumentService\KTA_REST_API_Example.CaptureDocumentService.ValidationResultCollection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\CaptureDocumentService\KTA_REST_API_Example.CaptureDocumentService.WordCollection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\JobService\JobService.wsdl" />
+    <None Include="Connected Services\JobService\JobService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\JobService\JobService1.wsdl" />
+    <None Include="Connected Services\JobService\JobService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\JobService\JobService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\JobService\JobService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\JobService\JobService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\JobService\JobService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\JobService\KTA_REST_API_Example.JobService.JobCount2Collection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\JobService\KTA_REST_API_Example.JobService.JobCountCollection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\JobService\KTA_REST_API_Example.JobService.JobDocumentCollection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\JobService\KTA_REST_API_Example.JobService.JobDocumentIdentityCollection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\JobService\KTA_REST_API_Example.JobService.JobDocumentRuleCollection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\JobService\KTA_REST_API_Example.JobService.JobDocumentTypeRuleResultCollection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\JobService\KTA_REST_API_Example.JobService.JobEventCollection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\JobService\KTA_REST_API_Example.JobService.JobExceptionSummaryCollection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\JobService\KTA_REST_API_Example.JobService.JobHistoryCollection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\JobService\KTA_REST_API_Example.JobService.JobIdentity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\JobService\KTA_REST_API_Example.JobService.JobInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\JobService\KTA_REST_API_Example.JobService.JobList.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\JobService\KTA_REST_API_Example.JobService.JobMilestoneCollection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\JobService\KTA_REST_API_Example.JobService.JobNoteCollection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\JobService\KTA_REST_API_Example.JobService.JobProgressOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\JobService\KTA_REST_API_Example.JobService.JobProperties.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\JobService\KTA_REST_API_Example.JobService.JobProperties2.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\JobService\KTA_REST_API_Example.JobService.JobQueryResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\JobService\KTA_REST_API_Example.JobService.JobQueryResult2.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\JobService\KTA_REST_API_Example.JobService.JobRole.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\JobService\KTA_REST_API_Example.JobService.JobRole2.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\JobService\KTA_REST_API_Example.JobService.JobRoleCollection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\JobService\KTA_REST_API_Example.JobService.JobsSummaryCollection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\JobService\KTA_REST_API_Example.JobService.JobsSummaryResults.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\JobService\KTA_REST_API_Example.JobService.JobVariableCollection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\JobService\KTA_REST_API_Example.JobService.JobVariableHistoryCollection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\JobService\KTA_REST_API_Example.JobService.JobWithDocumentsProgressOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\JobService\KTA_REST_API_Example.JobService.JobWithDocumentsProgressOutput2.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\JobService\KTA_REST_API_Example.JobService.ProcessIdentity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\JobService\KTA_REST_API_Example.JobService.ProcessViewerData.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\JobService\KTA_REST_API_Example.JobService.RoleCollection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\JobService\KTA_REST_API_Example.JobService.StateHistoryCollection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\JobService\KTA_REST_API_Example.JobService.SubJobIdentity.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\JobService\KTA_REST_API_Example.JobService.SubJobProperties.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\JobService\KTA_REST_API_Example.JobService.SyncJob.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\JobService\KTA_REST_API_Example.JobService.SyncJobWithDocument.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\JobService\KTA_REST_API_Example.JobService.SyncJobWithDocuments.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\JobService\KTA_REST_API_Example.JobService.VariableValue.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\JobService\KTA_REST_API_Example.JobService.VariableValueCollection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\BusinessRuleService\" />
+    <WCFMetadataStorage Include="Connected Services\CaptureDocumentService\" />
+    <WCFMetadataStorage Include="Connected Services\JobService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\JobService\JobService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\JobService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\JobService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\JobService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\CaptureDocumentService\CaptureDocumentService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\CaptureDocumentService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\CaptureDocumentService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\CaptureDocumentService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BusinessRuleService\BusinessRuleService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BusinessRuleService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BusinessRuleService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\BusinessRuleService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Agility.Server.Core.Model.Enumerations" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Agility.Server.Core.Model.Enumerations" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="JobDocumentRuleStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NotRun" />
+      <xs:enumeration value="Passed" />
+      <xs:enumeration value="Failed" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="JobDocumentRuleStatus" nillable="true" type="tns:JobDocumentRuleStatus" />
+</xs:schema>

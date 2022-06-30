@@ -1,0 +1,1801 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://www.kofax.com/agility/services/sdk" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://tempuri.org/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CaptureDocumentService" targetNamespace="http://www.kofax.com/agility/services/sdk" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="http://tempuri.org/" location="http://localhost/TotalAgility/Services/SDK/CaptureDocumentService.svc?wsdl=wsdl0" />
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.kofax.com/agility/services/sdk/Imports">
+      <xsd:import schemaLocation="http://localhost/TotalAgility/Services/SDK/CaptureDocumentService.svc?xsd=xsd1" namespace="http://www.kofax.com/agility/services/sdk" />
+      <xsd:import schemaLocation="http://localhost/TotalAgility/Services/SDK/CaptureDocumentService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" />
+      <xsd:import schemaLocation="http://localhost/TotalAgility/Services/SDK/CaptureDocumentService.svc?xsd=xsd0" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost/TotalAgility/Services/SDK/CaptureDocumentService.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost/TotalAgility/Services/SDK/CaptureDocumentService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Drawing" />
+      <xsd:import schemaLocation="http://localhost/TotalAgility/Services/SDK/CaptureDocumentService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/System.ServiceModel" />
+      <xsd:import schemaLocation="http://localhost/TotalAgility/Services/SDK/CaptureDocumentService.svc?xsd=xsd6" namespace="http://schemas.microsoft.com/Message" />
+      <xsd:import schemaLocation="http://localhost/TotalAgility/Services/SDK/CaptureDocumentService.svc?xsd=xsd7" />
+      <xsd:import schemaLocation="http://localhost/TotalAgility/Services/SDK/CaptureDocumentService.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/Agility.Sdk.Model" />
+      <xsd:import schemaLocation="http://localhost/TotalAgility/Services/SDK/CaptureDocumentService.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/System.Windows" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ICaptureDocumentService_RunDocumentFieldsValidation_InputMessage">
+    <wsdl:part name="parameters" element="tns:RunDocumentFieldsValidation" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_RunDocumentFieldsValidation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RunDocumentFieldsValidationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_RunDocumentFieldsValidation_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q1:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetValidationExecutionContext_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetValidationExecutionContext" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetValidationExecutionContext_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetValidationExecutionContextResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetValidationExecutionContext_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q2:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_CreateDocument3_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateDocument3" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_CreateDocument3_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateDocument3Response" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_CreateDocument3_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q3:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_RotatePages_InputMessage">
+    <wsdl:part name="parameters" element="tns:RotatePages" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_RotatePages_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RotatePagesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_RotatePages_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q4:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_RotatePagesRendition_InputMessage">
+    <wsdl:part name="parameters" element="tns:RotatePagesRendition" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_RotatePagesRendition_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RotatePagesRenditionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_RotatePagesRendition_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q5:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_ValidateDocumentData_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateDocumentData" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_ValidateDocumentData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateDocumentDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_ValidateDocumentData_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q6:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_TestFieldValidator_InputMessage">
+    <wsdl:part name="parameters" element="tns:TestFieldValidator" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_TestFieldValidator_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TestFieldValidatorResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_TestFieldValidator_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q7:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_ValidateDocument_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateDocument" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_ValidateDocument_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_ValidateDocument_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q8:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_ValidateFolder_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateFolder" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_ValidateFolder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateFolderResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_ValidateFolder_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q9:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetDocumentFieldValues_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentFieldValues" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetDocumentFieldValues_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentFieldValuesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetDocumentFieldValues_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q10:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetDocumentFieldValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentFieldValue" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetDocumentFieldValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentFieldValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetDocumentFieldValue_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q11:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetFolderFieldValues_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFolderFieldValues" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetFolderFieldValues_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFolderFieldValuesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetFolderFieldValues_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q12:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetFolderFieldValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFolderFieldValue" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetFolderFieldValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFolderFieldValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetFolderFieldValue_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q13:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetFolder_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFolder" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetFolder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFolderResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetFolder_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q14:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_UpdateDocumentFieldValues_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDocumentFieldValues" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_UpdateDocumentFieldValues_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDocumentFieldValuesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_UpdateDocumentFieldValues_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q15:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_UpdateDocumentFieldValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDocumentFieldValue" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_UpdateDocumentFieldValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDocumentFieldValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_UpdateDocumentFieldValue_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q16:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_SetDocumentStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetDocumentStatus" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_SetDocumentStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetDocumentStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_SetDocumentStatus_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q17="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q17:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_SetFolderStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetFolderStatus" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_SetFolderStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetFolderStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_SetFolderStatus_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q18:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_MoveDocument_InputMessage">
+    <wsdl:part name="parameters" element="tns:MoveDocument" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_MoveDocument_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MoveDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_MoveDocument_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q19="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q19:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_DeleteDocument_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteDocument" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_DeleteDocument_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_DeleteDocument_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q20="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q20:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_DeleteDocuments_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteDocuments" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_DeleteDocuments_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteDocumentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_DeleteDocuments_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q21="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q21:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_SplitDocument_InputMessage">
+    <wsdl:part name="parameters" element="tns:SplitDocument" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_SplitDocument_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SplitDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_SplitDocument_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q22="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q22:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetImage_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetImage" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetImage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetImage_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q23="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q23:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetPageImage_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPageImage" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetPageImage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPageImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetPageImage_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q24="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q24:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_MovePages_InputMessage">
+    <wsdl:part name="parameters" element="tns:MovePages" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_MovePages_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MovePagesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_MovePages_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q25="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q25:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_DeletePages_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePages" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_DeletePages_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePagesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_DeletePages_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q26="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q26:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_UpdateWords_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateWords" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_UpdateWords_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateWordsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_UpdateWords_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q27="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q27:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetWordsInRectangle_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWordsInRectangle" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetWordsInRectangle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWordsInRectangleResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetWordsInRectangle_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q28="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q28:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_SetDocumentFieldStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetDocumentFieldStatus" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_SetDocumentFieldStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetDocumentFieldStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_SetDocumentFieldStatus_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q29="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q29:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_SetDocumentFieldsStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetDocumentFieldsStatus" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_SetDocumentFieldsStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetDocumentFieldsStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_SetDocumentFieldsStatus_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q30="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q30:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_SetFolderFieldStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetFolderFieldStatus" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_SetFolderFieldStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetFolderFieldStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_SetFolderFieldStatus_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q31="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q31:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_DeleteFolder_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteFolder" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_DeleteFolder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteFolderResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_DeleteFolder_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q32="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q32:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_SplitFolder_InputMessage">
+    <wsdl:part name="parameters" element="tns:SplitFolder" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_SplitFolder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SplitFolderResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_SplitFolder_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q33="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q33:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_MoveFolder_InputMessage">
+    <wsdl:part name="parameters" element="tns:MoveFolder" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_MoveFolder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MoveFolderResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_MoveFolder_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q34="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q34:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_CreateDocument_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateDocument" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_CreateDocument_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_CreateDocument_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q35="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q35:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_CreateDocument2_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateDocument2" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_CreateDocument2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateDocument2Response" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_CreateDocument2_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q36="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q36:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_CreateDocuments_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateDocuments" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_CreateDocuments_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateDocumentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_CreateDocuments_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q37="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q37:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_CreateDocuments2_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateDocuments2" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_CreateDocuments2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateDocuments2Response" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_CreateDocuments2_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q38="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q38:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_CreateDocumentWithPages_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateDocumentWithPages" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_CreateDocumentWithPages_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateDocumentWithPagesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_CreateDocumentWithPages_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q39="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q39:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_CreatePage_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreatePage" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_CreatePage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreatePageResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_CreatePage_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q40="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q40:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetSourceFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSourceFile" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetSourceFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSourceFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetSourceFile_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q41="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q41:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetDocument_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocument" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetDocument_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetDocument_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q42="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q42:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_CreateFolder_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateFolder" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_CreateFolder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateFolderResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_CreateFolder_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q43="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q43:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_UpdateFolderFieldValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateFolderFieldValue" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_UpdateFolderFieldValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateFolderFieldValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_UpdateFolderFieldValue_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q44="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q44:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_InsertTableFieldRow_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertTableFieldRow" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_InsertTableFieldRow_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertTableFieldRowResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_InsertTableFieldRow_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q45="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q45:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_DeleteTableFieldRow_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteTableFieldRow" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_DeleteTableFieldRow_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteTableFieldRowResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_DeleteTableFieldRow_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q46="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q46:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_InterpolateTableField_InputMessage">
+    <wsdl:part name="parameters" element="tns:InterpolateTableField" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_InterpolateTableField_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InterpolateTableFieldResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_InterpolateTableField_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q47="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q47:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_UpdateFolderFieldValues_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateFolderFieldValues" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_UpdateFolderFieldValues_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateFolderFieldValuesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_UpdateFolderFieldValues_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q48="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q48:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_UpdatePages_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePages" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_UpdatePages_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePagesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_TestFieldFormatter_InputMessage">
+    <wsdl:part name="parameters" element="tns:TestFieldFormatter" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_TestFieldFormatter_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TestFieldFormatterResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_TestFieldFormatter_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q49="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q49:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_TestFieldFormatter2_InputMessage">
+    <wsdl:part name="parameters" element="tns:TestFieldFormatter2" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_TestFieldFormatter2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TestFieldFormatter2Response" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_TestFieldFormatter2_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q50="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q50:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_ValidateDocumentForReview_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateDocumentForReview" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_ValidateDocumentForReview_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateDocumentForReviewResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_ValidateDocumentForReview_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q51="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q51:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_ValidateFolderForReview_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateFolderForReview" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_ValidateFolderForReview_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateFolderForReviewResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_ValidateFolderForReview_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q52="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q52:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_ValidateDocumentWithType_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateDocumentWithType" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_ValidateDocumentWithType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateDocumentWithTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_ValidateDocumentWithType_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q53="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q53:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_ValidateFolderWithType_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateFolderWithType" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_ValidateFolderWithType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateFolderWithTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_ValidateFolderWithType_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q54="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q54:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_ValidateDocumentForReviewWithType_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateDocumentForReviewWithType" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_ValidateDocumentForReviewWithType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateDocumentForReviewWithTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_ValidateDocumentForReviewWithType_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q55="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q55:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_ValidateFolderForReviewWithType_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateFolderForReviewWithType" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_ValidateFolderForReviewWithType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateFolderForReviewWithTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_ValidateFolderForReviewWithType_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q56="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q56:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_ValidateDocumentField_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateDocumentField" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_ValidateDocumentField_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateDocumentFieldResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_ValidateDocumentField_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q57="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q57:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_ValidateDocumentFields_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateDocumentFields" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_ValidateDocumentFields_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateDocumentFieldsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_ValidateDocumentFields_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q58="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q58:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_ValidateFolderField_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateFolderField" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_ValidateFolderField_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateFolderFieldResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_ValidateFolderField_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q59="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q59:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_ValidateFolderFields_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateFolderFields" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_ValidateFolderFields_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateFolderFieldsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_ValidateFolderFields_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q60="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q60:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_FormatField_InputMessage">
+    <wsdl:part name="parameters" element="tns:FormatField" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_FormatField_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FormatFieldResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_FormatField_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q61="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q61:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_FormatField2_InputMessage">
+    <wsdl:part name="parameters" element="tns:FormatField2" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_FormatField2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FormatField2Response" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_FormatField2_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q62="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q62:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetDocumentAsFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentAsFile" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetDocumentAsFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentAsFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetDocumentAsFile_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q63="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q63:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_CreateOnlineLearningFolder_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateOnlineLearningFolder" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_CreateOnlineLearningFolder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateOnlineLearningFolderResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_CreateOnlineLearningFolder_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q64="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q64:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_SearchFuzzyDatabase_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchFuzzyDatabase" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_SearchFuzzyDatabase_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchFuzzyDatabaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_SearchFuzzyDatabase_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q65="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q65:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetDocumentsInOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentsInOrder" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetDocumentsInOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentsInOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetDocumentsInOrder_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q66="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q66:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetDocumentFieldAlternatives_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentFieldAlternatives" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetDocumentFieldAlternatives_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentFieldAlternativesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetDocumentFieldAlternatives_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q67="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q67:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetDocumentFieldAlternatives2_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentFieldAlternatives2" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetDocumentFieldAlternatives2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentFieldAlternatives2Response" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetDocumentFieldAlternatives2_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q68="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q68:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetDocumentFieldsAlternatives_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentFieldsAlternatives" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetDocumentFieldsAlternatives_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentFieldsAlternativesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetDocumentFieldsAlternatives_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q69="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q69:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetDocumentFieldsAlternatives2_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentFieldsAlternatives2" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetDocumentFieldsAlternatives2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentFieldsAlternatives2Response" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetDocumentFieldsAlternatives2_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q70="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q70:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_SaveTextExtension_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveTextExtension" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_SaveTextExtension_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveTextExtensionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_SaveTextExtension_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q71="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q71:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetTextExtension_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTextExtension" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetTextExtension_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTextExtensionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetTextExtension_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q72="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q72:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_CreatePageUsingStream_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreatePageUsingStream" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_CreatePageUsingStream_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreatePageUsingStreamResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_CreatePageUsingStream_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q73="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q73:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetDocumentTableFieldValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentTableFieldValue" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetDocumentTableFieldValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentTableFieldValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetDocumentTableFieldValue_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q74="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q74:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetJobVariableLockStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobVariableLockStatus" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetJobVariableLockStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobVariableLockStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetJobVariableLockStatus_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q75="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q75:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_ForceUnlockItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:ForceUnlockItem" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_ForceUnlockItem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ForceUnlockItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_ForceUnlockItem_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q76="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q76:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetDocumentFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentFile" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetDocumentFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetDocumentFile_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q77="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q77:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetDocumentRenditionsFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentRenditionsFile" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetDocumentRenditionsFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentRenditionsFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetDocumentRenditionsFile_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q78="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q78:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_UpdateDocumentType_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDocumentType" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_UpdateDocumentType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDocumentTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_UpdateDocumentType_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q79="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q79:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_UpdateDocumentType2_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDocumentType2" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_UpdateDocumentType2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDocumentType2Response" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_UpdateDocumentType2_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q80="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q80:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_MergeDocuments_InputMessage">
+    <wsdl:part name="parameters" element="tns:MergeDocuments" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_MergeDocuments_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MergeDocumentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_MergeDocuments_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q81="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q81:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_RejectDocuments_InputMessage">
+    <wsdl:part name="parameters" element="tns:RejectDocuments" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_RejectDocuments_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RejectDocumentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_RejectDocuments_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q82="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q82:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_UnrejectDocuments_InputMessage">
+    <wsdl:part name="parameters" element="tns:UnrejectDocuments" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_UnrejectDocuments_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UnrejectDocumentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_UnrejectDocuments_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q83="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q83:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_UpdateDocumentTypeWithConfidence_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDocumentTypeWithConfidence" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_UpdateDocumentTypeWithConfidence_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDocumentTypeWithConfidenceResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_UpdateDocumentTypeWithConfidence_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q84="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q84:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_UpdateDocumentTypeWithConfidence2_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDocumentTypeWithConfidence2" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_UpdateDocumentTypeWithConfidence2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDocumentTypeWithConfidence2Response" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_UpdateDocumentTypeWithConfidence2_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q85="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q85:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_UpdateDocumentTypeWithConfidence3_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDocumentTypeWithConfidence3" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_UpdateDocumentTypeWithConfidence3_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDocumentTypeWithConfidence3Response" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_UpdateDocumentTypeWithConfidence3_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q86="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q86:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_CopyDocumentFieldValues_InputMessage">
+    <wsdl:part name="parameters" element="tns:CopyDocumentFieldValues" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_CopyDocumentFieldValues_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CopyDocumentFieldValuesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_CopyDocumentFieldValues_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q87="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q87:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_SplitDocumentAndClassify_InputMessage">
+    <wsdl:part name="parameters" element="tns:SplitDocumentAndClassify" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_SplitDocumentAndClassify_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SplitDocumentAndClassifyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_SplitDocumentAndClassify_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q88="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q88:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_UpdateDocumentsProcessingCompleted_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDocumentsProcessingCompleted" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_UpdateDocumentsProcessingCompleted_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDocumentsProcessingCompletedResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_UpdateDocumentsProcessingCompleted_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q89="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q89:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_RejectDocument_InputMessage">
+    <wsdl:part name="parameters" element="tns:RejectDocument" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_RejectDocument_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RejectDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_CopyDocument_InputMessage">
+    <wsdl:part name="parameters" element="tns:CopyDocument" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_CopyDocument_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CopyDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_CopyDocument_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q90="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q90:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_RejectPages_InputMessage">
+    <wsdl:part name="parameters" element="tns:RejectPages" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_RejectPages_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RejectPagesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_UnrejectPages_InputMessage">
+    <wsdl:part name="parameters" element="tns:UnrejectPages" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_UnrejectPages_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UnrejectPagesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetRejectedPages_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRejectedPages" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetRejectedPages_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRejectedPagesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_SavePageImage_InputMessage">
+    <wsdl:part name="parameters" element="tns:SavePageImage" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_SavePageImage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SavePageImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_ValidateAllDocumentFields_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateAllDocumentFields" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_ValidateAllDocumentFields_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateAllDocumentFieldsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_ValidateAllDocumentFields_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q91="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q91:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_SavePageRendition_InputMessage">
+    <wsdl:part name="parameters" element="tns:SavePageRendition" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_SavePageRendition_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SavePageRenditionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetPageRendition_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPageRendition" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetPageRendition_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPageRenditionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_SetPageSourceImageFromRendition_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetPageSourceImageFromRendition" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_SetPageSourceImageFromRendition_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetPageSourceImageFromRenditionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_DeletePageRendition_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePageRendition" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_DeletePageRendition_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePageRenditionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_AddPageMaskForField_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddPageMaskForField" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_AddPageMaskForField_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddPageMaskForFieldResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_AddPageMaskForRegion_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddPageMaskForRegion" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_AddPageMaskForRegion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddPageMaskForRegionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_RemovePageMasks_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemovePageMasks" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_RemovePageMasks_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemovePageMasksResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_RemoveAllPageMasks_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveAllPageMasks" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_RemoveAllPageMasks_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveAllPageMasksResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_IsPageRenditionDefined_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsPageRenditionDefined" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_IsPageRenditionDefined_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsPageRenditionDefinedResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetDocumentTypeImage_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentTypeImage" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetDocumentTypeImage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentTypeImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetDocumentTypeImage_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q92="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q92:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetDocumentFieldsProperties_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentFieldsProperties" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetDocumentFieldsProperties_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentFieldsPropertiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetDocumentFieldsProperties_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q93="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q93:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetPageRenditionImageSummary_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPageRenditionImageSummary" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetPageRenditionImageSummary_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPageRenditionImageSummaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetPageSummary_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPageSummary" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetPageSummary_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPageSummaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_CopyDocumentWithPages_InputMessage">
+    <wsdl:part name="parameters" element="tns:CopyDocumentWithPages" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_CopyDocumentWithPages_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CopyDocumentWithPagesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_CopyDocumentWithPages_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q94="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q94:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetDocumentFieldPropertyValues_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentFieldPropertyValues" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetDocumentFieldPropertyValues_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDocumentFieldPropertyValuesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetDocumentFieldPropertyValues_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q95="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q95:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_UpdateDocumentFieldPropertyValues_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDocumentFieldPropertyValues" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_UpdateDocumentFieldPropertyValues_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDocumentFieldPropertyValuesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_UpdateDocumentFieldPropertyValues_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q96="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q96:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetAnnotations_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAnnotations" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetAnnotations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAnnotationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_DeleteExtension_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteExtension" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_DeleteExtension_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteExtensionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_DeleteExtension_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q97="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q97:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_SaveBinaryExtension_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveBinaryExtension" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_SaveBinaryExtension_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveBinaryExtensionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_SaveBinaryExtension_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q98="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q98:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_SavePageBinaryExtension_InputMessage">
+    <wsdl:part name="parameters" element="tns:SavePageBinaryExtension" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_SavePageBinaryExtension_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SavePageBinaryExtensionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_SavePageBinaryExtension_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q99="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q99:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetPageBinaryExtension_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPageBinaryExtension" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetPageBinaryExtension_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPageBinaryExtensionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetPageBinaryExtension_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q100="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q100:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_SavePageTextExtension_InputMessage">
+    <wsdl:part name="parameters" element="tns:SavePageTextExtension" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_SavePageTextExtension_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SavePageTextExtensionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_SavePageTextExtension_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q101="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q101:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetPageTextExtension_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPageTextExtension" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetPageTextExtension_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPageTextExtensionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetPageTextExtension_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q102="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q102:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetPagePropertyValues_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPagePropertyValues" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetPagePropertyValues_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPagePropertyValuesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetPagePropertyValues_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q103="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q103:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_DeletePageExtension_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePageExtension" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_DeletePageExtension_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePageExtensionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_DeletePageExtension_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q104="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q104:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetBinaryExtension_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBinaryExtension" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetBinaryExtension_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBinaryExtensionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetBinaryExtension_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q105="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q105:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_SaveFolderBinaryExtension_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveFolderBinaryExtension" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_SaveFolderBinaryExtension_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveFolderBinaryExtensionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_SaveFolderBinaryExtension_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q106="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q106:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetFolderBinaryExtension_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFolderBinaryExtension" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetFolderBinaryExtension_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFolderBinaryExtensionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetFolderBinaryExtension_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q107="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q107:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_SaveFolderTextExtension_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveFolderTextExtension" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_SaveFolderTextExtension_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveFolderTextExtensionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_SaveFolderTextExtension_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q108="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q108:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetFolderTextExtension_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFolderTextExtension" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetFolderTextExtension_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFolderTextExtensionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_GetFolderTextExtension_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q109="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q109:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_DeleteFolderExtension_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteFolderExtension" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_DeleteFolderExtension_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteFolderExtensionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_DeleteFolderExtension_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q110="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q110:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_UpdateSourceFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSourceFile" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_UpdateSourceFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSourceFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_UpdateSourceFile_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q111="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q111:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_DeleteSourceFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSourceFile" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_DeleteSourceFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSourceFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_DeleteSourceFile_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q112="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q112:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_UpdateDocumentVariant_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDocumentVariant" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_UpdateDocumentVariant_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDocumentVariantResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_UpdateDocumentVariant_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q113="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q113:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_RunFolderFieldsValidation_InputMessage">
+    <wsdl:part name="parameters" element="tns:RunFolderFieldsValidation" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_RunFolderFieldsValidation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RunFolderFieldsValidationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICaptureDocumentService_RunFolderFieldsValidation_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q114="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q114:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:portType name="ICaptureDocumentService">
+    <wsdl:operation name="RunDocumentFieldsValidation">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/RunDocumentFieldsValidation" message="tns:ICaptureDocumentService_RunDocumentFieldsValidation_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/RunDocumentFieldsValidationResponse" message="tns:ICaptureDocumentService_RunDocumentFieldsValidation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/RunDocumentFieldsValidationCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_RunDocumentFieldsValidation_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetValidationExecutionContext">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetValidationExecutionContext" message="tns:ICaptureDocumentService_GetValidationExecutionContext_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetValidationExecutionContextResponse" message="tns:ICaptureDocumentService_GetValidationExecutionContext_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetValidationExecutionContextCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_GetValidationExecutionContext_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateDocument3">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/CreateDocument3" message="tns:ICaptureDocumentService_CreateDocument3_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/CreateDocument3Response" message="tns:ICaptureDocumentService_CreateDocument3_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/CreateDocument3CustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_CreateDocument3_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RotatePages">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/RotatePages" message="tns:ICaptureDocumentService_RotatePages_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/RotatePagesResponse" message="tns:ICaptureDocumentService_RotatePages_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/RotatePagesCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_RotatePages_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RotatePagesRendition">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/RotatePagesRendition" message="tns:ICaptureDocumentService_RotatePagesRendition_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/RotatePagesRenditionResponse" message="tns:ICaptureDocumentService_RotatePagesRendition_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/RotatePagesRenditionCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_RotatePagesRendition_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateDocumentData">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/ValidateDocumentData" message="tns:ICaptureDocumentService_ValidateDocumentData_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/ValidateDocumentDataResponse" message="tns:ICaptureDocumentService_ValidateDocumentData_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/ValidateDocumentDataCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_ValidateDocumentData_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TestFieldValidator">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/TestFieldValidator" message="tns:ICaptureDocumentService_TestFieldValidator_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/TestFieldValidatorResponse" message="tns:ICaptureDocumentService_TestFieldValidator_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/TestFieldValidatorCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_TestFieldValidator_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateDocument">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/ValidateDocument" message="tns:ICaptureDocumentService_ValidateDocument_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/ValidateDocumentResponse" message="tns:ICaptureDocumentService_ValidateDocument_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/ValidateDocumentCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_ValidateDocument_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateFolder">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/ValidateFolder" message="tns:ICaptureDocumentService_ValidateFolder_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/ValidateFolderResponse" message="tns:ICaptureDocumentService_ValidateFolder_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/ValidateFolderCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_ValidateFolder_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentFieldValues">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetDocumentFieldValues" message="tns:ICaptureDocumentService_GetDocumentFieldValues_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetDocumentFieldValuesResponse" message="tns:ICaptureDocumentService_GetDocumentFieldValues_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetDocumentFieldValuesCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_GetDocumentFieldValues_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentFieldValue">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetDocumentFieldValue" message="tns:ICaptureDocumentService_GetDocumentFieldValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetDocumentFieldValueResponse" message="tns:ICaptureDocumentService_GetDocumentFieldValue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetDocumentFieldValueCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_GetDocumentFieldValue_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFolderFieldValues">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetFolderFieldValues" message="tns:ICaptureDocumentService_GetFolderFieldValues_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetFolderFieldValuesResponse" message="tns:ICaptureDocumentService_GetFolderFieldValues_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetFolderFieldValuesCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_GetFolderFieldValues_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFolderFieldValue">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetFolderFieldValue" message="tns:ICaptureDocumentService_GetFolderFieldValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetFolderFieldValueResponse" message="tns:ICaptureDocumentService_GetFolderFieldValue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetFolderFieldValueCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_GetFolderFieldValue_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFolder">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetFolder" message="tns:ICaptureDocumentService_GetFolder_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetFolderResponse" message="tns:ICaptureDocumentService_GetFolder_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetFolderCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_GetFolder_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDocumentFieldValues">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/UpdateDocumentFieldValues" message="tns:ICaptureDocumentService_UpdateDocumentFieldValues_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/UpdateDocumentFieldValuesResponse" message="tns:ICaptureDocumentService_UpdateDocumentFieldValues_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/UpdateDocumentFieldValuesCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_UpdateDocumentFieldValues_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDocumentFieldValue">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/UpdateDocumentFieldValue" message="tns:ICaptureDocumentService_UpdateDocumentFieldValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/UpdateDocumentFieldValueResponse" message="tns:ICaptureDocumentService_UpdateDocumentFieldValue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/UpdateDocumentFieldValueCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_UpdateDocumentFieldValue_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetDocumentStatus">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/SetDocumentStatus" message="tns:ICaptureDocumentService_SetDocumentStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/SetDocumentStatusResponse" message="tns:ICaptureDocumentService_SetDocumentStatus_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/SetDocumentStatusCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_SetDocumentStatus_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetFolderStatus">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/SetFolderStatus" message="tns:ICaptureDocumentService_SetFolderStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/SetFolderStatusResponse" message="tns:ICaptureDocumentService_SetFolderStatus_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/SetFolderStatusCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_SetFolderStatus_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MoveDocument">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/MoveDocument" message="tns:ICaptureDocumentService_MoveDocument_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/MoveDocumentResponse" message="tns:ICaptureDocumentService_MoveDocument_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/MoveDocumentCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_MoveDocument_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDocument">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/DeleteDocument" message="tns:ICaptureDocumentService_DeleteDocument_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/DeleteDocumentResponse" message="tns:ICaptureDocumentService_DeleteDocument_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/DeleteDocumentCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_DeleteDocument_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDocuments">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/DeleteDocuments" message="tns:ICaptureDocumentService_DeleteDocuments_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/DeleteDocumentsResponse" message="tns:ICaptureDocumentService_DeleteDocuments_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/DeleteDocumentsCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_DeleteDocuments_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SplitDocument">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/SplitDocument" message="tns:ICaptureDocumentService_SplitDocument_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/SplitDocumentResponse" message="tns:ICaptureDocumentService_SplitDocument_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/SplitDocumentCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_SplitDocument_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetImage">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetImage" message="tns:ICaptureDocumentService_GetImage_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetImageResponse" message="tns:ICaptureDocumentService_GetImage_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetImageCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_GetImage_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPageImage">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetPageImage" message="tns:ICaptureDocumentService_GetPageImage_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetPageImageResponse" message="tns:ICaptureDocumentService_GetPageImage_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetPageImageCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_GetPageImage_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MovePages">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/MovePages" message="tns:ICaptureDocumentService_MovePages_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/MovePagesResponse" message="tns:ICaptureDocumentService_MovePages_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/MovePagesCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_MovePages_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePages">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/DeletePages" message="tns:ICaptureDocumentService_DeletePages_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/DeletePagesResponse" message="tns:ICaptureDocumentService_DeletePages_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/DeletePagesCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_DeletePages_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateWords">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/UpdateWords" message="tns:ICaptureDocumentService_UpdateWords_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/UpdateWordsResponse" message="tns:ICaptureDocumentService_UpdateWords_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/UpdateWordsCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_UpdateWords_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWordsInRectangle">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetWordsInRectangle" message="tns:ICaptureDocumentService_GetWordsInRectangle_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetWordsInRectangleResponse" message="tns:ICaptureDocumentService_GetWordsInRectangle_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetWordsInRectangleCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_GetWordsInRectangle_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetDocumentFieldStatus">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/SetDocumentFieldStatus" message="tns:ICaptureDocumentService_SetDocumentFieldStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/SetDocumentFieldStatusResponse" message="tns:ICaptureDocumentService_SetDocumentFieldStatus_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/SetDocumentFieldStatusCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_SetDocumentFieldStatus_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetDocumentFieldsStatus">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/SetDocumentFieldsStatus" message="tns:ICaptureDocumentService_SetDocumentFieldsStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/SetDocumentFieldsStatusResponse" message="tns:ICaptureDocumentService_SetDocumentFieldsStatus_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/SetDocumentFieldsStatusCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_SetDocumentFieldsStatus_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetFolderFieldStatus">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/SetFolderFieldStatus" message="tns:ICaptureDocumentService_SetFolderFieldStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/SetFolderFieldStatusResponse" message="tns:ICaptureDocumentService_SetFolderFieldStatus_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/SetFolderFieldStatusCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_SetFolderFieldStatus_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFolder">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/DeleteFolder" message="tns:ICaptureDocumentService_DeleteFolder_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/DeleteFolderResponse" message="tns:ICaptureDocumentService_DeleteFolder_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/DeleteFolderCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_DeleteFolder_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SplitFolder">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/SplitFolder" message="tns:ICaptureDocumentService_SplitFolder_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/SplitFolderResponse" message="tns:ICaptureDocumentService_SplitFolder_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/SplitFolderCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_SplitFolder_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MoveFolder">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/MoveFolder" message="tns:ICaptureDocumentService_MoveFolder_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/MoveFolderResponse" message="tns:ICaptureDocumentService_MoveFolder_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/MoveFolderCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_MoveFolder_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateDocument">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/CreateDocument" message="tns:ICaptureDocumentService_CreateDocument_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/CreateDocumentResponse" message="tns:ICaptureDocumentService_CreateDocument_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/CreateDocumentCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_CreateDocument_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateDocument2">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/CreateDocument2" message="tns:ICaptureDocumentService_CreateDocument2_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/CreateDocument2Response" message="tns:ICaptureDocumentService_CreateDocument2_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/CreateDocument2CustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_CreateDocument2_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateDocuments">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/CreateDocuments" message="tns:ICaptureDocumentService_CreateDocuments_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/CreateDocumentsResponse" message="tns:ICaptureDocumentService_CreateDocuments_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/CreateDocumentsCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_CreateDocuments_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateDocuments2">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/CreateDocuments2" message="tns:ICaptureDocumentService_CreateDocuments2_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/CreateDocuments2Response" message="tns:ICaptureDocumentService_CreateDocuments2_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/CreateDocuments2CustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_CreateDocuments2_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateDocumentWithPages">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/CreateDocumentWithPages" message="tns:ICaptureDocumentService_CreateDocumentWithPages_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/CreateDocumentWithPagesResponse" message="tns:ICaptureDocumentService_CreateDocumentWithPages_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/CreateDocumentWithPagesCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_CreateDocumentWithPages_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreatePage">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/CreatePage" message="tns:ICaptureDocumentService_CreatePage_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/CreatePageResponse" message="tns:ICaptureDocumentService_CreatePage_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/CreatePageCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_CreatePage_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSourceFile">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetSourceFile" message="tns:ICaptureDocumentService_GetSourceFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetSourceFileResponse" message="tns:ICaptureDocumentService_GetSourceFile_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetSourceFileCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_GetSourceFile_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocument">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetDocument" message="tns:ICaptureDocumentService_GetDocument_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetDocumentResponse" message="tns:ICaptureDocumentService_GetDocument_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetDocumentCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_GetDocument_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateFolder">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/CreateFolder" message="tns:ICaptureDocumentService_CreateFolder_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/CreateFolderResponse" message="tns:ICaptureDocumentService_CreateFolder_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/CreateFolderCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_CreateFolder_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFolderFieldValue">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/UpdateFolderFieldValue" message="tns:ICaptureDocumentService_UpdateFolderFieldValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/UpdateFolderFieldValueResponse" message="tns:ICaptureDocumentService_UpdateFolderFieldValue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/UpdateFolderFieldValueCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_UpdateFolderFieldValue_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertTableFieldRow">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/InsertTableFieldRow" message="tns:ICaptureDocumentService_InsertTableFieldRow_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/InsertTableFieldRowResponse" message="tns:ICaptureDocumentService_InsertTableFieldRow_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/InsertTableFieldRowCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_InsertTableFieldRow_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTableFieldRow">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/DeleteTableFieldRow" message="tns:ICaptureDocumentService_DeleteTableFieldRow_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/DeleteTableFieldRowResponse" message="tns:ICaptureDocumentService_DeleteTableFieldRow_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/DeleteTableFieldRowCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_DeleteTableFieldRow_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InterpolateTableField">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/InterpolateTableField" message="tns:ICaptureDocumentService_InterpolateTableField_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/InterpolateTableFieldResponse" message="tns:ICaptureDocumentService_InterpolateTableField_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/InterpolateTableFieldCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_InterpolateTableField_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFolderFieldValues">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/UpdateFolderFieldValues" message="tns:ICaptureDocumentService_UpdateFolderFieldValues_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/UpdateFolderFieldValuesResponse" message="tns:ICaptureDocumentService_UpdateFolderFieldValues_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/UpdateFolderFieldValuesCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_UpdateFolderFieldValues_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePages">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/UpdatePages" message="tns:ICaptureDocumentService_UpdatePages_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/UpdatePagesResponse" message="tns:ICaptureDocumentService_UpdatePages_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TestFieldFormatter">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/TestFieldFormatter" message="tns:ICaptureDocumentService_TestFieldFormatter_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/TestFieldFormatterResponse" message="tns:ICaptureDocumentService_TestFieldFormatter_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/TestFieldFormatterCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_TestFieldFormatter_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TestFieldFormatter2">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/TestFieldFormatter2" message="tns:ICaptureDocumentService_TestFieldFormatter2_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/TestFieldFormatter2Response" message="tns:ICaptureDocumentService_TestFieldFormatter2_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/TestFieldFormatter2CustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_TestFieldFormatter2_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateDocumentForReview">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/ValidateDocumentForReview" message="tns:ICaptureDocumentService_ValidateDocumentForReview_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/ValidateDocumentForReviewResponse" message="tns:ICaptureDocumentService_ValidateDocumentForReview_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/ValidateDocumentForReviewCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_ValidateDocumentForReview_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateFolderForReview">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/ValidateFolderForReview" message="tns:ICaptureDocumentService_ValidateFolderForReview_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/ValidateFolderForReviewResponse" message="tns:ICaptureDocumentService_ValidateFolderForReview_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/ValidateFolderForReviewCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_ValidateFolderForReview_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateDocumentWithType">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/ValidateDocumentWithType" message="tns:ICaptureDocumentService_ValidateDocumentWithType_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/ValidateDocumentWithTypeResponse" message="tns:ICaptureDocumentService_ValidateDocumentWithType_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/ValidateDocumentWithTypeCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_ValidateDocumentWithType_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateFolderWithType">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/ValidateFolderWithType" message="tns:ICaptureDocumentService_ValidateFolderWithType_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/ValidateFolderWithTypeResponse" message="tns:ICaptureDocumentService_ValidateFolderWithType_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/ValidateFolderWithTypeCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_ValidateFolderWithType_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateDocumentForReviewWithType">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/ValidateDocumentForReviewWithType" message="tns:ICaptureDocumentService_ValidateDocumentForReviewWithType_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/ValidateDocumentForReviewWithTypeResponse" message="tns:ICaptureDocumentService_ValidateDocumentForReviewWithType_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/ValidateDocumentForReviewWithTypeCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_ValidateDocumentForReviewWithType_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateFolderForReviewWithType">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/ValidateFolderForReviewWithType" message="tns:ICaptureDocumentService_ValidateFolderForReviewWithType_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/ValidateFolderForReviewWithTypeResponse" message="tns:ICaptureDocumentService_ValidateFolderForReviewWithType_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/ValidateFolderForReviewWithTypeCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_ValidateFolderForReviewWithType_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateDocumentField">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/ValidateDocumentField" message="tns:ICaptureDocumentService_ValidateDocumentField_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/ValidateDocumentFieldResponse" message="tns:ICaptureDocumentService_ValidateDocumentField_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/ValidateDocumentFieldCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_ValidateDocumentField_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateDocumentFields">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/ValidateDocumentFields" message="tns:ICaptureDocumentService_ValidateDocumentFields_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/ValidateDocumentFieldsResponse" message="tns:ICaptureDocumentService_ValidateDocumentFields_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/ValidateDocumentFieldsCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_ValidateDocumentFields_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateFolderField">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/ValidateFolderField" message="tns:ICaptureDocumentService_ValidateFolderField_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/ValidateFolderFieldResponse" message="tns:ICaptureDocumentService_ValidateFolderField_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/ValidateFolderFieldCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_ValidateFolderField_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateFolderFields">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/ValidateFolderFields" message="tns:ICaptureDocumentService_ValidateFolderFields_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/ValidateFolderFieldsResponse" message="tns:ICaptureDocumentService_ValidateFolderFields_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/ValidateFolderFieldsCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_ValidateFolderFields_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FormatField">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/FormatField" message="tns:ICaptureDocumentService_FormatField_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/FormatFieldResponse" message="tns:ICaptureDocumentService_FormatField_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/FormatFieldCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_FormatField_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FormatField2">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/FormatField2" message="tns:ICaptureDocumentService_FormatField2_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/FormatField2Response" message="tns:ICaptureDocumentService_FormatField2_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/FormatField2CustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_FormatField2_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentAsFile">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetDocumentAsFile" message="tns:ICaptureDocumentService_GetDocumentAsFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetDocumentAsFileResponse" message="tns:ICaptureDocumentService_GetDocumentAsFile_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetDocumentAsFileCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_GetDocumentAsFile_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateOnlineLearningFolder">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/CreateOnlineLearningFolder" message="tns:ICaptureDocumentService_CreateOnlineLearningFolder_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/CreateOnlineLearningFolderResponse" message="tns:ICaptureDocumentService_CreateOnlineLearningFolder_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/CreateOnlineLearningFolderCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_CreateOnlineLearningFolder_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchFuzzyDatabase">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/SearchFuzzyDatabase" message="tns:ICaptureDocumentService_SearchFuzzyDatabase_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/SearchFuzzyDatabaseResponse" message="tns:ICaptureDocumentService_SearchFuzzyDatabase_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/SearchFuzzyDatabaseCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_SearchFuzzyDatabase_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentsInOrder">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetDocumentsInOrder" message="tns:ICaptureDocumentService_GetDocumentsInOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetDocumentsInOrderResponse" message="tns:ICaptureDocumentService_GetDocumentsInOrder_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetDocumentsInOrderCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_GetDocumentsInOrder_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentFieldAlternatives">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetDocumentFieldAlternatives" message="tns:ICaptureDocumentService_GetDocumentFieldAlternatives_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetDocumentFieldAlternativesResponse" message="tns:ICaptureDocumentService_GetDocumentFieldAlternatives_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetDocumentFieldAlternativesCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_GetDocumentFieldAlternatives_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentFieldAlternatives2">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetDocumentFieldAlternatives2" message="tns:ICaptureDocumentService_GetDocumentFieldAlternatives2_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetDocumentFieldAlternatives2Response" message="tns:ICaptureDocumentService_GetDocumentFieldAlternatives2_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetDocumentFieldAlternatives2CustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_GetDocumentFieldAlternatives2_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentFieldsAlternatives">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetDocumentFieldsAlternatives" message="tns:ICaptureDocumentService_GetDocumentFieldsAlternatives_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetDocumentFieldsAlternativesResponse" message="tns:ICaptureDocumentService_GetDocumentFieldsAlternatives_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetDocumentFieldsAlternativesCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_GetDocumentFieldsAlternatives_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentFieldsAlternatives2">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetDocumentFieldsAlternatives2" message="tns:ICaptureDocumentService_GetDocumentFieldsAlternatives2_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetDocumentFieldsAlternatives2Response" message="tns:ICaptureDocumentService_GetDocumentFieldsAlternatives2_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetDocumentFieldsAlternatives2CustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_GetDocumentFieldsAlternatives2_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveTextExtension">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/SaveTextExtension" message="tns:ICaptureDocumentService_SaveTextExtension_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/SaveTextExtensionResponse" message="tns:ICaptureDocumentService_SaveTextExtension_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/SaveTextExtensionCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_SaveTextExtension_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTextExtension">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetTextExtension" message="tns:ICaptureDocumentService_GetTextExtension_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetTextExtensionResponse" message="tns:ICaptureDocumentService_GetTextExtension_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetTextExtensionCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_GetTextExtension_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreatePageUsingStream">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/CreatePageUsingStream" message="tns:ICaptureDocumentService_CreatePageUsingStream_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/CreatePageUsingStreamResponse" message="tns:ICaptureDocumentService_CreatePageUsingStream_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/CreatePageUsingStreamCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_CreatePageUsingStream_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentTableFieldValue">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetDocumentTableFieldValue" message="tns:ICaptureDocumentService_GetDocumentTableFieldValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetDocumentTableFieldValueResponse" message="tns:ICaptureDocumentService_GetDocumentTableFieldValue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetDocumentTableFieldValueCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_GetDocumentTableFieldValue_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobVariableLockStatus">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetJobVariableLockStatus" message="tns:ICaptureDocumentService_GetJobVariableLockStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetJobVariableLockStatusResponse" message="tns:ICaptureDocumentService_GetJobVariableLockStatus_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetJobVariableLockStatusCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_GetJobVariableLockStatus_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ForceUnlockItem">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/ForceUnlockItem" message="tns:ICaptureDocumentService_ForceUnlockItem_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/ForceUnlockItemResponse" message="tns:ICaptureDocumentService_ForceUnlockItem_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/ForceUnlockItemCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_ForceUnlockItem_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentFile">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetDocumentFile" message="tns:ICaptureDocumentService_GetDocumentFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetDocumentFileResponse" message="tns:ICaptureDocumentService_GetDocumentFile_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetDocumentFileCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_GetDocumentFile_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentRenditionsFile">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetDocumentRenditionsFile" message="tns:ICaptureDocumentService_GetDocumentRenditionsFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetDocumentRenditionsFileResponse" message="tns:ICaptureDocumentService_GetDocumentRenditionsFile_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetDocumentRenditionsFileCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_GetDocumentRenditionsFile_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDocumentType">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/UpdateDocumentType" message="tns:ICaptureDocumentService_UpdateDocumentType_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/UpdateDocumentTypeResponse" message="tns:ICaptureDocumentService_UpdateDocumentType_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/UpdateDocumentTypeCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_UpdateDocumentType_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDocumentType2">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/UpdateDocumentType2" message="tns:ICaptureDocumentService_UpdateDocumentType2_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/UpdateDocumentType2Response" message="tns:ICaptureDocumentService_UpdateDocumentType2_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/UpdateDocumentType2CustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_UpdateDocumentType2_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MergeDocuments">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/MergeDocuments" message="tns:ICaptureDocumentService_MergeDocuments_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/MergeDocumentsResponse" message="tns:ICaptureDocumentService_MergeDocuments_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/MergeDocumentsCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_MergeDocuments_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RejectDocuments">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/RejectDocuments" message="tns:ICaptureDocumentService_RejectDocuments_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/RejectDocumentsResponse" message="tns:ICaptureDocumentService_RejectDocuments_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/RejectDocumentsCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_RejectDocuments_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UnrejectDocuments">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/UnrejectDocuments" message="tns:ICaptureDocumentService_UnrejectDocuments_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/UnrejectDocumentsResponse" message="tns:ICaptureDocumentService_UnrejectDocuments_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/UnrejectDocumentsCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_UnrejectDocuments_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDocumentTypeWithConfidence">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/UpdateDocumentTypeWithConfidence" message="tns:ICaptureDocumentService_UpdateDocumentTypeWithConfidence_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/UpdateDocumentTypeWithConfidenceResponse" message="tns:ICaptureDocumentService_UpdateDocumentTypeWithConfidence_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/UpdateDocumentTypeWithConfidenceCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_UpdateDocumentTypeWithConfidence_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDocumentTypeWithConfidence2">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/UpdateDocumentTypeWithConfidence2" message="tns:ICaptureDocumentService_UpdateDocumentTypeWithConfidence2_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/UpdateDocumentTypeWithConfidence2Response" message="tns:ICaptureDocumentService_UpdateDocumentTypeWithConfidence2_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/UpdateDocumentTypeWithConfidence2CustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_UpdateDocumentTypeWithConfidence2_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDocumentTypeWithConfidence3">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/UpdateDocumentTypeWithConfidence3" message="tns:ICaptureDocumentService_UpdateDocumentTypeWithConfidence3_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/UpdateDocumentTypeWithConfidence3Response" message="tns:ICaptureDocumentService_UpdateDocumentTypeWithConfidence3_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/UpdateDocumentTypeWithConfidence3CustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_UpdateDocumentTypeWithConfidence3_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CopyDocumentFieldValues">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/CopyDocumentFieldValues" message="tns:ICaptureDocumentService_CopyDocumentFieldValues_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/CopyDocumentFieldValuesResponse" message="tns:ICaptureDocumentService_CopyDocumentFieldValues_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/CopyDocumentFieldValuesCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_CopyDocumentFieldValues_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SplitDocumentAndClassify">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/SplitDocumentAndClassify" message="tns:ICaptureDocumentService_SplitDocumentAndClassify_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/SplitDocumentAndClassifyResponse" message="tns:ICaptureDocumentService_SplitDocumentAndClassify_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/SplitDocumentAndClassifyCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_SplitDocumentAndClassify_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDocumentsProcessingCompleted">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/UpdateDocumentsProcessingCompleted" message="tns:ICaptureDocumentService_UpdateDocumentsProcessingCompleted_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/UpdateDocumentsProcessingCompletedResponse" message="tns:ICaptureDocumentService_UpdateDocumentsProcessingCompleted_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/UpdateDocumentsProcessingCompletedCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_UpdateDocumentsProcessingCompleted_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RejectDocument">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/RejectDocument" message="tns:ICaptureDocumentService_RejectDocument_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/RejectDocumentResponse" message="tns:ICaptureDocumentService_RejectDocument_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CopyDocument">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/CopyDocument" message="tns:ICaptureDocumentService_CopyDocument_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/CopyDocumentResponse" message="tns:ICaptureDocumentService_CopyDocument_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/CopyDocumentCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_CopyDocument_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RejectPages">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/RejectPages" message="tns:ICaptureDocumentService_RejectPages_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/RejectPagesResponse" message="tns:ICaptureDocumentService_RejectPages_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UnrejectPages">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/UnrejectPages" message="tns:ICaptureDocumentService_UnrejectPages_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/UnrejectPagesResponse" message="tns:ICaptureDocumentService_UnrejectPages_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRejectedPages">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetRejectedPages" message="tns:ICaptureDocumentService_GetRejectedPages_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetRejectedPagesResponse" message="tns:ICaptureDocumentService_GetRejectedPages_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SavePageImage">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/SavePageImage" message="tns:ICaptureDocumentService_SavePageImage_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/SavePageImageResponse" message="tns:ICaptureDocumentService_SavePageImage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateAllDocumentFields">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/ValidateAllDocumentFields" message="tns:ICaptureDocumentService_ValidateAllDocumentFields_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/ValidateAllDocumentFieldsResponse" message="tns:ICaptureDocumentService_ValidateAllDocumentFields_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/ValidateAllDocumentFieldsCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_ValidateAllDocumentFields_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SavePageRendition">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/SavePageRendition" message="tns:ICaptureDocumentService_SavePageRendition_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/SavePageRenditionResponse" message="tns:ICaptureDocumentService_SavePageRendition_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPageRendition">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetPageRendition" message="tns:ICaptureDocumentService_GetPageRendition_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetPageRenditionResponse" message="tns:ICaptureDocumentService_GetPageRendition_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetPageSourceImageFromRendition">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/SetPageSourceImageFromRendition" message="tns:ICaptureDocumentService_SetPageSourceImageFromRendition_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/SetPageSourceImageFromRenditionResponse" message="tns:ICaptureDocumentService_SetPageSourceImageFromRendition_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePageRendition">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/DeletePageRendition" message="tns:ICaptureDocumentService_DeletePageRendition_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/DeletePageRenditionResponse" message="tns:ICaptureDocumentService_DeletePageRendition_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPageMaskForField">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/AddPageMaskForField" message="tns:ICaptureDocumentService_AddPageMaskForField_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/AddPageMaskForFieldResponse" message="tns:ICaptureDocumentService_AddPageMaskForField_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPageMaskForRegion">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/AddPageMaskForRegion" message="tns:ICaptureDocumentService_AddPageMaskForRegion_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/AddPageMaskForRegionResponse" message="tns:ICaptureDocumentService_AddPageMaskForRegion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemovePageMasks">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/RemovePageMasks" message="tns:ICaptureDocumentService_RemovePageMasks_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/RemovePageMasksResponse" message="tns:ICaptureDocumentService_RemovePageMasks_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveAllPageMasks">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/RemoveAllPageMasks" message="tns:ICaptureDocumentService_RemoveAllPageMasks_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/RemoveAllPageMasksResponse" message="tns:ICaptureDocumentService_RemoveAllPageMasks_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsPageRenditionDefined">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/IsPageRenditionDefined" message="tns:ICaptureDocumentService_IsPageRenditionDefined_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/IsPageRenditionDefinedResponse" message="tns:ICaptureDocumentService_IsPageRenditionDefined_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentTypeImage">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetDocumentTypeImage" message="tns:ICaptureDocumentService_GetDocumentTypeImage_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetDocumentTypeImageResponse" message="tns:ICaptureDocumentService_GetDocumentTypeImage_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetDocumentTypeImageCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_GetDocumentTypeImage_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentFieldsProperties">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetDocumentFieldsProperties" message="tns:ICaptureDocumentService_GetDocumentFieldsProperties_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetDocumentFieldsPropertiesResponse" message="tns:ICaptureDocumentService_GetDocumentFieldsProperties_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetDocumentFieldsPropertiesCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_GetDocumentFieldsProperties_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPageRenditionImageSummary">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetPageRenditionImageSummary" message="tns:ICaptureDocumentService_GetPageRenditionImageSummary_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetPageRenditionImageSummaryResponse" message="tns:ICaptureDocumentService_GetPageRenditionImageSummary_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPageSummary">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetPageSummary" message="tns:ICaptureDocumentService_GetPageSummary_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetPageSummaryResponse" message="tns:ICaptureDocumentService_GetPageSummary_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CopyDocumentWithPages">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/CopyDocumentWithPages" message="tns:ICaptureDocumentService_CopyDocumentWithPages_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/CopyDocumentWithPagesResponse" message="tns:ICaptureDocumentService_CopyDocumentWithPages_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/CopyDocumentWithPagesCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_CopyDocumentWithPages_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentFieldPropertyValues">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetDocumentFieldPropertyValues" message="tns:ICaptureDocumentService_GetDocumentFieldPropertyValues_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetDocumentFieldPropertyValuesResponse" message="tns:ICaptureDocumentService_GetDocumentFieldPropertyValues_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetDocumentFieldPropertyValuesCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_GetDocumentFieldPropertyValues_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDocumentFieldPropertyValues">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/UpdateDocumentFieldPropertyValues" message="tns:ICaptureDocumentService_UpdateDocumentFieldPropertyValues_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/UpdateDocumentFieldPropertyValuesResponse" message="tns:ICaptureDocumentService_UpdateDocumentFieldPropertyValues_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/UpdateDocumentFieldPropertyValuesCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_UpdateDocumentFieldPropertyValues_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAnnotations">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetAnnotations" message="tns:ICaptureDocumentService_GetAnnotations_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetAnnotationsResponse" message="tns:ICaptureDocumentService_GetAnnotations_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteExtension">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/DeleteExtension" message="tns:ICaptureDocumentService_DeleteExtension_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/DeleteExtensionResponse" message="tns:ICaptureDocumentService_DeleteExtension_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/DeleteExtensionCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_DeleteExtension_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveBinaryExtension">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/SaveBinaryExtension" message="tns:ICaptureDocumentService_SaveBinaryExtension_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/SaveBinaryExtensionResponse" message="tns:ICaptureDocumentService_SaveBinaryExtension_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/SaveBinaryExtensionCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_SaveBinaryExtension_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SavePageBinaryExtension">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/SavePageBinaryExtension" message="tns:ICaptureDocumentService_SavePageBinaryExtension_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/SavePageBinaryExtensionResponse" message="tns:ICaptureDocumentService_SavePageBinaryExtension_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/SavePageBinaryExtensionCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_SavePageBinaryExtension_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPageBinaryExtension">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetPageBinaryExtension" message="tns:ICaptureDocumentService_GetPageBinaryExtension_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetPageBinaryExtensionResponse" message="tns:ICaptureDocumentService_GetPageBinaryExtension_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetPageBinaryExtensionCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_GetPageBinaryExtension_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SavePageTextExtension">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/SavePageTextExtension" message="tns:ICaptureDocumentService_SavePageTextExtension_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/SavePageTextExtensionResponse" message="tns:ICaptureDocumentService_SavePageTextExtension_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/SavePageTextExtensionCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_SavePageTextExtension_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPageTextExtension">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetPageTextExtension" message="tns:ICaptureDocumentService_GetPageTextExtension_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetPageTextExtensionResponse" message="tns:ICaptureDocumentService_GetPageTextExtension_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetPageTextExtensionCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_GetPageTextExtension_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPagePropertyValues">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetPagePropertyValues" message="tns:ICaptureDocumentService_GetPagePropertyValues_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetPagePropertyValuesResponse" message="tns:ICaptureDocumentService_GetPagePropertyValues_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetPagePropertyValuesCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_GetPagePropertyValues_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePageExtension">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/DeletePageExtension" message="tns:ICaptureDocumentService_DeletePageExtension_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/DeletePageExtensionResponse" message="tns:ICaptureDocumentService_DeletePageExtension_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/DeletePageExtensionCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_DeletePageExtension_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBinaryExtension">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetBinaryExtension" message="tns:ICaptureDocumentService_GetBinaryExtension_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetBinaryExtensionResponse" message="tns:ICaptureDocumentService_GetBinaryExtension_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetBinaryExtensionCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_GetBinaryExtension_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveFolderBinaryExtension">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/SaveFolderBinaryExtension" message="tns:ICaptureDocumentService_SaveFolderBinaryExtension_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/SaveFolderBinaryExtensionResponse" message="tns:ICaptureDocumentService_SaveFolderBinaryExtension_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/SaveFolderBinaryExtensionCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_SaveFolderBinaryExtension_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFolderBinaryExtension">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetFolderBinaryExtension" message="tns:ICaptureDocumentService_GetFolderBinaryExtension_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetFolderBinaryExtensionResponse" message="tns:ICaptureDocumentService_GetFolderBinaryExtension_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetFolderBinaryExtensionCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_GetFolderBinaryExtension_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveFolderTextExtension">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/SaveFolderTextExtension" message="tns:ICaptureDocumentService_SaveFolderTextExtension_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/SaveFolderTextExtensionResponse" message="tns:ICaptureDocumentService_SaveFolderTextExtension_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/SaveFolderTextExtensionCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_SaveFolderTextExtension_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFolderTextExtension">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetFolderTextExtension" message="tns:ICaptureDocumentService_GetFolderTextExtension_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetFolderTextExtensionResponse" message="tns:ICaptureDocumentService_GetFolderTextExtension_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetFolderTextExtensionCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_GetFolderTextExtension_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFolderExtension">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/DeleteFolderExtension" message="tns:ICaptureDocumentService_DeleteFolderExtension_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/DeleteFolderExtensionResponse" message="tns:ICaptureDocumentService_DeleteFolderExtension_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/DeleteFolderExtensionCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_DeleteFolderExtension_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSourceFile">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/UpdateSourceFile" message="tns:ICaptureDocumentService_UpdateSourceFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/UpdateSourceFileResponse" message="tns:ICaptureDocumentService_UpdateSourceFile_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/UpdateSourceFileCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_UpdateSourceFile_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSourceFile">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/DeleteSourceFile" message="tns:ICaptureDocumentService_DeleteSourceFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/DeleteSourceFileResponse" message="tns:ICaptureDocumentService_DeleteSourceFile_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/DeleteSourceFileCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_DeleteSourceFile_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDocumentVariant">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/UpdateDocumentVariant" message="tns:ICaptureDocumentService_UpdateDocumentVariant_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/UpdateDocumentVariantResponse" message="tns:ICaptureDocumentService_UpdateDocumentVariant_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/UpdateDocumentVariantCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_UpdateDocumentVariant_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RunFolderFieldsValidation">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/RunFolderFieldsValidation" message="tns:ICaptureDocumentService_RunFolderFieldsValidation_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/RunFolderFieldsValidationResponse" message="tns:ICaptureDocumentService_RunFolderFieldsValidation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/RunFolderFieldsValidationCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:ICaptureDocumentService_RunFolderFieldsValidation_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:service name="CaptureDocumentService">
+    <wsdl:port name="BasicHttpBinding_ICaptureDocumentService" binding="i0:BasicHttpBinding_ICaptureDocumentService">
+      <soap:address location="http://localhost/TotalAgility/Services/SDK/CaptureDocumentService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

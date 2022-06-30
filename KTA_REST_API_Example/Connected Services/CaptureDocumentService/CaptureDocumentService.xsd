@@ -1,0 +1,3796 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://www.kofax.com/agility/services/sdk" elementFormDefault="qualified" targetNamespace="http://www.kofax.com/agility/services/sdk" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/TotalAgility/Services/SDK/CaptureDocumentService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Drawing" />
+  <xs:import schemaLocation="http://localhost/TotalAgility/Services/SDK/CaptureDocumentService.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://localhost/TotalAgility/Services/SDK/CaptureDocumentService.svc?xsd=xsd6" namespace="http://schemas.microsoft.com/Message" />
+  <xs:import schemaLocation="http://localhost/TotalAgility/Services/SDK/CaptureDocumentService.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/Agility.Sdk.Model" />
+  <xs:import schemaLocation="http://localhost/TotalAgility/Services/SDK/CaptureDocumentService.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/System.Windows" />
+  <xs:complexType name="FieldAlternativeCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FieldAlternative" nillable="true" type="tns:FieldAlternative" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FieldAlternativeCollection" nillable="true" type="tns:FieldAlternativeCollection" />
+  <xs:complexType name="FieldAlternative">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PageIndex" type="xs:int" />
+      <xs:element minOccurs="0" name="Confidence" type="xs:double" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FieldAlternative" nillable="true" type="tns:FieldAlternative" />
+  <xs:complexType name="ClassificationResultCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ClassificationResult" nillable="true" type="tns:ClassificationResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ClassificationResultCollection" nillable="true" type="tns:ClassificationResultCollection" />
+  <xs:complexType name="ClassificationResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Confidence" type="xs:double" />
+      <xs:element minOccurs="0" name="DocumentTypeId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ResultType" type="xs:int" />
+      <xs:element minOccurs="0" name="DocumentTypeName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ClassificationResult" nillable="true" type="tns:ClassificationResult" />
+  <xs:complexType name="CaptureAnnotationCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CaptureAnnotation" nillable="true" type="tns:CaptureAnnotation" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CaptureAnnotationCollection" nillable="true" type="tns:CaptureAnnotationCollection" />
+  <xs:complexType name="CaptureAnnotation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Author" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Timestamp" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Left" type="xs:int" />
+      <xs:element minOccurs="0" name="Top" type="xs:int" />
+      <xs:element minOccurs="0" name="PageIndex" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CaptureAnnotation" nillable="true" type="tns:CaptureAnnotation" />
+  <xs:complexType name="BarcodeCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Barcode" nillable="true" type="tns:Barcode" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BarcodeCollection" nillable="true" type="tns:BarcodeCollection" />
+  <xs:complexType name="Barcode">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BarcodeOrientation" type="xs:short" />
+      <xs:element minOccurs="0" name="BarcodeType" type="xs:short" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Left" type="xs:int" />
+      <xs:element minOccurs="0" name="Top" type="xs:int" />
+      <xs:element minOccurs="0" name="Height" type="xs:int" />
+      <xs:element minOccurs="0" name="Width" type="xs:int" />
+      <xs:element minOccurs="0" name="PageIndex" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Barcode" nillable="true" type="tns:Barcode" />
+  <xs:complexType name="TextLineCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TextLine" nillable="true" type="tns:TextLine" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TextLineCollection" nillable="true" type="tns:TextLineCollection" />
+  <xs:complexType name="TextLine">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="LineIndex" type="xs:int" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Height" type="xs:int" />
+      <xs:element minOccurs="0" name="Left" type="xs:int" />
+      <xs:element minOccurs="0" name="Top" type="xs:int" />
+      <xs:element minOccurs="0" name="Width" type="xs:int" />
+      <xs:element minOccurs="0" name="StringTag" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageIndex" type="xs:int" />
+      <xs:element minOccurs="0" name="Words" nillable="true" type="tns:WordCollection" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TextLine" nillable="true" type="tns:TextLine" />
+  <xs:complexType name="WordCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Word" nillable="true" type="tns:Word" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WordCollection" nillable="true" type="tns:WordCollection" />
+  <xs:complexType name="Word">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="LineIndex" type="xs:int" />
+      <xs:element minOccurs="0" name="RightToLeft" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Height" type="xs:int" />
+      <xs:element minOccurs="0" name="Left" type="xs:int" />
+      <xs:element minOccurs="0" name="Top" type="xs:int" />
+      <xs:element minOccurs="0" name="Width" type="xs:int" />
+      <xs:element minOccurs="0" name="IndexInTextLine" type="xs:int" />
+      <xs:element minOccurs="0" name="PageIndex" type="xs:int" />
+      <xs:element minOccurs="0" name="Confidence" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Word" nillable="true" type="tns:Word" />
+  <xs:complexType name="PageRectangleCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PageRectangle" nillable="true" type="tns:PageRectangle" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PageRectangleCollection" nillable="true" type="tns:PageRectangleCollection" />
+  <xs:complexType name="PageRectangle">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PageIndex" type="xs:int" />
+      <xs:element minOccurs="0" name="ErrorDescription" type="xs:int" />
+      <xs:element minOccurs="0" name="Left" type="xs:int" />
+      <xs:element minOccurs="0" name="Height" type="xs:int" />
+      <xs:element minOccurs="0" name="Width" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PageRectangle" nillable="true" type="tns:PageRectangle" />
+  <xs:complexType name="RuntimeTableColumnCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RuntimeTableColumn" nillable="true" type="tns:RuntimeTableColumn" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RuntimeTableColumnCollection" nillable="true" type="tns:RuntimeTableColumnCollection" />
+  <xs:complexType name="RuntimeTableColumn">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ColumnType" type="xs:int" />
+      <xs:element minOccurs="0" name="Sum" type="xs:int" />
+      <xs:element minOccurs="0" name="DoubleSum" type="xs:double" />
+      <xs:element minOccurs="0" name="StartPage" type="xs:int" />
+      <xs:element minOccurs="0" name="EndPage" type="xs:int" />
+      <xs:element minOccurs="0" name="PageRectangles" nillable="true" type="tns:PageRectangleCollection" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RuntimeTableColumn" nillable="true" type="tns:RuntimeTableColumn" />
+  <xs:complexType name="RuntimeTableRowCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RuntimeTableRow" nillable="true" type="tns:RuntimeTableRow" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RuntimeTableRowCollection" nillable="true" type="tns:RuntimeTableRowCollection" />
+  <xs:complexType name="RuntimeTableRow">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cells" nillable="true" type="tns:RuntimeTableCellCollection" />
+      <xs:element minOccurs="0" name="ErrorDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PageIndex" type="xs:int" />
+      <xs:element minOccurs="0" name="Valid" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Tag" type="xs:int" />
+      <xs:element minOccurs="0" name="PageRectangles" nillable="true" type="tns:PageRectangleCollection" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RuntimeTableRow" nillable="true" type="tns:RuntimeTableRow" />
+  <xs:complexType name="RuntimeTableCellCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RuntimeTableCell" nillable="true" type="tns:RuntimeTableCell" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RuntimeTableCellCollection" nillable="true" type="tns:RuntimeTableCellCollection" />
+  <xs:complexType name="RuntimeTableCell">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Column" type="xs:int" />
+      <xs:element minOccurs="0" name="Row" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RuntimeTableCell" nillable="true" type="tns:RuntimeTableCell" />
+  <xs:complexType name="RuntimeFieldDataCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RuntimeFieldData" nillable="true" type="tns:RuntimeFieldData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RuntimeFieldDataCollection" nillable="true" type="tns:RuntimeFieldDataCollection" />
+  <xs:complexType name="RuntimeFieldData">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RuntimeField">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Confidence" type="xs:double" />
+          <xs:element minOccurs="0" name="Inherited" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsFolder" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsReadOnly" type="xs:boolean" />
+          <xs:element minOccurs="0" name="NumKeyStrokes" type="xs:int" />
+          <xs:element minOccurs="0" name="Table" nillable="true" type="tns:RuntimeTableField" />
+          <xs:element minOccurs="0" name="FieldType" type="xs:short" />
+          <xs:element minOccurs="0" name="ValidValue" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DateValue" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DoubleValue" nillable="true" type="xs:double" />
+          <xs:element minOccurs="0" name="ErrorDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ExtractionConfident" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ForcedValid" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ForcedValidDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PageIndex" type="xs:int" />
+          <xs:element minOccurs="0" name="Valid" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Verified" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RuntimeFieldData" nillable="true" type="tns:RuntimeFieldData" />
+  <xs:complexType name="RuntimeField">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TableRow" type="xs:int" />
+      <xs:element minOccurs="0" name="TableColumn" type="xs:int" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:anyType" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RuntimeField" nillable="true" type="tns:RuntimeField" />
+  <xs:complexType name="RuntimeTableField">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Rows" nillable="true" type="tns:RuntimeTableRowCollection" />
+      <xs:element minOccurs="0" name="ChangedCells" nillable="true" type="tns:RuntimeTableCellCollection" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RuntimeTableField" nillable="true" type="tns:RuntimeTableField" />
+  <xs:complexType name="PageCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Page" nillable="true" type="tns:Page" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PageCollection" nillable="true" type="tns:PageCollection" />
+  <xs:complexType name="Page">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Annotations" nillable="true" type="tns:CaptureAnnotationCollection" />
+      <xs:element minOccurs="0" name="Barcodes" nillable="true" type="tns:BarcodeCollection" />
+      <xs:element minOccurs="0" name="FileName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Front" type="xs:boolean" />
+      <xs:element minOccurs="0" name="HorizontalResolution" type="xs:float" />
+      <xs:element minOccurs="0" name="ImageId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ImprintedText" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MimeType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Rejected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="RejectionNote" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RotationType" type="xs:short" />
+      <xs:element minOccurs="0" name="SheetId" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/System.Drawing" minOccurs="0" name="Size" type="q1:Size" />
+      <xs:element minOccurs="0" name="VerticalResolution" type="xs:float" />
+      <xs:element minOccurs="0" name="VirtualReScanProcessed" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Words" nillable="true" type="tns:WordCollection" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Page" nillable="true" type="tns:Page" />
+  <xs:complexType name="StringCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StringCollection" nillable="true" type="tns:StringCollection" />
+  <xs:element name="RunDocumentFieldsValidation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="documentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="runtimeFields" nillable="true" type="tns:RuntimeFieldIdentityCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="RuntimeFieldIdentityCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RuntimeFieldIdentity" nillable="true" type="tns:RuntimeFieldIdentity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RuntimeFieldIdentityCollection" nillable="true" type="tns:RuntimeFieldIdentityCollection" />
+  <xs:complexType name="RuntimeFieldIdentity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Table_x0020_Row" type="xs:int" />
+      <xs:element minOccurs="0" name="Table_x0020_Column" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RuntimeFieldIdentity" nillable="true" type="tns:RuntimeFieldIdentity" />
+  <xs:element name="RunDocumentFieldsValidationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RunDocumentFieldsValidationResult" nillable="true" type="tns:FieldValidationResult2Collection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="FieldValidationResult2Collection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FieldValidationResult2" nillable="true" type="tns:FieldValidationResult2" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FieldValidationResult2Collection" nillable="true" type="tns:FieldValidationResult2Collection" />
+  <xs:complexType name="FieldValidationResult2">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FieldId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FieldName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FormattedValue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsValid" type="xs:boolean" />
+      <xs:element minOccurs="0" name="TableCellValidationResults" nillable="true" type="tns:TableCellValidationResultCollection" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FieldValidationResult2" nillable="true" type="tns:FieldValidationResult2" />
+  <xs:complexType name="TableCellValidationResultCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TableCellValidationResult" nillable="true" type="tns:TableCellValidationResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TableCellValidationResultCollection" nillable="true" type="tns:TableCellValidationResultCollection" />
+  <xs:complexType name="TableCellValidationResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Row" type="xs:int" />
+      <xs:element minOccurs="0" name="ColumnId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ColumnName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FormattedValue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsValid" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TableCellValidationResult" nillable="true" type="tns:TableCellValidationResult" />
+  <xs:element name="GetValidationExecutionContext">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetValidationExecutionContextResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetValidationExecutionContextResult" nillable="true" type="tns:ValidationExecutionContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ValidationExecutionContext">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Component" type="xs:short" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ValidationExecutionContext" nillable="true" type="tns:ValidationExecutionContext" />
+  <xs:element name="CreateDocument3">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reportingData" nillable="true" type="tns:ReportingData" />
+        <xs:element minOccurs="0" name="parentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="runtimeFolderFields" nillable="true" type="tns:RuntimeFieldCollection" />
+        <xs:element minOccurs="0" name="folderTypeId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="documentDataInput" nillable="true" type="tns:DocumentDataInput2" />
+        <xs:element minOccurs="0" name="insertIndex" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ReportingData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Station" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MarkCompleted" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsSystemChange" type="xs:boolean">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReportingData" nillable="true" type="tns:ReportingData" />
+  <xs:complexType name="RuntimeFieldCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RuntimeField" nillable="true" type="tns:RuntimeField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RuntimeFieldCollection" nillable="true" type="tns:RuntimeFieldCollection" />
+  <xs:complexType name="DocumentDataInput2">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:DocumentDataInput">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FieldProperties" nillable="true" type="tns:FieldPropertiesCollection" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DocumentDataInput2" nillable="true" type="tns:DocumentDataInput2" />
+  <xs:complexType name="DocumentDataInput">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Data" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="MimeType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RuntimeFields" nillable="true" type="tns:RuntimeFieldCollection" />
+      <xs:element minOccurs="0" name="PageDataList" nillable="true" type="tns:PageDataCollection" />
+      <xs:element minOccurs="0" name="DocumentTypeIdentity" nillable="true" type="tns:DocumentTypeIdentity" />
+      <xs:element minOccurs="0" name="PageImages" nillable="true" type="tns:PageImageDataCollection" />
+      <xs:element minOccurs="0" name="VariantName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FilePath" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DocumentDataInput" nillable="true" type="tns:DocumentDataInput" />
+  <xs:complexType name="PageDataCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PageData" nillable="true" type="tns:PageData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PageDataCollection" nillable="true" type="tns:PageDataCollection" />
+  <xs:complexType name="PageData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Data" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="MimeType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RuntimeFields" nillable="true" type="tns:RuntimeFieldCollection" />
+      <xs:element minOccurs="0" name="Base64Data" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PageData" nillable="true" type="tns:PageData" />
+  <xs:complexType name="DocumentTypeIdentity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Version" type="xs:double" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DocumentTypeIdentity" nillable="true" type="tns:DocumentTypeIdentity" />
+  <xs:complexType name="PageImageDataCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PageImageData" nillable="true" type="tns:PageImageData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PageImageDataCollection" nillable="true" type="tns:PageImageDataCollection" />
+  <xs:complexType name="PageImageData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ImageId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BatchId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Height" type="xs:int" />
+      <xs:element minOccurs="0" name="Width" type="xs:int" />
+      <xs:element minOccurs="0" name="HorizontalResolution" type="xs:float" />
+      <xs:element minOccurs="0" name="VerticalResolution" type="xs:float" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PageImageData" nillable="true" type="tns:PageImageData" />
+  <xs:complexType name="FieldPropertiesCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FieldProperties" nillable="true" type="tns:FieldProperties" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FieldPropertiesCollection" nillable="true" type="tns:FieldPropertiesCollection" />
+  <xs:complexType name="FieldProperties">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FieldIdentity" nillable="true" type="tns:RuntimeFieldIdentity" />
+      <xs:element minOccurs="0" name="Properties" nillable="true" type="tns:FieldSystemPropertyCollection" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FieldProperties" nillable="true" type="tns:FieldProperties" />
+  <xs:complexType name="FieldSystemPropertyCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FieldSystemProperty" nillable="true" type="tns:FieldSystemProperty" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FieldSystemPropertyCollection" nillable="true" type="tns:FieldSystemPropertyCollection" />
+  <xs:complexType name="FieldSystemProperty">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FieldIdentity" nillable="true" type="tns:FieldSystemPropertyIdentity" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:anyType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FieldSystemProperty" nillable="true" type="tns:FieldSystemProperty" />
+  <xs:complexType name="FieldSystemPropertyIdentity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FieldSystemPropertyIdentity" nillable="true" type="tns:FieldSystemPropertyIdentity" />
+  <xs:element name="CreateDocument3Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreateDocument3Result" nillable="true" type="tns:DocumentIdentity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="DocumentIdentity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DocumentId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FolderId" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DocumentIdentity" nillable="true" type="tns:DocumentIdentity" />
+  <xs:element name="RotatePages">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reportingData" nillable="true" type="tns:ReportingData" />
+        <xs:element minOccurs="0" name="documentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageIndexes" nillable="true" type="tns:PageIndexCollection" />
+        <xs:element minOccurs="0" name="rotationAngle" type="xs:short" />
+        <xs:element minOccurs="0" name="preserveTextData" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="PageIndexCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PageIndex" nillable="true" type="tns:PageIndex" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PageIndexCollection" nillable="true" type="tns:PageIndexCollection" />
+  <xs:complexType name="PageIndex">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Index" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PageIndex" nillable="true" type="tns:PageIndex" />
+  <xs:element name="RotatePagesResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RotatePagesRendition">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reportingData" nillable="true" type="tns:ReportingData" />
+        <xs:element minOccurs="0" name="documentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageIndexes" nillable="true" type="tns:PageIndexCollection" />
+        <xs:element minOccurs="0" name="rotationAngle" type="xs:short" />
+        <xs:element minOccurs="0" name="renditionNumber" type="xs:short" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RotatePagesRenditionResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateDocumentData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="documentTypeIdentity" nillable="true" type="tns:DocumentTypeIdentity" />
+        <xs:element minOccurs="0" name="documentXml" nillable="true" type="xs:string" />
+        <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="sourceFileBinaries" nillable="true" type="q2:ArrayOfbase64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateDocumentDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ValidateDocumentDataResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TestFieldValidator">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="value" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="validator" nillable="true" type="tns:Validator" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="Validator">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Identity" nillable="true" type="tns:ValidatorIdentity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Validator" nillable="true" type="tns:Validator" />
+  <xs:complexType name="ValidatorIdentity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ValidatorIdentity" nillable="true" type="tns:ValidatorIdentity" />
+  <xs:complexType name="BusinessRuleFieldValidator">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:FieldValidator">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BusinessRules" nillable="true" type="tns:BusinessRuleIdentity" />
+          <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BusinessRuleInputs" nillable="true" type="tns:BusinessRuleValidatorInputCollection" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BusinessRuleFieldValidator" nillable="true" type="tns:BusinessRuleFieldValidator" />
+  <xs:complexType name="FieldValidator">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Validator">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AllowEmptyField" type="xs:boolean" />
+          <xs:element minOccurs="0" name="FieldValidatorType" type="xs:short" />
+          <xs:element minOccurs="0" name="CanValidationRuleMakeUncertainExtractionResultsValid" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FieldValidator" nillable="true" type="tns:FieldValidator" />
+  <xs:complexType name="RegularExpressionValidator">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:FieldValidator">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Expressions" nillable="true" type="tns:FieldRegularExpressionCollection" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RegularExpressionValidator" nillable="true" type="tns:RegularExpressionValidator" />
+  <xs:complexType name="FieldRegularExpressionCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FieldRegularExpression" nillable="true" type="tns:FieldRegularExpression" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FieldRegularExpressionCollection" nillable="true" type="tns:FieldRegularExpressionCollection" />
+  <xs:complexType name="FieldRegularExpression">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Format" nillable="true" type="tns:RegularExpression2" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HighPerformance" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IgnoreCase" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IgnoreBlanks" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IgnoreCharacters" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FieldRegularExpression" nillable="true" type="tns:FieldRegularExpression" />
+  <xs:complexType name="RegularExpression2">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Identity" nillable="true" type="tns:RegularExpressionIdentity" />
+      <xs:element minOccurs="0" name="Expression" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RegularExpression2" nillable="true" type="tns:RegularExpression2" />
+  <xs:complexType name="RegularExpressionIdentity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RegularExpressionIdentity" nillable="true" type="tns:RegularExpressionIdentity" />
+  <xs:complexType name="DateValidator">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:FieldValidator">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FormatterIdentity" nillable="true" type="tns:FormatterIdentity" />
+          <xs:element minOccurs="0" name="CheckBeforeReferenceDate" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CheckAfterReferenceDate" type="xs:boolean" />
+          <xs:element minOccurs="0" name="NoOfDaysBeforeReferenceDate" type="xs:int" />
+          <xs:element minOccurs="0" name="NoOfDaysAfterReferenceDate" type="xs:int" />
+          <xs:element minOccurs="0" name="ReferenceDateType" type="xs:short" />
+          <xs:element minOccurs="0" name="ReferenceFixedDate" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DateValidator" nillable="true" type="tns:DateValidator" />
+  <xs:complexType name="FormatterIdentity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FormatterIdentity" nillable="true" type="tns:FormatterIdentity" />
+  <xs:complexType name="StandardValidator">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:FieldValidator">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CheckForMaximumLength" type="xs:boolean" />
+          <xs:element minOccurs="0" name="MaximumLength" type="xs:int" />
+          <xs:element minOccurs="0" name="CheckForMinimumLength" type="xs:boolean" />
+          <xs:element minOccurs="0" name="MinimumLength" type="xs:int" />
+          <xs:element minOccurs="0" name="RestrictAllowedCharacterSet" type="xs:boolean" />
+          <xs:element minOccurs="0" name="AllowedCharacterSet" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DefineRestrictedCharacterSet" type="xs:boolean" />
+          <xs:element minOccurs="0" name="RestrictedCharacterSet" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StandardValidator" nillable="true" type="tns:StandardValidator" />
+  <xs:complexType name="BusinessRuleDocumentValidator">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:DocumentValidator">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BusinessRules" nillable="true" type="tns:BusinessRuleIdentity" />
+          <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BusinessRuleInputs" nillable="true" type="tns:BusinessRuleValidatorInputCollection" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BusinessRuleDocumentValidator" nillable="true" type="tns:BusinessRuleDocumentValidator" />
+  <xs:complexType name="DocumentValidator">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Validator">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DocumentValidator" nillable="true" type="tns:DocumentValidator" />
+  <xs:complexType name="FolderValidator">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Validator">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FolderValidatorType" type="xs:short" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FolderValidator" nillable="true" type="tns:FolderValidator" />
+  <xs:complexType name="BusinessRuleFolderValidator">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:FolderValidator">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BusinessRules" nillable="true" type="tns:BusinessRuleIdentity" />
+          <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BusinessRuleInputs" nillable="true" type="tns:BusinessRuleValidatorInputCollection" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BusinessRuleFolderValidator" nillable="true" type="tns:BusinessRuleFolderValidator" />
+  <xs:complexType name="BusinessRuleIdentity">
+    <xs:sequence>
+      <xs:element name="Id" nillable="true" type="xs:string" />
+      <xs:element name="Name" nillable="true" type="xs:string" />
+      <xs:element name="Version" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BusinessRuleIdentity" nillable="true" type="tns:BusinessRuleIdentity" />
+  <xs:complexType name="BusinessRuleValidatorInputCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BusinessRuleValidatorInput" nillable="true" type="tns:BusinessRuleValidatorInput" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BusinessRuleValidatorInputCollection" nillable="true" type="tns:BusinessRuleValidatorInputCollection" />
+  <xs:complexType name="BusinessRuleValidatorInput">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BusinessRuleInputName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:anyType" />
+      <xs:element minOccurs="0" name="Type" type="xs:short" />
+      <xs:element minOccurs="0" name="IsInline" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BusinessRuleValidatorInput" nillable="true" type="tns:BusinessRuleValidatorInput" />
+  <xs:complexType name="CaptureField">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Identity" nillable="true" type="tns:FieldIdentity" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FieldType" type="xs:short" />
+      <xs:element minOccurs="0" name="Validators" nillable="true" type="tns:ValidatorIdentityCollection" />
+      <xs:element minOccurs="0" name="Formatter" nillable="true" type="tns:FormatterIdentity" />
+      <xs:element minOccurs="0" name="Verification" nillable="true" type="tns:VerificationSettings" />
+      <xs:element minOccurs="0" name="IsInherited" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DisplayName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsFormatterOverridden" type="xs:boolean" />
+      <xs:element minOccurs="0" name="RequireManualFieldConfirmation" type="xs:boolean" />
+      <xs:element minOccurs="0" name="AlwaysValid" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MonitorForAutomaticOnlineLearning" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Editable" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsOverridden" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsOptional" type="xs:boolean" />
+      <xs:element minOccurs="0" name="FormatterInputs" nillable="true" type="tns:BusinessRuleFormatterInputCollection" />
+      <xs:element minOccurs="0" name="FieldGroupName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FieldGroupId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExcludeFromAnalytics" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MaskValueInAnalytics" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MaskImageForHiddenField" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CaptureField" nillable="true" type="tns:CaptureField" />
+  <xs:complexType name="FieldIdentity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="row" type="xs:int" />
+      <xs:element minOccurs="0" name="col" type="xs:int" />
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FieldIdentity" nillable="true" type="tns:FieldIdentity" />
+  <xs:complexType name="ValidatorIdentityCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ValidatorIdentity" nillable="true" type="tns:ValidatorIdentity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ValidatorIdentityCollection" nillable="true" type="tns:ValidatorIdentityCollection" />
+  <xs:complexType name="VerificationSettings">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IsVerificationDisplayField" type="xs:boolean" />
+      <xs:element minOccurs="0" name="VerificationMode" type="xs:short" />
+      <xs:element minOccurs="0" name="CanChangeFieldValue" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ShowFieldValueIfNoMatch" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VerificationSettings" nillable="true" type="tns:VerificationSettings" />
+  <xs:complexType name="BusinessRuleFormatterInputCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BusinessRuleFormatterInput" nillable="true" type="tns:BusinessRuleFormatterInput" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BusinessRuleFormatterInputCollection" nillable="true" type="tns:BusinessRuleFormatterInputCollection" />
+  <xs:complexType name="BusinessRuleFormatterInput">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BusinessRuleInputName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:anyType" />
+      <xs:element minOccurs="0" name="InputType" type="xs:short" />
+      <xs:element minOccurs="0" name="IsInline" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BusinessRuleFormatterInput" nillable="true" type="tns:BusinessRuleFormatterInput" />
+  <xs:complexType name="SimpleField">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CaptureField">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DefaultValue" nillable="true" type="xs:anyType" />
+          <xs:element minOccurs="0" name="ChoiceItems" nillable="true" type="tns:LookupItemCollection" />
+          <xs:element minOccurs="0" name="Lookup" nillable="true" type="tns:LookupIdentity" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SimpleField" nillable="true" type="tns:SimpleField" />
+  <xs:complexType name="LookupItemCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LookupItem" nillable="true" type="tns:LookupItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LookupItemCollection" nillable="true" type="tns:LookupItemCollection" />
+  <xs:complexType name="LookupItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Identity" nillable="true" type="tns:LookupIdentity" />
+      <xs:element minOccurs="0" name="DisplayMember" nillable="true" type="xs:anyType" />
+      <xs:element minOccurs="0" name="ValueMember" nillable="true" type="xs:anyType" />
+      <xs:element minOccurs="0" name="IsInputPrompt" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsDefaultValue" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsInherited" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LookupItem" nillable="true" type="tns:LookupItem" />
+  <xs:complexType name="LookupIdentity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LookupIdentity" nillable="true" type="tns:LookupIdentity" />
+  <xs:complexType name="TableField">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:CaptureField">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FieldColumns" nillable="true" type="tns:CaptureFieldCollection" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TableField" nillable="true" type="tns:TableField" />
+  <xs:complexType name="CaptureFieldCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CaptureField" nillable="true" type="tns:CaptureField" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CaptureFieldCollection" nillable="true" type="tns:CaptureFieldCollection" />
+  <xs:complexType name="FolderStandardValidator">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:FolderValidator">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NumberOfDocuments" type="xs:int" />
+          <xs:element minOccurs="0" name="DocumentCountLevel" type="xs:short" />
+          <xs:element minOccurs="0" name="DocumentTypeIdentity" nillable="true" type="tns:DocumentTypeIdentity" />
+          <xs:element minOccurs="0" name="IsSameDocumentType" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FolderStandardValidator" nillable="true" type="tns:FolderStandardValidator" />
+  <xs:element name="TestFieldValidatorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TestFieldValidatorResult" nillable="true" type="tns:ValidationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ValidationResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsValid" type="xs:boolean" />
+      <xs:element minOccurs="0" name="FormattedValue" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ValidationResult" nillable="true" type="tns:ValidationResult" />
+  <xs:element name="ValidateDocument">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="documentId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateDocumentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ValidateDocumentResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateFolder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="folderId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateFolderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ValidateFolderResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDocumentFieldValues">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reportingData" nillable="true" type="tns:ReportingData" />
+        <xs:element minOccurs="0" name="documentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fieldIdentities" nillable="true" type="tns:RuntimeFieldIdentityCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDocumentFieldValuesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetDocumentFieldValuesResult" nillable="true" type="tns:DocumentFieldValueCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="DocumentFieldValueCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DocumentFieldValue" nillable="true" type="tns:DocumentFieldValue" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DocumentFieldValueCollection" nillable="true" type="tns:DocumentFieldValueCollection" />
+  <xs:complexType name="DocumentFieldValue">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:anyType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DocumentFieldValue" nillable="true" type="tns:DocumentFieldValue" />
+  <xs:element name="GetDocumentFieldValue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reportingData" nillable="true" type="tns:ReportingData" />
+        <xs:element minOccurs="0" name="documentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fieldIdentity" nillable="true" type="tns:RuntimeFieldIdentity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDocumentFieldValueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetDocumentFieldValueResult" nillable="true" type="tns:DocumentFieldValue" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFolderFieldValues">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reportingData" nillable="true" type="tns:ReportingData" />
+        <xs:element minOccurs="0" name="folderId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fieldIdentities" nillable="true" type="tns:RuntimeFieldIdentityCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFolderFieldValuesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetFolderFieldValuesResult" nillable="true" type="tns:FolderFieldValueCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="FolderFieldValueCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FolderFieldValue" nillable="true" type="tns:FolderFieldValue" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FolderFieldValueCollection" nillable="true" type="tns:FolderFieldValueCollection" />
+  <xs:complexType name="FolderFieldValue">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:anyType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FolderFieldValue" nillable="true" type="tns:FolderFieldValue" />
+  <xs:element name="GetFolderFieldValue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reportingData" nillable="true" type="tns:ReportingData" />
+        <xs:element minOccurs="0" name="folderId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fieldIdentity" nillable="true" type="tns:RuntimeFieldIdentity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFolderFieldValueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetFolderFieldValueResult" nillable="true" type="tns:FolderFieldValue" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFolder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reportingData" nillable="true" type="tns:ReportingData" />
+        <xs:element minOccurs="0" name="folderId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFolderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetFolderResult" nillable="true" type="tns:Folder" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="Folder">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RuntimeFieldContainer">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Documents" nillable="true" type="tns:DocumentCollection" />
+          <xs:element minOccurs="0" name="Folders" nillable="true" type="tns:FolderCollection" />
+          <xs:element minOccurs="0" name="Level" type="xs:int" />
+          <xs:element minOccurs="0" name="FolderType" nillable="true" type="tns:FolderTypeIdentity" />
+          <xs:element minOccurs="0" name="NumberOfDocuments" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Folder" nillable="true" type="tns:Folder" />
+  <xs:complexType name="RuntimeFieldContainer">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ParentId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReviewForceValid" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ReviewValid" type="xs:boolean" />
+      <xs:element minOccurs="0" name="TypeXml" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Valid" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Verified" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Fields" nillable="true" type="tns:RuntimeFieldDataCollection" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RuntimeFieldContainer" nillable="true" type="tns:RuntimeFieldContainer" />
+  <xs:complexType name="DocumentCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Document" nillable="true" type="tns:Document" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DocumentCollection" nillable="true" type="tns:DocumentCollection" />
+  <xs:complexType name="Document">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:RuntimeFieldContainer">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="NumKeyStrokes" type="xs:int" />
+          <xs:element minOccurs="0" name="OnlineLearningComments" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OnlineLearningOptions" type="xs:short" />
+          <xs:element minOccurs="0" name="Pages" nillable="true" type="tns:PageCollection" />
+          <xs:element minOccurs="0" name="ReadOnly" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Rejected" type="xs:boolean" />
+          <xs:element minOccurs="0" name="RejectionReason" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TotalTime" type="xs:int" />
+          <xs:element minOccurs="0" name="DocumentType" nillable="true" type="tns:DocumentTypeSummary" />
+          <xs:element minOccurs="0" name="MimeType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FileName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VariantIdentity" nillable="true" type="tns:VariantIdentity" />
+          <xs:element minOccurs="0" name="NumberOfPages" type="xs:int" />
+          <xs:element minOccurs="0" name="CreatedAt" nillable="true" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Document" nillable="true" type="tns:Document" />
+  <xs:complexType name="DocumentTypeSummary">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Identity" nillable="true" type="tns:DocumentTypeIdentity" />
+      <xs:element minOccurs="0" name="ClassificationGroup" nillable="true" type="tns:ClassificationGroupIdentity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DocumentTypeSummary" nillable="true" type="tns:DocumentTypeSummary" />
+  <xs:complexType name="ClassificationGroupIdentity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Version" type="xs:double" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ClassificationGroupIdentity" nillable="true" type="tns:ClassificationGroupIdentity" />
+  <xs:complexType name="VariantIdentity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Version" type="xs:double" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VariantIdentity" nillable="true" type="tns:VariantIdentity" />
+  <xs:complexType name="FolderCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Folder" nillable="true" type="tns:Folder" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FolderCollection" nillable="true" type="tns:FolderCollection" />
+  <xs:complexType name="FolderTypeIdentity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Version" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FolderTypeIdentity" nillable="true" type="tns:FolderTypeIdentity" />
+  <xs:element name="UpdateDocumentFieldValues">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reportingData" nillable="true" type="tns:ReportingData" />
+        <xs:element minOccurs="0" name="documentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="runtimeFields" nillable="true" type="tns:RuntimeFieldCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateDocumentFieldValuesResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateDocumentFieldValue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reportingData" nillable="true" type="tns:ReportingData" />
+        <xs:element minOccurs="0" name="documentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="runtimeField" nillable="true" type="tns:RuntimeField" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateDocumentFieldValueResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetDocumentStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reportingData" nillable="true" type="tns:ReportingData" />
+        <xs:element minOccurs="0" name="documentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="documentStatus" type="xs:short" />
+        <xs:element minOccurs="0" name="message" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetDocumentStatusResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetFolderStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reportingData" nillable="true" type="tns:ReportingData" />
+        <xs:element minOccurs="0" name="folderId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="folderStatus" type="xs:short" />
+        <xs:element minOccurs="0" name="message" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetFolderStatusResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MoveDocument">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reportingData" nillable="true" type="tns:ReportingData" />
+        <xs:element minOccurs="0" name="documentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="folderId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="insertIndex" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MoveDocumentResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteDocument">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="documentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reportingData" nillable="true" type="tns:ReportingData" />
+        <xs:element minOccurs="0" name="failOnError" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteDocumentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteDocumentResult" nillable="true" type="tns:DeletionResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="DeletionResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorInfo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Succeeded" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DeletionResult" nillable="true" type="tns:DeletionResult" />
+  <xs:element name="DeleteDocuments">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="documentIds" nillable="true" type="tns:StringCollection" />
+        <xs:element minOccurs="0" name="reportingData" nillable="true" type="tns:ReportingData" />
+        <xs:element minOccurs="0" name="ignoreError" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteDocumentsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteDocumentsResult" nillable="true" type="tns:DeletionResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SplitDocument">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reportingData" nillable="true" type="tns:ReportingData" />
+        <xs:element minOccurs="0" name="documentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageIndex" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SplitDocumentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SplitDocumentResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetImage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reportingData" nillable="true" type="tns:ReportingData" />
+        <xs:element minOccurs="0" name="imageId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="desiredWidth" type="xs:int" />
+        <xs:element minOccurs="0" name="desiredHeight" type="xs:int" />
+        <xs:element minOccurs="0" name="desiredFormat" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetImageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetImageResult" nillable="true" type="tns:DocumentImage" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="DocumentImage">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Image" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="MimeType" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DocumentImage" nillable="true" type="tns:DocumentImage" />
+  <xs:element name="GetPageImage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="docId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="desiredWidth" type="xs:int" />
+        <xs:element minOccurs="0" name="desiredHeight" type="xs:int" />
+        <xs:element minOccurs="0" name="desiredFormat" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPageImageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.microsoft.com/Message" name="GetPageImageResult" type="q3:StreamBody" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MovePages">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reportingData" nillable="true" type="tns:ReportingData" />
+        <xs:element minOccurs="0" name="documentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="toDocumentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageIndexes" nillable="true" type="tns:PageIndexCollection" />
+        <xs:element minOccurs="0" name="insertIndex" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MovePagesResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeletePages">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reportingData" nillable="true" type="tns:ReportingData" />
+        <xs:element minOccurs="0" name="documentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageIndexes" nillable="true" type="tns:PageIndexCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeletePagesResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateWords">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reportingData" nillable="true" type="tns:ReportingData" />
+        <xs:element minOccurs="0" name="documentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="wordUpdates" nillable="true" type="tns:WordUpdateCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="WordUpdateCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WordUpdate" nillable="true" type="tns:WordUpdate" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WordUpdateCollection" nillable="true" type="tns:WordUpdateCollection" />
+  <xs:complexType name="WordUpdate">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="LineIndex" type="xs:int" />
+      <xs:element minOccurs="0" name="IndexInTextLine" type="xs:int" />
+      <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WordUpdate" nillable="true" type="tns:WordUpdate" />
+  <xs:element name="UpdateWordsResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetWordsInRectangle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="words" nillable="true" type="tns:WordCollection" />
+        <xs:element minOccurs="0" name="top" type="xs:int" />
+        <xs:element minOccurs="0" name="left" type="xs:int" />
+        <xs:element minOccurs="0" name="height" type="xs:int" />
+        <xs:element minOccurs="0" name="width" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetWordsInRectangleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetWordsInRectangleResult" nillable="true" type="tns:WordCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetDocumentFieldStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reportingData" nillable="true" type="tns:ReportingData" />
+        <xs:element minOccurs="0" name="documentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fieldIdentity" nillable="true" type="tns:RuntimeFieldIdentity" />
+        <xs:element minOccurs="0" name="documentFieldStatus" type="xs:short" />
+        <xs:element minOccurs="0" name="message" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fieldValue" nillable="true" type="xs:anyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetDocumentFieldStatusResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetDocumentFieldsStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reportingData" nillable="true" type="tns:ReportingData" />
+        <xs:element minOccurs="0" name="documentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fieldsStatus" nillable="true" type="tns:FieldStatusCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="FieldStatusCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FieldStatus" nillable="true" type="tns:FieldStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FieldStatusCollection" nillable="true" type="tns:FieldStatusCollection" />
+  <xs:complexType name="FieldStatus">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FieldIdentity" nillable="true" type="tns:RuntimeFieldIdentity" />
+      <xs:element minOccurs="0" name="Status" type="xs:short" />
+      <xs:element minOccurs="0" name="FieldValue" nillable="true" type="xs:anyType" />
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FieldStatus" nillable="true" type="tns:FieldStatus" />
+  <xs:element name="SetDocumentFieldsStatusResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetFolderFieldStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reportingData" nillable="true" type="tns:ReportingData" />
+        <xs:element minOccurs="0" name="folderId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fieldIdentity" nillable="true" type="tns:RuntimeFieldIdentity" />
+        <xs:element minOccurs="0" name="folderFieldStatus" type="xs:short" />
+        <xs:element minOccurs="0" name="message" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fieldValue" nillable="true" type="xs:anyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetFolderFieldStatusResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteFolder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="folderId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reportingData" nillable="true" type="tns:ReportingData" />
+        <xs:element minOccurs="0" name="failOnError" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteFolderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteFolderResult" nillable="true" type="tns:DeletionResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SplitFolder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reportingData" nillable="true" type="tns:ReportingData" />
+        <xs:element minOccurs="0" name="folderId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="index" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SplitFolderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SplitFolderResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MoveFolder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reportingData" nillable="true" type="tns:ReportingData" />
+        <xs:element minOccurs="0" name="folderId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="toFolderId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="insertIndex" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MoveFolderResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateDocument">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reportingData" nillable="true" type="tns:ReportingData" />
+        <xs:element minOccurs="0" name="parentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="runtimeFields" nillable="true" type="tns:RuntimeFieldCollection" />
+        <xs:element minOccurs="0" name="filePath" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="insertIndex" type="xs:int" />
+        <xs:element minOccurs="0" name="documentTypeId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="folderTypeId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateDocumentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreateDocumentResult" nillable="true" type="tns:DocumentIdentity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateDocument2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reportingData" nillable="true" type="tns:ReportingData" />
+        <xs:element minOccurs="0" name="parentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="runtimeFields" nillable="true" type="tns:RuntimeFieldCollection" />
+        <xs:element minOccurs="0" name="filePath" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="insertIndex" type="xs:int" />
+        <xs:element minOccurs="0" name="documentTypeId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="folderTypeId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="runtimeFieldProperties" nillable="true" type="tns:FieldPropertiesCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateDocument2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreateDocument2Result" nillable="true" type="tns:DocumentIdentity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateDocuments">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reportingData" nillable="true" type="tns:ReportingData" />
+        <xs:element minOccurs="0" name="parentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="runtimeFolderFields" nillable="true" type="tns:RuntimeFieldCollection" />
+        <xs:element minOccurs="0" name="folderTypeId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="documentData" nillable="true" type="tns:DocumentDataInputCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="DocumentDataInputCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DocumentDataInput" nillable="true" type="tns:DocumentDataInput" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DocumentDataInputCollection" nillable="true" type="tns:DocumentDataInputCollection" />
+  <xs:element name="CreateDocumentsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreateDocumentsResult" nillable="true" type="tns:DocumentIdentityCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="DocumentIdentityCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DocumentIdentity" nillable="true" type="tns:DocumentIdentity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DocumentIdentityCollection" nillable="true" type="tns:DocumentIdentityCollection" />
+  <xs:element name="CreateDocuments2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reportingData" nillable="true" type="tns:ReportingData" />
+        <xs:element minOccurs="0" name="parentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="runtimeFolderFields" nillable="true" type="tns:RuntimeFieldCollection" />
+        <xs:element minOccurs="0" name="folderTypeId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="documentData" nillable="true" type="tns:DocumentDataInput2Collection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="DocumentDataInput2Collection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DocumentDataInput2" nillable="true" type="tns:DocumentDataInput2" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DocumentDataInput2Collection" nillable="true" type="tns:DocumentDataInput2Collection" />
+  <xs:element name="CreateDocuments2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreateDocuments2Result" nillable="true" type="tns:DocumentIdentityCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateDocumentWithPages">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reportingData" nillable="true" type="tns:ReportingData" />
+        <xs:element minOccurs="0" name="parentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="runtimeFields" nillable="true" type="tns:RuntimeFieldCollection" />
+        <xs:element minOccurs="0" name="documentTypeId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="folderTypeId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pages" nillable="true" type="tns:PageDataCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateDocumentWithPagesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreateDocumentWithPagesResult" nillable="true" type="tns:DocumentIdentity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreatePage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reportingData" nillable="true" type="tns:ReportingData" />
+        <xs:element minOccurs="0" name="documentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="runtimeFields" nillable="true" type="tns:RuntimeFieldCollection" />
+        <xs:element minOccurs="0" name="filePath" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="insertIndex" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreatePageResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSourceFile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reportingData" nillable="true" type="tns:ReportingData" />
+        <xs:element minOccurs="0" name="documentId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSourceFileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetSourceFileResult" nillable="true" type="tns:DocumentSourceFile" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="DocumentSourceFile">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MimeType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SourceFile" nillable="true" type="xs:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DocumentSourceFile" nillable="true" type="tns:DocumentSourceFile" />
+  <xs:element name="GetDocument">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reportingData" nillable="true" type="tns:ReportingData" />
+        <xs:element minOccurs="0" name="documentId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDocumentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetDocumentResult" nillable="true" type="tns:Document" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateFolder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reportingData" nillable="true" type="tns:ReportingData" />
+        <xs:element minOccurs="0" name="parentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="runtimeFields" nillable="true" type="tns:RuntimeFieldCollection" />
+        <xs:element minOccurs="0" name="insertIndex" type="xs:int" />
+        <xs:element minOccurs="0" name="folderTypeCategory" nillable="true" type="tns:CategoryIdentity" />
+        <xs:element minOccurs="0" name="folderTypeIdentity" nillable="true" type="tns:FolderTypeIdentity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="CategoryIdentity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CategoryIdentity" nillable="true" type="tns:CategoryIdentity" />
+  <xs:element name="CreateFolderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreateFolderResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateFolderFieldValue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reportingData" nillable="true" type="tns:ReportingData" />
+        <xs:element minOccurs="0" name="folderId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="runtimeField" nillable="true" type="tns:RuntimeField" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateFolderFieldValueResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertTableFieldRow">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reportingData" nillable="true" type="tns:ReportingData" />
+        <xs:element minOccurs="0" name="documentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tableFieldId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="rowIndex" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertTableFieldRowResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteTableFieldRow">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reportingData" nillable="true" type="tns:ReportingData" />
+        <xs:element minOccurs="0" name="documentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tableFieldId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="rowIndexes" nillable="true" type="tns:RowIndexCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="RowIndexCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RowIndex" nillable="true" type="tns:RowIndex" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RowIndexCollection" nillable="true" type="tns:RowIndexCollection" />
+  <xs:complexType name="RowIndex">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Index" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RowIndex" nillable="true" type="tns:RowIndex" />
+  <xs:element name="DeleteTableFieldRowResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InterpolateTableField">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reportingData" nillable="true" type="tns:ReportingData" />
+        <xs:element minOccurs="0" name="documentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tableFieldId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="selectedIndex" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InterpolateTableFieldResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateFolderFieldValues">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reportingData" nillable="true" type="tns:ReportingData" />
+        <xs:element minOccurs="0" name="folderId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="runtimeFields" nillable="true" type="tns:RuntimeFieldCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateFolderFieldValuesResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePages">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reportingData" nillable="true" type="tns:ReportingData" />
+        <xs:element minOccurs="0" name="docId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageData2Collection" nillable="true" type="tns:PageData2Collection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="PageData2Collection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PageData2" nillable="true" type="tns:PageData2" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PageData2Collection" nillable="true" type="tns:PageData2Collection" />
+  <xs:complexType name="PageData2">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:PageData">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Index" type="xs:int" />
+          <xs:element minOccurs="0" name="UseSheetId" type="xs:boolean" />
+          <xs:element minOccurs="0" name="SheetId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UseIsFront" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsFront" type="xs:boolean" />
+          <xs:element minOccurs="0" name="UseHorizontalResolution" type="xs:boolean" />
+          <xs:element minOccurs="0" name="HorizontalResolution" type="xs:float" />
+          <xs:element minOccurs="0" name="UseVerticalResolution" type="xs:boolean" />
+          <xs:element minOccurs="0" name="VerticalResolution" type="xs:float" />
+          <xs:element minOccurs="0" name="UseRotationType" type="xs:boolean" />
+          <xs:element minOccurs="0" name="RotationType" type="xs:short" />
+          <xs:element minOccurs="0" name="UseBarcodes" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Barcodes" nillable="true" type="tns:BarcodeCollection" />
+          <xs:element minOccurs="0" name="UseLayoutHeight" type="xs:boolean" />
+          <xs:element minOccurs="0" name="LayoutHeight" type="xs:int" />
+          <xs:element minOccurs="0" name="UseLayoutWidth" type="xs:boolean" />
+          <xs:element minOccurs="0" name="LayoutWidth" type="xs:int" />
+          <xs:element minOccurs="0" name="UseImprintedText" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ImprintedText" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UseVrsProcessed" type="xs:boolean" />
+          <xs:element minOccurs="0" name="VrsProcessed" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PageData2" nillable="true" type="tns:PageData2" />
+  <xs:element name="UpdatePagesResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TestFieldFormatter">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="value" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fieldFormatter" nillable="true" type="tns:FieldFormatter" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="FieldFormatter">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Identity" nillable="true" type="tns:FormatterIdentity" />
+      <xs:element minOccurs="0" name="Formatter" nillable="true" type="tns:Formatter" />
+      <xs:element minOccurs="0" name="Category" nillable="true" type="tns:CategoryIdentity" />
+      <xs:element minOccurs="0" name="LastModifiedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="LastModifiedUser" nillable="true" type="tns:ResourceIdentity" />
+      <xs:element minOccurs="0" name="FormatterType" type="xs:short" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FieldFormatter" nillable="true" type="tns:FieldFormatter" />
+  <xs:complexType name="Formatter">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AllowEmptyField" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Formatter" nillable="true" type="tns:Formatter" />
+  <xs:complexType name="AmountFormatter">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Formatter">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AllowNegativeAmounts" type="xs:boolean" />
+          <xs:element minOccurs="0" name="RequireDecimalPoints" type="xs:boolean" />
+          <xs:element minOccurs="0" name="AllowThreeDecimalPlaces" type="xs:boolean" />
+          <xs:element minOccurs="0" name="DecimalSymbol" type="xs:short" />
+          <xs:element minOccurs="0" name="NoOfDecimalPlaces" type="xs:short" />
+          <xs:element minOccurs="0" name="Currencies" nillable="true" type="tns:StringCollection" />
+          <xs:element minOccurs="0" name="ThousandsSeparator" type="xs:short" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AmountFormatter" nillable="true" type="tns:AmountFormatter" />
+  <xs:complexType name="BusinessRuleFormatter">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Formatter">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BusinessRules" nillable="true" type="tns:BusinessRuleIdentity" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="BusinessRuleFormatter" nillable="true" type="tns:BusinessRuleFormatter" />
+  <xs:complexType name="DateFormatter">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Formatter">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="MinYear" type="xs:short" />
+          <xs:element minOccurs="0" name="MaxYear" type="xs:short" />
+          <xs:element minOccurs="0" name="AmbiguousDateFormatSetting" type="xs:short" />
+          <xs:element minOccurs="0" name="AmbiguousDateFormats" nillable="true" type="tns:StringCollection" />
+          <xs:element minOccurs="0" name="TwoDigitDateGreaterThanValue" type="xs:short" />
+          <xs:element minOccurs="0" name="OutputDateFormat" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OutputDateDelimiter" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MonthNames" nillable="true" type="tns:MonthNameCollection" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DateFormatter" nillable="true" type="tns:DateFormatter" />
+  <xs:complexType name="MonthNameCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MonthName" nillable="true" type="tns:MonthName" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MonthNameCollection" nillable="true" type="tns:MonthNameCollection" />
+  <xs:complexType name="MonthName">
+    <xs:sequence>
+      <xs:element name="Name" nillable="true" type="xs:string" />
+      <xs:element name="MonthId" type="xs:short" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MonthName" nillable="true" type="tns:MonthName" />
+  <xs:complexType name="PercentageFormatter">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Formatter">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DecimalSymbol" type="xs:short" />
+          <xs:element minOccurs="0" name="DecimalPlace" type="xs:short" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PercentageFormatter" nillable="true" type="tns:PercentageFormatter" />
+  <xs:complexType name="ResourceIdentity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ResourceType" type="xs:short" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ResourceIdentity" nillable="true" type="tns:ResourceIdentity" />
+  <xs:element name="TestFieldFormatterResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TestFieldFormatterResult" nillable="true" type="tns:FormattingResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="FormattingResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsValid" type="xs:boolean" />
+      <xs:element minOccurs="0" name="FormattedText" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FormattedValue" nillable="true" type="xs:anyType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FormattingResult" nillable="true" type="tns:FormattingResult" />
+  <xs:element name="TestFieldFormatter2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="value" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fieldFormatter" nillable="true" type="tns:FieldFormatter" />
+        <xs:element minOccurs="0" name="ruleInputs" nillable="true" type="tns:BusinessRuleInputCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="BusinessRuleInputCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="BusinessRuleInput" nillable="true" type="tns:BusinessRuleInput" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BusinessRuleInputCollection" nillable="true" type="tns:BusinessRuleInputCollection" />
+  <xs:complexType name="BusinessRuleInput">
+    <xs:sequence>
+      <xs:element name="Name" nillable="true" type="xs:string" />
+      <xs:element name="Type" type="xs:short" />
+      <xs:element name="Value" nillable="true" type="xs:anyType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BusinessRuleInput" nillable="true" type="tns:BusinessRuleInput" />
+  <xs:element name="TestFieldFormatter2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TestFieldFormatter2Result" nillable="true" type="tns:FormattingResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateDocumentForReview">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="documentId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateDocumentForReviewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ValidateDocumentForReviewResult" nillable="true" type="tns:ReviewValidationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ReviewValidationResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReviewValid" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReviewValidationResult" nillable="true" type="tns:ReviewValidationResult" />
+  <xs:element name="ValidateFolderForReview">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="folderId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateFolderForReviewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ValidateFolderForReviewResult" nillable="true" type="tns:ReviewValidationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateDocumentWithType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="documentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="documentTypeIdentity" nillable="true" type="tns:DocumentTypeIdentity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateDocumentWithTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ValidateDocumentWithTypeResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateFolderWithType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="folderId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="folderTypeIdentity" nillable="true" type="tns:FolderTypeIdentity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateFolderWithTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ValidateFolderWithTypeResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateDocumentForReviewWithType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="documentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="documentTypeIdentity" nillable="true" type="tns:DocumentTypeIdentity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateDocumentForReviewWithTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ValidateDocumentForReviewWithTypeResult" nillable="true" type="tns:ReviewValidationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateFolderForReviewWithType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="folderId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="folderTypeIdentity" nillable="true" type="tns:FolderTypeIdentity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateFolderForReviewWithTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ValidateFolderForReviewWithTypeResult" nillable="true" type="tns:ReviewValidationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateDocumentField">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="documentTypeId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="field" nillable="true" type="tns:RuntimeFieldValue" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="RuntimeFieldValue">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RuntimeFieldValue" nillable="true" type="tns:RuntimeFieldValue" />
+  <xs:element name="ValidateDocumentFieldResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ValidateDocumentFieldResult" nillable="true" type="tns:ValidationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateDocumentFields">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="documentTypeId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fields" nillable="true" type="tns:RuntimeFieldValueCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="RuntimeFieldValueCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RuntimeFieldValue" nillable="true" type="tns:RuntimeFieldValue" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RuntimeFieldValueCollection" nillable="true" type="tns:RuntimeFieldValueCollection" />
+  <xs:element name="ValidateDocumentFieldsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ValidateDocumentFieldsResult" nillable="true" type="tns:ValidationResultCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ValidationResultCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ValidationResult" nillable="true" type="tns:ValidationResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ValidationResultCollection" nillable="true" type="tns:ValidationResultCollection" />
+  <xs:element name="ValidateFolderField">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="folderTypeId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="field" nillable="true" type="tns:RuntimeFieldValue" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateFolderFieldResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ValidateFolderFieldResult" nillable="true" type="tns:ValidationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateFolderFields">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="folderTypeId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fields" nillable="true" type="tns:RuntimeFieldValueCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateFolderFieldsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ValidateFolderFieldsResult" nillable="true" type="tns:ValidationResultCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FormatField">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="value" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="formatterIdentity" nillable="true" type="tns:FormatterIdentity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FormatFieldResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FormatFieldResult" nillable="true" type="tns:FormattingResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FormatField2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="value" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="formatterIdentity" nillable="true" type="tns:FormatterIdentity" />
+        <xs:element minOccurs="0" name="ruleInputs" nillable="true" type="tns:BusinessRuleInputCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FormatField2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FormatField2Result" nillable="true" type="tns:FormattingResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDocumentAsFile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="documentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fileLocation" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fileName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDocumentAsFileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetDocumentAsFileResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateOnlineLearningFolder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="maxSamples" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateOnlineLearningFolderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreateOnlineLearningFolderResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchFuzzyDatabase">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="databaseIdentity" nillable="true" type="tns:FuzzyDatabaseIdentity" />
+        <xs:element minOccurs="0" name="query" nillable="true" type="tns:SearchQuery" />
+        <xs:element minOccurs="0" name="documentTypeIdentity" nillable="true" type="tns:DocumentTypeIdentity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="FuzzyDatabaseIdentity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DisplayName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FuzzyDatabaseIdentity" nillable="true" type="tns:FuzzyDatabaseIdentity" />
+  <xs:complexType name="SearchQuery">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FuzzySearchFilters" nillable="true" type="tns:FuzzySearchFilterCollection" />
+      <xs:element minOccurs="0" name="NumberOfRowsToReturn" type="xs:int" />
+      <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="SearchWords" nillable="true" type="q4:ArrayOfstring" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SearchQuery" nillable="true" type="tns:SearchQuery" />
+  <xs:complexType name="FuzzySearchFilterCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FuzzySearch" nillable="true" type="tns:FuzzySearch" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FuzzySearchFilterCollection" nillable="true" type="tns:FuzzySearchFilterCollection" />
+  <xs:complexType name="FuzzySearch">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FieldName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FilterText" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FuzzySearch" nillable="true" type="tns:FuzzySearch" />
+  <xs:element name="SearchFuzzyDatabaseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SearchFuzzyDatabaseResult" nillable="true" type="tns:SearchResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="SearchResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FieldMappingCollection" nillable="true" type="tns:FuzzyDatabaseFieldMappingCollection" />
+      <xs:element minOccurs="0" name="RecordItems" nillable="true" type="tns:FuzzyRecordItemCollection" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SearchResult" nillable="true" type="tns:SearchResult" />
+  <xs:complexType name="FuzzyDatabaseFieldMappingCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FuzzyDatabaseFieldMapping" nillable="true" type="tns:FuzzyDatabaseFieldMapping" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FuzzyDatabaseFieldMappingCollection" nillable="true" type="tns:FuzzyDatabaseFieldMappingCollection" />
+  <xs:complexType name="FuzzyDatabaseFieldMapping">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DatabaseField" nillable="true" type="tns:FuzzyDatabaseField" />
+      <xs:element minOccurs="0" name="DocumentTypeField" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Filter" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FuzzyDatabaseFieldMapping" nillable="true" type="tns:FuzzyDatabaseFieldMapping" />
+  <xs:complexType name="FuzzyDatabaseField">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Hidden" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsFilterable" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FuzzyDatabaseField" nillable="true" type="tns:FuzzyDatabaseField" />
+  <xs:complexType name="FuzzyRecordItemCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FuzzyRecordItem" nillable="true" type="tns:FuzzyRecordItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FuzzyRecordItemCollection" nillable="true" type="tns:FuzzyRecordItemCollection" />
+  <xs:complexType name="FuzzyRecordItem">
+    <xs:sequence>
+      <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Columns" nillable="true" type="q5:ArrayOfstring" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FuzzyRecordItem" nillable="true" type="tns:FuzzyRecordItem" />
+  <xs:element name="GetDocumentsInOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="folderId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="field1NameForSort" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="field2NameForSort" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="field3NameForSort" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ascending" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDocumentsInOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetDocumentsInOrderResult" nillable="true" type="tns:DocumentSortResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="DocumentSortResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AllFieldsFound" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SortedDocuments" nillable="true" type="tns:DocumentSummaryCollection" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DocumentSortResult" nillable="true" type="tns:DocumentSortResult" />
+  <xs:complexType name="DocumentSummaryCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DocumentSummary" nillable="true" type="tns:DocumentSummary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DocumentSummaryCollection" nillable="true" type="tns:DocumentSummaryCollection" />
+  <xs:complexType name="DocumentSummary">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="InstanceId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ParentId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocumentType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Field1Value" nillable="true" type="xs:anyType" />
+      <xs:element minOccurs="0" name="Field2Value" nillable="true" type="xs:anyType" />
+      <xs:element minOccurs="0" name="Field3Value" nillable="true" type="xs:anyType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DocumentSummary" nillable="true" type="tns:DocumentSummary" />
+  <xs:element name="GetDocumentFieldAlternatives">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="documentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fieldIdentity" nillable="true" type="tns:FieldIdentity" />
+        <xs:element minOccurs="0" name="numberOfRowsToReturn" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDocumentFieldAlternativesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetDocumentFieldAlternativesResult" nillable="true" type="tns:FieldAlternativeCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDocumentFieldAlternatives2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="documentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fieldIdentity" nillable="true" type="tns:FieldIdentity" />
+        <xs:element minOccurs="0" name="numberOfRowsToReturn" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDocumentFieldAlternatives2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetDocumentFieldAlternatives2Result" nillable="true" type="tns:FieldAlternative2Collection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="FieldAlternative2Collection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FieldAlternative2" nillable="true" type="tns:FieldAlternative2" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FieldAlternative2Collection" nillable="true" type="tns:FieldAlternative2Collection" />
+  <xs:complexType name="FieldAlternative2">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:FieldAlternative">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Height" type="xs:int" />
+          <xs:element minOccurs="0" name="Left" type="xs:int" />
+          <xs:element minOccurs="0" name="Top" type="xs:int" />
+          <xs:element minOccurs="0" name="Width" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FieldAlternative2" nillable="true" type="tns:FieldAlternative2" />
+  <xs:element name="GetDocumentFieldsAlternatives">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="documentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fields" nillable="true" type="tns:FieldIdentityCollection" />
+        <xs:element minOccurs="0" name="numberOfRowsToReturn" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="FieldIdentityCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FieldIdentity" nillable="true" type="tns:FieldIdentity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FieldIdentityCollection" nillable="true" type="tns:FieldIdentityCollection" />
+  <xs:element name="GetDocumentFieldsAlternativesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetDocumentFieldsAlternativesResult" nillable="true" type="tns:FieldAlternativesCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="FieldAlternativesCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FieldAlternatives" nillable="true" type="tns:FieldAlternatives" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FieldAlternativesCollection" nillable="true" type="tns:FieldAlternativesCollection" />
+  <xs:complexType name="FieldAlternatives">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DocumentFieldAlternatives" nillable="true" type="tns:FieldAlternativeCollection" />
+      <xs:element minOccurs="0" name="FieldIdentity" nillable="true" type="tns:FieldIdentity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FieldAlternatives" nillable="true" type="tns:FieldAlternatives" />
+  <xs:element name="GetDocumentFieldsAlternatives2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="documentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fields" nillable="true" type="tns:FieldIdentityCollection" />
+        <xs:element minOccurs="0" name="numberOfRowsToReturn" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDocumentFieldsAlternatives2Response">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetDocumentFieldsAlternatives2Result" nillable="true" type="tns:FieldAlternatives2Collection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="FieldAlternatives2Collection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FieldAlternatives2" nillable="true" type="tns:FieldAlternatives2" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FieldAlternatives2Collection" nillable="true" type="tns:FieldAlternatives2Collection" />
+  <xs:complexType name="FieldAlternatives2">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:FieldAlternatives">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DocumentFieldAlternatives2" nillable="true" type="tns:FieldAlternative2Collection" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FieldAlternatives2" nillable="true" type="tns:FieldAlternatives2" />
+  <xs:element name="SaveTextExtension">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reportingData" nillable="true" type="tns:ReportingData" />
+        <xs:element minOccurs="0" name="documentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="text" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveTextExtensionResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTextExtension">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reportingData" nillable="true" type="tns:ReportingData" />
+        <xs:element minOccurs="0" name="documentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTextExtensionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetTextExtensionResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreatePageUsingStream">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reportingData" nillable="true" type="tns:ReportingData" />
+        <xs:element minOccurs="0" name="documentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="runtimeFields" nillable="true" type="tns:RuntimeFieldCollection" />
+        <xs:element minOccurs="0" name="data" nillable="true" type="xs:base64Binary" />
+        <xs:element minOccurs="0" name="insertIndex" type="xs:int" />
+        <xs:element minOccurs="0" name="mimeType" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreatePageUsingStreamResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDocumentTableFieldValue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reportingData" nillable="true" type="tns:ReportingData" />
+        <xs:element minOccurs="0" name="documentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tableFieldIdentity" nillable="true" type="tns:TableFieldIdentity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="TableFieldIdentity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TableFieldIdentity" nillable="true" type="tns:TableFieldIdentity" />
+  <xs:element name="GetDocumentTableFieldValueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetDocumentTableFieldValueResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetJobVariableLockStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reportingData" nillable="true" type="tns:ReportingData" />
+        <xs:element minOccurs="0" name="jobIdentity" nillable="true" type="tns:JobIdentity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="JobIdentity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="JobIdentity" nillable="true" type="tns:JobIdentity" />
+  <xs:element name="GetJobVariableLockStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetJobVariableLockStatusResult" nillable="true" type="tns:LockedItemCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="LockedItemCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LockedItem" nillable="true" type="tns:LockedItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LockedItemCollection" nillable="true" type="tns:LockedItemCollection" />
+  <xs:complexType name="LockedItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Identity" nillable="true" type="tns:LockedItemIdentity" />
+      <xs:element minOccurs="0" name="ItemTypeName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LockedBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LockedAt" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TypeName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TypeId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TypeVersion" type="xs:double" />
+      <xs:element minOccurs="0" name="Status" type="xs:short" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LockedItem" nillable="true" type="tns:LockedItem" />
+  <xs:complexType name="LockedItemIdentity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ItemId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ItemType" type="xs:short" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LockedItemIdentity" nillable="true" type="tns:LockedItemIdentity" />
+  <xs:element name="ForceUnlockItem">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reportingData" nillable="true" type="tns:ReportingData" />
+        <xs:element minOccurs="0" name="identity" nillable="true" type="tns:LockedItemIdentity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ForceUnlockItemResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDocumentFile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reportingData" nillable="true" type="tns:ReportingData" />
+        <xs:element minOccurs="0" name="documentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fileType" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDocumentFileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.microsoft.com/Message" name="GetDocumentFileResult" type="q6:StreamBody" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDocumentRenditionsFile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="documentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="renditionName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fileType" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDocumentRenditionsFileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.microsoft.com/Message" name="GetDocumentRenditionsFileResult" type="q7:StreamBody" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateDocumentType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="documentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="documentTypeIdentity" nillable="true" type="tns:DocumentTypeIdentity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateDocumentTypeResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateDocumentType2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reportingData" nillable="true" type="tns:ReportingData" />
+        <xs:element minOccurs="0" name="documentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="documentTypeIdentity" nillable="true" type="tns:DocumentTypeIdentity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateDocumentType2Response">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MergeDocuments">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="documentIds" nillable="true" type="tns:StringCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MergeDocumentsResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RejectDocuments">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="documentIds" nillable="true" type="tns:StringCollection" />
+        <xs:element minOccurs="0" name="reportingData" nillable="true" type="tns:ReportingData" />
+        <xs:element minOccurs="0" name="reason" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RejectDocumentsResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UnrejectDocuments">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="documentIds" nillable="true" type="tns:StringCollection" />
+        <xs:element minOccurs="0" name="reportingData" nillable="true" type="tns:ReportingData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UnrejectDocumentsResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateDocumentTypeWithConfidence">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="documentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="documentTypeIdentity" nillable="true" type="tns:DocumentTypeIdentity" />
+        <xs:element minOccurs="0" name="confidenceLevel" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateDocumentTypeWithConfidenceResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateDocumentTypeWithConfidence2">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="documentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="documentTypeIdentity" nillable="true" type="tns:DocumentTypeIdentity" />
+        <xs:element minOccurs="0" name="confidenceLevel" type="xs:double" />
+        <xs:element minOccurs="0" name="classificationConfident" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateDocumentTypeWithConfidence2Response">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateDocumentTypeWithConfidence3">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reportingData" nillable="true" type="tns:ReportingData" />
+        <xs:element minOccurs="0" name="documentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="documentTypeIdentity" nillable="true" type="tns:DocumentTypeIdentity" />
+        <xs:element minOccurs="0" name="confidenceLevel" type="xs:double" />
+        <xs:element minOccurs="0" name="classificationConfident" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateDocumentTypeWithConfidence3Response">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CopyDocumentFieldValues">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sourceDocumentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="targetDocumentId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CopyDocumentFieldValuesResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SplitDocumentAndClassify">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reportingData" nillable="true" type="tns:ReportingData" />
+        <xs:element minOccurs="0" name="documentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="splitDocumentInfoCollection" nillable="true" type="tns:SplitDocumentInfoCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="SplitDocumentInfoCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SplitDocumentInfo" nillable="true" type="tns:SplitDocumentInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SplitDocumentInfoCollection" nillable="true" type="tns:SplitDocumentInfoCollection" />
+  <xs:complexType name="SplitDocumentInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SplitIndex" type="xs:int" />
+      <xs:element minOccurs="0" name="DocumentTypeIdentity" nillable="true" type="tns:DocumentTypeIdentity" />
+      <xs:element minOccurs="0" name="ClassificationConfident" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ConfidenceLevel" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="ReviewValid" nillable="true" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SplitDocumentInfo" nillable="true" type="tns:SplitDocumentInfo" />
+  <xs:element name="SplitDocumentAndClassifyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SplitDocumentAndClassifyResult" nillable="true" type="tns:DocumentIdentityCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateDocumentsProcessingCompleted">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="documentIds" nillable="true" type="tns:StringCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateDocumentsProcessingCompletedResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RejectDocument">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="documentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reason" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RejectDocumentResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CopyDocument">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sourceDocumentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="targetDocumentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fieldNames" nillable="true" type="tns:StringCollection" />
+        <xs:element minOccurs="0" name="copyDocumentOptions" type="xs:short" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CopyDocumentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CopyDocumentResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RejectPages">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="documentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageIndexes" nillable="true" type="tns:PageIndexCollection" />
+        <xs:element minOccurs="0" name="reason" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RejectPagesResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UnrejectPages">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="documentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageIndexes" nillable="true" type="tns:PageIndexCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UnrejectPagesResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRejectedPages">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="documentId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRejectedPagesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetRejectedPagesResult" nillable="true" type="tns:RejectedPages" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="RejectedPages">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="HasRejectedPage" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PageIndexes" nillable="true" type="tns:PageIndexCollection" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RejectedPages" nillable="true" type="tns:RejectedPages" />
+  <xs:element name="SavePageImage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="batchId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="data" nillable="true" type="xs:base64Binary" />
+        <xs:element minOccurs="0" name="mimeType" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SavePageImageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SavePageImageResult" nillable="true" type="tns:PageImageData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateAllDocumentFields">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="documentTypeIdentity" nillable="true" type="tns:DocumentTypeIdentity" />
+        <xs:element minOccurs="0" name="documentFields" nillable="true" type="tns:RuntimeField2Collection" />
+        <xs:element minOccurs="0" name="documentSystemProperties" nillable="true" type="tns:DocumentSystemProperties" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="RuntimeField2Collection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RuntimeField2" nillable="true" type="tns:RuntimeField2" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RuntimeField2Collection" nillable="true" type="tns:RuntimeField2Collection" />
+  <xs:complexType name="RuntimeField2">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:anyType" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SystemProperties" nillable="true" type="tns:FieldSystemProperties" />
+      <xs:element minOccurs="0" name="TableCells" nillable="true" type="tns:RuntimeTableCell2Collection" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RuntimeField2" nillable="true" type="tns:RuntimeField2" />
+  <xs:complexType name="FieldSystemProperties">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Confidence" type="xs:double" />
+      <xs:element minOccurs="0" name="ErrorDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExtractionConfident" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Height" type="xs:int" />
+      <xs:element minOccurs="0" name="Left" type="xs:int" />
+      <xs:element minOccurs="0" name="PageIndex" type="xs:int" />
+      <xs:element minOccurs="0" name="ReviewForcedValid" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ReviewForcedValidDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Top" type="xs:int" />
+      <xs:element minOccurs="0" name="Valid" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Verified" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Width" type="xs:int" />
+      <xs:element minOccurs="0" name="DocumentFieldAlternatives" nillable="true" type="tns:FieldAlternative2Collection" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FieldSystemProperties" nillable="true" type="tns:FieldSystemProperties" />
+  <xs:complexType name="RuntimeTableCell2Collection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RuntimeTableCell2" nillable="true" type="tns:RuntimeTableCell2" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RuntimeTableCell2Collection" nillable="true" type="tns:RuntimeTableCell2Collection" />
+  <xs:complexType name="RuntimeTableCell2">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ColumnId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ColumnName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Row" type="xs:int" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:anyType" />
+      <xs:element minOccurs="0" name="SystemProperties" nillable="true" type="tns:FieldSystemProperties" />
+      <xs:element minOccurs="0" name="Column" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RuntimeTableCell2" nillable="true" type="tns:RuntimeTableCell2" />
+  <xs:complexType name="DocumentSystemProperties">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ClassificationConfident" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ErrorDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InstanceId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsReadOnly" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MimeType" type="xs:short" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NoOfPages" type="xs:int" />
+      <xs:element minOccurs="0" name="OnlineLearningComments" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OnlineLearningOptions" type="xs:short" />
+      <xs:element minOccurs="0" name="ParentId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Rejected" type="xs:boolean" />
+      <xs:element minOccurs="0" name="RejectedReason" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReviewForcedValid" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ReviewValid" type="xs:boolean" />
+      <xs:element minOccurs="0" name="TypeId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Valid" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Verified" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DocumentSystemProperties" nillable="true" type="tns:DocumentSystemProperties" />
+  <xs:element name="ValidateAllDocumentFieldsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ValidateAllDocumentFieldsResult" nillable="true" type="tns:FieldValidationResult2Collection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SavePageRendition">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="documentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="renditionNumber" type="xs:short" />
+        <xs:element minOccurs="0" name="mimeType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="imageStream" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SavePageRenditionResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPageRendition">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="documentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="renditionNumber" type="xs:short" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPageRenditionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPageRenditionResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetPageSourceImageFromRendition">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="documentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="renditionNumber" type="xs:short" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetPageSourceImageFromRenditionResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeletePageRendition">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="documentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="renditionNumber" type="xs:short" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeletePageRenditionResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddPageMaskForField">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="documentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageIndex" type="xs:int" />
+        <xs:element minOccurs="0" name="fieldName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="color" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddPageMaskForFieldResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddPageMaskForFieldResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddPageMaskForRegion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="documentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageIndex" type="xs:int" />
+        <xs:element minOccurs="0" name="left" type="xs:int" />
+        <xs:element minOccurs="0" name="top" type="xs:int" />
+        <xs:element minOccurs="0" name="right" type="xs:int" />
+        <xs:element minOccurs="0" name="bottom" type="xs:int" />
+        <xs:element minOccurs="0" name="color" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddPageMaskForRegionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddPageMaskForRegionResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemovePageMasks">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="documentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageIndex" type="xs:int" />
+        <xs:element minOccurs="0" name="left" type="xs:int" />
+        <xs:element minOccurs="0" name="top" type="xs:int" />
+        <xs:element minOccurs="0" name="right" type="xs:int" />
+        <xs:element minOccurs="0" name="bottom" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemovePageMasksResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RemovePageMasksResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveAllPageMasks">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="documentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageIndex" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveAllPageMasksResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RemoveAllPageMasksResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsPageRenditionDefined">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="documentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="renditionNumber" type="xs:short" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsPageRenditionDefinedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IsPageRenditionDefinedResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDocumentTypeImage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="documentTypeIdentity" nillable="true" type="tns:DocumentTypeIdentity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDocumentTypeImageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetDocumentTypeImageResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDocumentFieldsProperties">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="documentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fields" nillable="true" type="tns:RuntimeFieldIdentityCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDocumentFieldsPropertiesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetDocumentFieldsPropertiesResult" nillable="true" type="tns:RuntimeField2Collection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPageRenditionImageSummary">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="documentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="renditionNumber" type="xs:short" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPageRenditionImageSummaryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPageRenditionImageSummaryResult" nillable="true" type="tns:ImageSummary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ImageSummary">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MimeType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VerticalResolution" type="xs:float" />
+      <xs:element minOccurs="0" name="HorizontalResolution" type="xs:float" />
+      <xs:element minOccurs="0" name="Width" type="xs:int" />
+      <xs:element minOccurs="0" name="Height" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ImageSummary" nillable="true" type="tns:ImageSummary" />
+  <xs:element name="GetPageSummary">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="documentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPageSummaryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPageSummaryResult" nillable="true" type="tns:PageSummary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="PageSummary">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ImageSummary">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Index" type="xs:int" />
+          <xs:element minOccurs="0" name="SheetId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsFront" type="xs:boolean" />
+          <xs:element minOccurs="0" name="RotationType" type="xs:short" />
+          <xs:element minOccurs="0" name="Barcodes" nillable="true" type="tns:BarcodeCollection" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PageSummary" nillable="true" type="tns:PageSummary" />
+  <xs:element name="CopyDocumentWithPages">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="documentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="insertIndex" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CopyDocumentWithPagesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CopyDocumentWithPagesResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDocumentFieldPropertyValues">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reportingData" nillable="true" type="tns:ReportingData" />
+        <xs:element minOccurs="0" name="documentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fieldProperties" nillable="true" type="tns:FieldPropertiesIdentityCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="FieldPropertiesIdentityCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FieldPropertiesIdentity" nillable="true" type="tns:FieldPropertiesIdentity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FieldPropertiesIdentityCollection" nillable="true" type="tns:FieldPropertiesIdentityCollection" />
+  <xs:complexType name="FieldPropertiesIdentity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FieldSystemProperties" nillable="true" type="tns:FieldSystemPropertyIdentityCollection" />
+      <xs:element minOccurs="0" name="Identity" nillable="true" type="tns:RuntimeFieldIdentity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FieldPropertiesIdentity" nillable="true" type="tns:FieldPropertiesIdentity" />
+  <xs:complexType name="FieldSystemPropertyIdentityCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FieldSystemPropertyIdentity" nillable="true" type="tns:FieldSystemPropertyIdentity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FieldSystemPropertyIdentityCollection" nillable="true" type="tns:FieldSystemPropertyIdentityCollection" />
+  <xs:element name="GetDocumentFieldPropertyValuesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetDocumentFieldPropertyValuesResult" nillable="true" type="tns:FieldPropertiesCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateDocumentFieldPropertyValues">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reportingData" nillable="true" type="tns:ReportingData" />
+        <xs:element minOccurs="0" name="documentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fieldProperties" nillable="true" type="tns:FieldPropertiesCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateDocumentFieldPropertyValuesResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAnnotations">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="documentId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAnnotationsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAnnotationsResult" nillable="true" type="tns:AnnotationDataCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="AnnotationDataCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AnnotationData" nillable="true" type="tns:AnnotationData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AnnotationDataCollection" nillable="true" type="tns:AnnotationDataCollection" />
+  <xs:complexType name="AnnotationData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PageIndex" type="xs:int" />
+      <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/System.Drawing" minOccurs="0" name="Location" type="q8:PointF" />
+      <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/System.Drawing" minOccurs="0" name="Size" type="q9:SizeF" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AnnotationData" nillable="true" type="tns:AnnotationData" />
+  <xs:complexType name="LineAnnotationData">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:AnnotationData">
+        <xs:sequence>
+          <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/System.Drawing" minOccurs="0" name="StartPoint" type="q10:PointF" />
+          <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/System.Drawing" minOccurs="0" name="EndPoint" type="q11:PointF" />
+          <xs:element minOccurs="0" name="Outline" nillable="true" type="tns:AnnotationPen" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="LineAnnotationData" nillable="true" type="tns:LineAnnotationData" />
+  <xs:complexType name="AnnotationPen">
+    <xs:sequence>
+      <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/System.Drawing" minOccurs="0" name="Color" type="q12:Color" />
+      <xs:element minOccurs="0" name="Width" type="xs:float" />
+      <xs:element minOccurs="0" name="StartCap" nillable="true" type="tns:AnnotationLineCap" />
+      <xs:element minOccurs="0" name="EndCap" nillable="true" type="tns:AnnotationLineCap" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AnnotationPen" nillable="true" type="tns:AnnotationPen" />
+  <xs:complexType name="AnnotationLineCap">
+    <xs:sequence>
+      <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Agility.Sdk.Model" minOccurs="0" name="Style" type="q13:AnnotationLineCapStyle" />
+      <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/System.Drawing" minOccurs="0" name="Size" type="q14:SizeF" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AnnotationLineCap" nillable="true" type="tns:AnnotationLineCap" />
+  <xs:complexType name="FreehandAnnotationData">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:AnnotationData">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Outline" nillable="true" type="tns:AnnotationPen" />
+          <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/System.Windows" minOccurs="0" name="Points" nillable="true" type="q15:ArrayOfPoint" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FreehandAnnotationData" nillable="true" type="tns:FreehandAnnotationData" />
+  <xs:complexType name="RedactionAnnotationData">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:AnnotationData">
+        <xs:sequence>
+          <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/System.Drawing" minOccurs="0" name="Fill" type="q16:Color" />
+          <xs:element minOccurs="0" name="Outline" nillable="true" type="tns:AnnotationPen" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RedactionAnnotationData" nillable="true" type="tns:RedactionAnnotationData" />
+  <xs:complexType name="HighlightAnnotationData">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:AnnotationData">
+        <xs:sequence>
+          <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/System.Drawing" minOccurs="0" name="Fill" type="q17:Color" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="HighlightAnnotationData" nillable="true" type="tns:HighlightAnnotationData" />
+  <xs:complexType name="TextAnnotationData">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:AnnotationData">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
+          <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/System.Drawing" minOccurs="0" name="Fill" type="q18:Color" />
+          <xs:element minOccurs="0" name="Outline" nillable="true" type="tns:AnnotationPen" />
+          <xs:element minOccurs="0" name="Font" nillable="true" type="tns:AnnotationFont" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TextAnnotationData" nillable="true" type="tns:TextAnnotationData" />
+  <xs:complexType name="AnnotationFont">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Bold" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Italic" type="xs:boolean" />
+      <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/System.Drawing" minOccurs="0" name="Color" type="q19:Color" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Size" type="xs:float" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AnnotationFont" nillable="true" type="tns:AnnotationFont" />
+  <xs:element name="DeleteExtension">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reportingData" nillable="true" type="tns:ReportingData" />
+        <xs:element minOccurs="0" name="documentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteExtensionResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveBinaryExtension">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reportingData" nillable="true" type="tns:ReportingData" />
+        <xs:element minOccurs="0" name="documentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="mimeType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="data" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveBinaryExtensionResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SavePageBinaryExtension">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reportingData" nillable="true" type="tns:ReportingData" />
+        <xs:element minOccurs="0" name="documentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="mimeType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="data" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SavePageBinaryExtensionResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPageBinaryExtension">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reportingData" nillable="true" type="tns:ReportingData" />
+        <xs:element minOccurs="0" name="documentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPageBinaryExtensionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPageBinaryExtensionResult" nillable="true" type="tns:BinaryData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="BinaryData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Data" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="MimeType" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BinaryData" nillable="true" type="tns:BinaryData" />
+  <xs:element name="SavePageTextExtension">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reportingData" nillable="true" type="tns:ReportingData" />
+        <xs:element minOccurs="0" name="documentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="text" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SavePageTextExtensionResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPageTextExtension">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reportingData" nillable="true" type="tns:ReportingData" />
+        <xs:element minOccurs="0" name="documentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPageTextExtensionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPageTextExtensionResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPagePropertyValues">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="documentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pagePropertyIdentityValues" nillable="true" type="tns:PagePropertiesIdentityCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="PagePropertiesIdentityCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PagePropertiesIdentity" nillable="true" type="tns:PagePropertiesIdentity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PagePropertiesIdentityCollection" nillable="true" type="tns:PagePropertiesIdentityCollection" />
+  <xs:complexType name="PagePropertiesIdentity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SystemProperties" nillable="true" type="tns:FieldSystemPropertyIdentityCollection" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PagePropertiesIdentity" nillable="true" type="tns:PagePropertiesIdentity" />
+  <xs:element name="GetPagePropertyValuesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPagePropertyValuesResult" nillable="true" type="tns:PagePropertiesCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="PagePropertiesCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PageProperties" nillable="true" type="tns:PageProperties" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PagePropertiesCollection" nillable="true" type="tns:PagePropertiesCollection" />
+  <xs:complexType name="PageProperties">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Properties" nillable="true" type="tns:FieldSystemPropertyCollection" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PageProperties" nillable="true" type="tns:PageProperties" />
+  <xs:element name="DeletePageExtension">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reportingData" nillable="true" type="tns:ReportingData" />
+        <xs:element minOccurs="0" name="documentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pageId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="extensionName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeletePageExtensionResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBinaryExtension">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reportingData" nillable="true" type="tns:ReportingData" />
+        <xs:element minOccurs="0" name="documentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBinaryExtensionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetBinaryExtensionResult" nillable="true" type="tns:BinaryData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveFolderBinaryExtension">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reportingData" nillable="true" type="tns:ReportingData" />
+        <xs:element minOccurs="0" name="folderId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="mimeType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="data" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveFolderBinaryExtensionResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFolderBinaryExtension">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reportingData" nillable="true" type="tns:ReportingData" />
+        <xs:element minOccurs="0" name="folderId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFolderBinaryExtensionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetFolderBinaryExtensionResult" nillable="true" type="tns:BinaryData" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveFolderTextExtension">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reportingData" nillable="true" type="tns:ReportingData" />
+        <xs:element minOccurs="0" name="folderId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="text" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveFolderTextExtensionResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFolderTextExtension">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reportingData" nillable="true" type="tns:ReportingData" />
+        <xs:element minOccurs="0" name="folderId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFolderTextExtensionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetFolderTextExtensionResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteFolderExtension">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reportingData" nillable="true" type="tns:ReportingData" />
+        <xs:element minOccurs="0" name="folderId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteFolderExtensionResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateSourceFile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reportingData" nillable="true" type="tns:ReportingData" />
+        <xs:element minOccurs="0" name="documentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sourceFile" nillable="true" type="tns:DocumentSourceFile" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateSourceFileResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteSourceFile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="reportingData" nillable="true" type="tns:ReportingData" />
+        <xs:element minOccurs="0" name="documentId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteSourceFileResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateDocumentVariant">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="documentId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="variantName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateDocumentVariantResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RunFolderFieldsValidation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="folderId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="runtimeFields" nillable="true" type="tns:RuntimeFieldIdentityCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RunFolderFieldsValidationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RunFolderFieldsValidationResult" nillable="true" type="tns:FieldValidationResult2Collection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

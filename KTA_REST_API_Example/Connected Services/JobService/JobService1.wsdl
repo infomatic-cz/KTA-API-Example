@@ -1,0 +1,1771 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://www.kofax.com/agility/services/sdk" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://tempuri.org/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="JobService" targetNamespace="http://www.kofax.com/agility/services/sdk" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="http://tempuri.org/" location="http://localhost/TotalAgility/Services/SDK/JobService.svc?wsdl=wsdl0" />
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.kofax.com/agility/services/sdk/Imports">
+      <xsd:import schemaLocation="http://localhost/TotalAgility/Services/SDK/JobService.svc?xsd=xsd0" namespace="http://www.kofax.com/agility/services/sdk" />
+      <xsd:import schemaLocation="http://localhost/TotalAgility/Services/SDK/JobService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" />
+      <xsd:import schemaLocation="http://localhost/TotalAgility/Services/SDK/JobService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost/TotalAgility/Services/SDK/JobService.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost/TotalAgility/Services/SDK/JobService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System.ServiceModel" />
+      <xsd:import schemaLocation="http://localhost/TotalAgility/Services/SDK/JobService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Agility.Server.Core.Model.Enumerations" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IJobService_GetMinJobDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMinJobDetails" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetMinJobDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMinJobDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetMinJobDetails_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q1:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_CreateJob_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateJob" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_CreateJob_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_CreateJob_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q2:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_CreateJobWithDocuments_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateJobWithDocuments" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_CreateJobWithDocuments_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateJobWithDocumentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_CreateJobWithDocuments_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q3:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_CreateJobInCaseWithDocuments_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateJobInCaseWithDocuments" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_CreateJobInCaseWithDocuments_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateJobInCaseWithDocumentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_CreateJobInCaseWithDocuments_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q4:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetStateChangeHistory_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStateChangeHistory" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetStateChangeHistory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStateChangeHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetStateChangeHistory_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q5:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobProperties_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobProperties" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobProperties_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobPropertiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobProperties_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q6:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobProcessIdentity_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobProcessIdentity" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobProcessIdentity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobProcessIdentityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobProcessIdentity_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q7:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_UpdateJobExpectedFinishTime_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateJobExpectedFinishTime" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_UpdateJobExpectedFinishTime_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateJobExpectedFinishTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_UpdateJobExpectedFinishTime_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q8:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_AddJobNote_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddJobNote" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_AddJobNote_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddJobNoteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_AddJobNote_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q9:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_ReplaceJobRoleMembers_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReplaceJobRoleMembers" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_ReplaceJobRoleMembers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReplaceJobRoleMembersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_ReplaceJobRoleMembers_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q10:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_ReEvaluateSkin_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReEvaluateSkin" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_ReEvaluateSkin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReEvaluateSkinResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_ReEvaluateSkin_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q11:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_SuspendJob_InputMessage">
+    <wsdl:part name="parameters" element="tns:SuspendJob" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_SuspendJob_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SuspendJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_SuspendJob_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q12:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_TerminateJob_InputMessage">
+    <wsdl:part name="parameters" element="tns:TerminateJob" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_TerminateJob_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TerminateJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_TerminateJob_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q13:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_ActivateJob_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActivateJob" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_ActivateJob_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActivateJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_ActivateJob_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q14:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_HoldJob_InputMessage">
+    <wsdl:part name="parameters" element="tns:HoldJob" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_HoldJob_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HoldJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_HoldJob_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q15:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_HoldJob2_InputMessage">
+    <wsdl:part name="parameters" element="tns:HoldJob2" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_HoldJob2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HoldJob2Response" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_HoldJob2_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q16:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobViewerData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobViewerData" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobViewerData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobViewerDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobViewerData_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q17="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q17:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_UpgradeJob_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpgradeJob" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_UpgradeJob_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpgradeJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_UpgradeJob_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q18:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_UpdateJobSpend_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateJobSpend" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_UpdateJobSpend_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateJobSpendResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_UpdateJobSpend_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q19="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q19:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_UpdateJobNote_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateJobNote" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_UpdateJobNote_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateJobNoteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_UpdateJobNote_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q20="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q20:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_UpdateJobPriority_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateJobPriority" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_UpdateJobPriority_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateJobPriorityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_UpdateJobPriority_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q21="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q21:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_UpdateJobOwners_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateJobOwners" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_UpdateJobOwners_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateJobOwnersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_UpdateJobOwners_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q22="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q22:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_UpdateJobOwner_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateJobOwner" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_UpdateJobOwner_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateJobOwnerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_UpdateJobOwner_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q23="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q23:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_RestartJob_InputMessage">
+    <wsdl:part name="parameters" element="tns:RestartJob" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_RestartJob_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RestartJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_RestartJob_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q24="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q24:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_RaiseEvent_InputMessage">
+    <wsdl:part name="parameters" element="tns:RaiseEvent" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_RaiseEvent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RaiseEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_RaiseEvent_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q25="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q25:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_RaiseAnonymousEvent_InputMessage">
+    <wsdl:part name="parameters" element="tns:RaiseAnonymousEvent" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_RaiseAnonymousEvent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RaiseAnonymousEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_RaiseAnonymousEvent_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q26="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q26:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobCount" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobCount_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q27="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q27:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobCount2_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobCount2" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobCount2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobCount2Response" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobCount2_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q28="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q28:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobEvents_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobEvents" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobEvents_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobEventsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobEvents_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q29="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q29:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobCaseRoles_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobCaseRoles" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobCaseRoles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobCaseRolesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobCaseRoles_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q30="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q30:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobVariableValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobVariableValue" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobVariableValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobVariableValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobVariableValue_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q31="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q31:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_IsAccessPermitted_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsAccessPermitted" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_IsAccessPermitted_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsAccessPermittedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_IsAccessPermitted_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q32="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q32:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobInfo" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobInfo_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q33="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q33:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetSubJobId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubJobId" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetSubJobId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubJobIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetSubJobId_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q34="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q34:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobHistory_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobHistory" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobHistory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobHistory_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q35="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q35:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobs_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobs" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobs_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q36="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q36:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobs2_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobs2" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobs2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobs2Response" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobs2_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q37="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q37:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobs3_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobs3" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobs3_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobs3Response" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobs3_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q38="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q38:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobs4_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobs4" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobs4_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobs4Response" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobs4_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q39="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q39:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobVariableHistory_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobVariableHistory" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobVariableHistory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobVariableHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobVariableHistory_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q40="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q40:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobMilestones_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobMilestones" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobMilestones_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobMilestonesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobMilestones_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q41="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q41:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobNotes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobNotes" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobNotes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobNotesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobNotes_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q42="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q42:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobRoles_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobRoles" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobRoles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobRolesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobRoles_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q43="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q43:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_AddRoleMember_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddRoleMember" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_AddRoleMember_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddRoleMemberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_AddRoleMember_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q44="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q44:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_AddToNumericVarValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddToNumericVarValue" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_AddToNumericVarValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddToNumericVarValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_AddToNumericVarValue_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q45="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q45:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_DeleteJobNote_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteJobNote" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_DeleteJobNote_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteJobNoteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_DeleteJobNote_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q46="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q46:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_DeleteRoleMember_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRoleMember" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_DeleteRoleMember_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRoleMemberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_DeleteRoleMember_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q47="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q47:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_UpdateJobMilestoneTargetDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateJobMilestoneTargetDate" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_UpdateJobMilestoneTargetDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateJobMilestoneTargetDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_UpdateJobMilestoneTargetDate_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q48="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q48:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_UpdateJobMilestoneActualDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateJobMilestoneActualDate" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_UpdateJobMilestoneActualDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateJobMilestoneActualDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_UpdateJobMilestoneActualDate_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q49="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q49:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_UpdateJobState_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateJobState" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_UpdateJobState_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateJobStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_UpdateJobState_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q50="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q50:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_PurgeJobs_InputMessage">
+    <wsdl:part name="parameters" element="tns:PurgeJobs" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_PurgeJobs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PurgeJobsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_PurgeJobs_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q51="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q51:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobLanguage_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobLanguage" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobLanguage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobLanguageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobLanguage_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q52="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q52:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobSource_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobSource" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobSource_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobSourceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobSource_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q53="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q53:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_UpdateJobLanguage_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateJobLanguage" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_UpdateJobLanguage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateJobLanguageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_UpdateJobLanguage_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q54="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q54:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_UpdateJobSource_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateJobSource" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_UpdateJobSource_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateJobSourceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_UpdateJobSource_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q55="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q55:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_UpdateJobCustomerData_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateJobCustomerData" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_UpdateJobCustomerData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateJobCustomerDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_UpdateJobCustomerData_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q56="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q56:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_PerformSampling_InputMessage">
+    <wsdl:part name="parameters" element="tns:PerformSampling" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_PerformSampling_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PerformSamplingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_PerformSampling_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q57="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q57:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_PerformChecking_InputMessage">
+    <wsdl:part name="parameters" element="tns:PerformChecking" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_PerformChecking_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PerformCheckingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_PerformChecking_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q58="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q58:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_RecoverJob_InputMessage">
+    <wsdl:part name="parameters" element="tns:RecoverJob" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_RecoverJob_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RecoverJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_RecoverJob_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q59="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q59:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_RecoverJobs_InputMessage">
+    <wsdl:part name="parameters" element="tns:RecoverJobs" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_RecoverJobs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RecoverJobsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_RecoverJobs_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q60="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q60:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_CreateJobInCase_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateJobInCase" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_CreateJobInCase_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateJobInCaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_CreateJobInCase_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q61="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q61:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetSubJobProperties_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubJobProperties" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetSubJobProperties_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubJobPropertiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetSubJobProperties_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q62="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q62:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetUpdatedMilestones_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUpdatedMilestones" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetUpdatedMilestones_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUpdatedMilestonesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetUpdatedMilestones_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q63="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q63:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_ResetJobVariables_InputMessage">
+    <wsdl:part name="parameters" element="tns:ResetJobVariables" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_ResetJobVariables_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ResetJobVariablesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_ResetJobVariables_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q64="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q64:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_UpdateJobOwnerUsingSearchCriteria_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateJobOwnerUsingSearchCriteria" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_UpdateJobOwnerUsingSearchCriteria_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateJobOwnerUsingSearchCriteriaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_UpdateJobOwnerUsingSearchCriteria_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q65="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q65:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobVariablesValues_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobVariablesValues" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobVariablesValues_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobVariablesValuesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobVariablesValues_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q66="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q66:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_UnHoldJob_InputMessage">
+    <wsdl:part name="parameters" element="tns:UnHoldJob" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_UnHoldJob_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UnHoldJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_UnHoldJob_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q67="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q67:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_ActivateJobs_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActivateJobs" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_ActivateJobs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActivateJobsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_ActivateJobs_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q68="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q68:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_SuspendJobs_InputMessage">
+    <wsdl:part name="parameters" element="tns:SuspendJobs" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_SuspendJobs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SuspendJobsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_SuspendJobs_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q69="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q69:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_TerminateJobs_InputMessage">
+    <wsdl:part name="parameters" element="tns:TerminateJobs" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_TerminateJobs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TerminateJobsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_TerminateJobs_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q70="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q70:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_HoldJobs_InputMessage">
+    <wsdl:part name="parameters" element="tns:HoldJobs" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_HoldJobs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HoldJobsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_HoldJobs_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q71="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q71:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_UnHoldJobs_InputMessage">
+    <wsdl:part name="parameters" element="tns:UnHoldJobs" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_UnHoldJobs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UnHoldJobsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_UnHoldJobs_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q72="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q72:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_CreateJobAndProgress_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateJobAndProgress" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_CreateJobAndProgress_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateJobAndProgressResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_CreateJobAndProgress_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q73="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q73:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_UpdateJobVariables_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateJobVariables" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_UpdateJobVariables_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateJobVariablesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_UpdateJobVariables_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q74="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q74:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_ReevaluatePrecondition_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReevaluatePrecondition" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_ReevaluatePrecondition_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReevaluatePreconditionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_ReevaluatePrecondition_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q75="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q75:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_CreateJobAndStartAt_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateJobAndStartAt" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_CreateJobAndStartAt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateJobAndStartAtResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_CreateJobAndStartAt_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q76="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q76:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_CreateJobUsingProcessType_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateJobUsingProcessType" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_CreateJobUsingProcessType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateJobUsingProcessTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_CreateJobUsingProcessType_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q77="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q77:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetSubJobViewerData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubJobViewerData" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetSubJobViewerData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubJobViewerDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetSubJobViewerData_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q78="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q78:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetSubJobViewerData2_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubJobViewerData2" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetSubJobViewerData2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSubJobViewerData2Response" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetSubJobViewerData2_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q79="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q79:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_EvaluateScore_InputMessage">
+    <wsdl:part name="parameters" element="tns:EvaluateScore" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_EvaluateScore_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EvaluateScoreResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_EvaluateScore_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q80="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q80:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_CreateJobSync_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateJobSync" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_CreateJobSync_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateJobSyncResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_CreateJobSync_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q81="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q81:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobRole" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobRole_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q82="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q82:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobRole2_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobRole2" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobRole2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobRole2Response" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobRole2_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q83="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q83:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_CreateCustomProcessForJob_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateCustomProcessForJob" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_CreateCustomProcessForJob_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateCustomProcessForJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_CreateCustomProcessForJob_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q84="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q84:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_UpgradeJobs_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpgradeJobs" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_UpgradeJobs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpgradeJobsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_UpgradeJobs_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q85="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q85:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_UpgradeJobs2_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpgradeJobs2" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_UpgradeJobs2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpgradeJobs2Response" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_UpgradeJobs2_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q86="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q86:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_CreateJobInCaseAndProgress_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateJobInCaseAndProgress" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_CreateJobInCaseAndProgress_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateJobInCaseAndProgressResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_CreateJobInCaseAndProgress_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q87="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q87:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobProperties2_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobProperties2" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobProperties2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobProperties2Response" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobProperties2_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q88="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q88:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobHistory2_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobHistory2" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobHistory2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobHistory2Response" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobHistory2_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q89="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q89:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobsSummary_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobsSummary" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobsSummary_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobsSummaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobsSummary_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q90="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q90:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobsSummaryWithQuery_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobsSummaryWithQuery" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobsSummaryWithQuery_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobsSummaryWithQueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobsSummaryWithQuery_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q91="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q91:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobProcessIdentity2_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobProcessIdentity2" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobProcessIdentity2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobProcessIdentity2Response" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobProcessIdentity2_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q92="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q92:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetExceptionMaps_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExceptionMaps" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetExceptionMaps_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExceptionMapsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetExceptionMaps_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q93="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q93:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobVariables_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobVariables" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobVariables_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobVariablesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobVariables_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q94="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q94:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_CreateJobInCaseWithDocumentsAndProgress_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateJobInCaseWithDocumentsAndProgress" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_CreateJobInCaseWithDocumentsAndProgress_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateJobInCaseWithDocumentsAndProgressResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_CreateJobInCaseWithDocumentsAndProgress_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q95="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q95:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_CreateJobInCaseWithDocumentsAndProgress2_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateJobInCaseWithDocumentsAndProgress2" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_CreateJobInCaseWithDocumentsAndProgress2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateJobInCaseWithDocumentsAndProgress2Response" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_CreateJobInCaseWithDocumentsAndProgress2_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q96="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q96:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_CreateJobWithDocumentsAndProgress_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateJobWithDocumentsAndProgress" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_CreateJobWithDocumentsAndProgress_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateJobWithDocumentsAndProgressResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_CreateJobWithDocumentsAndProgress_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q97="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q97:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_CreateJobWithDocumentsAndProgress2_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateJobWithDocumentsAndProgress2" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_CreateJobWithDocumentsAndProgress2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateJobWithDocumentsAndProgress2Response" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_CreateJobWithDocumentsAndProgress2_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q98="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q98:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobsWithQuery_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobsWithQuery" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobsWithQuery_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobsWithQueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobsWithQuery_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q99="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q99:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobsWithQueryAndFilter_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobsWithQueryAndFilter" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobsWithQueryAndFilter_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobsWithQueryAndFilterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobsWithQueryAndFilter_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q100="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q100:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobsWithQuery2_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobsWithQuery2" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobsWithQuery2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobsWithQuery2Response" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobsWithQuery2_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q101="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q101:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobsCountWithQuery_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobsCountWithQuery" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobsCountWithQuery_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobsCountWithQueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobsCountWithQuery_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q102="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q102:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_ForceValidJobDocument_InputMessage">
+    <wsdl:part name="parameters" element="tns:ForceValidJobDocument" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_ForceValidJobDocument_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ForceValidJobDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_ForceValidJobDocument_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q103="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q103:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_ReevaluateJobDocumentRequiredDates_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReevaluateJobDocumentRequiredDates" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_ReevaluateJobDocumentRequiredDates_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReevaluateJobDocumentRequiredDatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_ReevaluateJobDocumentRequiredDates_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q104="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q104:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobDocumentsUsingType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobDocumentsUsingType" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobDocumentsUsingType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobDocumentsUsingTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobDocumentsUsingType_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q105="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q105:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_ConfirmJobDocument_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConfirmJobDocument" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_ConfirmJobDocument_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConfirmJobDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_ConfirmJobDocument_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q106="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q106:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_ReceivedJobDocument_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReceivedJobDocument" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_ReceivedJobDocument_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReceivedJobDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_ReceivedJobDocument_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q107="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q107:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_ReceivedJobDocuments_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReceivedJobDocuments" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_ReceivedJobDocuments_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReceivedJobDocumentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_ReceivedJobDocuments_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q108="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q108:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_UpdateReceivedJobDocumentsStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateReceivedJobDocumentsStatus" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_UpdateReceivedJobDocumentsStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateReceivedJobDocumentsStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_UpdateReceivedJobDocumentsStatus_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q109="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q109:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobDocuments_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobDocuments" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobDocuments_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobDocumentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobDocuments_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q110="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q110:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobDocumentRules_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobDocumentRules" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobDocumentRules_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobDocumentRulesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_GetJobDocumentRules_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q111="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q111:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_UpdateJobDocumentRequiredDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateJobDocumentRequiredDate" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_UpdateJobDocumentRequiredDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateJobDocumentRequiredDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_UpdateJobDocumentRequiredDate_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q112="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q112:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_AddJobDocumentRule_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddJobDocumentRule" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_AddJobDocumentRule_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddJobDocumentRuleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_AddJobDocumentRule_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q113="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q113:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_DeleteJobDocumentRule_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteJobDocumentRule" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_DeleteJobDocumentRule_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteJobDocumentRuleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_DeleteJobDocumentRule_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q114="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q114:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_ConfirmJobDocuments_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConfirmJobDocuments" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_ConfirmJobDocuments_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConfirmJobDocumentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_ConfirmJobDocuments_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q115="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q115:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_UpdateJobDocumentType_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateJobDocumentType" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_UpdateJobDocumentType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateJobDocumentTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_UpdateJobDocumentType_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q116="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q116:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_UpdateJobDocumentRule_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateJobDocumentRule" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_UpdateJobDocumentRule_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateJobDocumentRuleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_UpdateJobDocumentRule_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q117="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q117:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_CreateJobSyncWithDocuments_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateJobSyncWithDocuments" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_CreateJobSyncWithDocuments_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateJobSyncWithDocumentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_CreateJobSyncWithDocuments_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q118="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q118:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_CreateJobSyncWithDocument_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateJobSyncWithDocument" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_CreateJobSyncWithDocument_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateJobSyncWithDocumentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_CreateJobSyncWithDocument_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q119="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q119:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_ArchiveJobs_InputMessage">
+    <wsdl:part name="parameters" element="tns:ArchiveJobs" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_ArchiveJobs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ArchiveJobsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_ArchiveJobs_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q120="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q120:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_UpgradeJobsAsync_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpgradeJobsAsync" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_UpgradeJobsAsync_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpgradeJobsAsyncResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_UpgradeJobsAsync_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q121="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q121:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_ActivateJobsWithSuspendReason_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActivateJobsWithSuspendReason" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_ActivateJobsWithSuspendReason_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActivateJobsWithSuspendReasonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_ActivateJobsWithSuspendReason_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q122="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q122:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_SuspendJob2_InputMessage">
+    <wsdl:part name="parameters" element="tns:SuspendJob2" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_SuspendJob2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SuspendJob2Response" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_SuspendJob2_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q123="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q123:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_SuspendJobs2_InputMessage">
+    <wsdl:part name="parameters" element="tns:SuspendJobs2" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_SuspendJobs2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SuspendJobs2Response" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_SuspendJobs2_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q124="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q124:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_PurgeJobsByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:PurgeJobsByID" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_PurgeJobsByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PurgeJobsByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJobService_PurgeJobsByID_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q125="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q125:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:portType name="IJobService">
+    <wsdl:operation name="GetMinJobDetails">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetMinJobDetails" message="tns:IJobService_GetMinJobDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetMinJobDetailsResponse" message="tns:IJobService_GetMinJobDetails_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetMinJobDetailsCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_GetMinJobDetails_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateJob">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/CreateJob" message="tns:IJobService_CreateJob_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/CreateJobResponse" message="tns:IJobService_CreateJob_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/CreateJobCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_CreateJob_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateJobWithDocuments">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/CreateJobWithDocuments" message="tns:IJobService_CreateJobWithDocuments_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/CreateJobWithDocumentsResponse" message="tns:IJobService_CreateJobWithDocuments_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/CreateJobWithDocumentsCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_CreateJobWithDocuments_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateJobInCaseWithDocuments">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/CreateJobInCaseWithDocuments" message="tns:IJobService_CreateJobInCaseWithDocuments_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/CreateJobInCaseWithDocumentsResponse" message="tns:IJobService_CreateJobInCaseWithDocuments_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/CreateJobInCaseWithDocumentsCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_CreateJobInCaseWithDocuments_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStateChangeHistory">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetStateChangeHistory" message="tns:IJobService_GetStateChangeHistory_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetStateChangeHistoryResponse" message="tns:IJobService_GetStateChangeHistory_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetStateChangeHistoryCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_GetStateChangeHistory_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobProperties">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobProperties" message="tns:IJobService_GetJobProperties_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobPropertiesResponse" message="tns:IJobService_GetJobProperties_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobPropertiesCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_GetJobProperties_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobProcessIdentity">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobProcessIdentity" message="tns:IJobService_GetJobProcessIdentity_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobProcessIdentityResponse" message="tns:IJobService_GetJobProcessIdentity_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobProcessIdentityCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_GetJobProcessIdentity_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJobExpectedFinishTime">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/UpdateJobExpectedFinishTime" message="tns:IJobService_UpdateJobExpectedFinishTime_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/UpdateJobExpectedFinishTimeResponse" message="tns:IJobService_UpdateJobExpectedFinishTime_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/UpdateJobExpectedFinishTimeCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_UpdateJobExpectedFinishTime_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddJobNote">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/AddJobNote" message="tns:IJobService_AddJobNote_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/AddJobNoteResponse" message="tns:IJobService_AddJobNote_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/AddJobNoteCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_AddJobNote_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReplaceJobRoleMembers">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/ReplaceJobRoleMembers" message="tns:IJobService_ReplaceJobRoleMembers_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/ReplaceJobRoleMembersResponse" message="tns:IJobService_ReplaceJobRoleMembers_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/ReplaceJobRoleMembersCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_ReplaceJobRoleMembers_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReEvaluateSkin">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/ReEvaluateSkin" message="tns:IJobService_ReEvaluateSkin_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/ReEvaluateSkinResponse" message="tns:IJobService_ReEvaluateSkin_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/ReEvaluateSkinCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_ReEvaluateSkin_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SuspendJob">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/SuspendJob" message="tns:IJobService_SuspendJob_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/SuspendJobResponse" message="tns:IJobService_SuspendJob_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/SuspendJobCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_SuspendJob_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TerminateJob">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/TerminateJob" message="tns:IJobService_TerminateJob_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/TerminateJobResponse" message="tns:IJobService_TerminateJob_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/TerminateJobCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_TerminateJob_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActivateJob">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/ActivateJob" message="tns:IJobService_ActivateJob_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/ActivateJobResponse" message="tns:IJobService_ActivateJob_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/ActivateJobCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_ActivateJob_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HoldJob">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/HoldJob" message="tns:IJobService_HoldJob_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/HoldJobResponse" message="tns:IJobService_HoldJob_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/HoldJobCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_HoldJob_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HoldJob2">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/HoldJob2" message="tns:IJobService_HoldJob2_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/HoldJob2Response" message="tns:IJobService_HoldJob2_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/HoldJob2CustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_HoldJob2_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobViewerData">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobViewerData" message="tns:IJobService_GetJobViewerData_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobViewerDataResponse" message="tns:IJobService_GetJobViewerData_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobViewerDataCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_GetJobViewerData_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpgradeJob">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/UpgradeJob" message="tns:IJobService_UpgradeJob_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/UpgradeJobResponse" message="tns:IJobService_UpgradeJob_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/UpgradeJobCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_UpgradeJob_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJobSpend">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/UpdateJobSpend" message="tns:IJobService_UpdateJobSpend_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/UpdateJobSpendResponse" message="tns:IJobService_UpdateJobSpend_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/UpdateJobSpendCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_UpdateJobSpend_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJobNote">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/UpdateJobNote" message="tns:IJobService_UpdateJobNote_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/UpdateJobNoteResponse" message="tns:IJobService_UpdateJobNote_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/UpdateJobNoteCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_UpdateJobNote_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJobPriority">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/UpdateJobPriority" message="tns:IJobService_UpdateJobPriority_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/UpdateJobPriorityResponse" message="tns:IJobService_UpdateJobPriority_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/UpdateJobPriorityCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_UpdateJobPriority_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJobOwners">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/UpdateJobOwners" message="tns:IJobService_UpdateJobOwners_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/UpdateJobOwnersResponse" message="tns:IJobService_UpdateJobOwners_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/UpdateJobOwnersCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_UpdateJobOwners_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJobOwner">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/UpdateJobOwner" message="tns:IJobService_UpdateJobOwner_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/UpdateJobOwnerResponse" message="tns:IJobService_UpdateJobOwner_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/UpdateJobOwnerCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_UpdateJobOwner_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RestartJob">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/RestartJob" message="tns:IJobService_RestartJob_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/RestartJobResponse" message="tns:IJobService_RestartJob_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/RestartJobCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_RestartJob_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RaiseEvent">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/RaiseEvent" message="tns:IJobService_RaiseEvent_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/RaiseEventResponse" message="tns:IJobService_RaiseEvent_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/RaiseEventCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_RaiseEvent_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RaiseAnonymousEvent">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/RaiseAnonymousEvent" message="tns:IJobService_RaiseAnonymousEvent_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/RaiseAnonymousEventResponse" message="tns:IJobService_RaiseAnonymousEvent_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/RaiseAnonymousEventCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_RaiseAnonymousEvent_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobCount">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobCount" message="tns:IJobService_GetJobCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobCountResponse" message="tns:IJobService_GetJobCount_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobCountCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_GetJobCount_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobCount2">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobCount2" message="tns:IJobService_GetJobCount2_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobCount2Response" message="tns:IJobService_GetJobCount2_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobCount2CustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_GetJobCount2_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobEvents">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobEvents" message="tns:IJobService_GetJobEvents_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobEventsResponse" message="tns:IJobService_GetJobEvents_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobEventsCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_GetJobEvents_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobCaseRoles">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobCaseRoles" message="tns:IJobService_GetJobCaseRoles_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobCaseRolesResponse" message="tns:IJobService_GetJobCaseRoles_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobCaseRolesCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_GetJobCaseRoles_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobVariableValue">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobVariableValue" message="tns:IJobService_GetJobVariableValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobVariableValueResponse" message="tns:IJobService_GetJobVariableValue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobVariableValueCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_GetJobVariableValue_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsAccessPermitted">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/IsAccessPermitted" message="tns:IJobService_IsAccessPermitted_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/IsAccessPermittedResponse" message="tns:IJobService_IsAccessPermitted_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/IsAccessPermittedCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_IsAccessPermitted_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobInfo">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobInfo" message="tns:IJobService_GetJobInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobInfoResponse" message="tns:IJobService_GetJobInfo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobInfoCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_GetJobInfo_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSubJobId">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetSubJobId" message="tns:IJobService_GetSubJobId_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetSubJobIdResponse" message="tns:IJobService_GetSubJobId_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetSubJobIdCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_GetSubJobId_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobHistory">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobHistory" message="tns:IJobService_GetJobHistory_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobHistoryResponse" message="tns:IJobService_GetJobHistory_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobHistoryCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_GetJobHistory_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobs">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobs" message="tns:IJobService_GetJobs_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobsResponse" message="tns:IJobService_GetJobs_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobsCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_GetJobs_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobs2">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobs2" message="tns:IJobService_GetJobs2_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobs2Response" message="tns:IJobService_GetJobs2_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobs2CustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_GetJobs2_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobs3">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobs3" message="tns:IJobService_GetJobs3_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobs3Response" message="tns:IJobService_GetJobs3_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobs3CustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_GetJobs3_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobs4">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobs4" message="tns:IJobService_GetJobs4_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobs4Response" message="tns:IJobService_GetJobs4_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobs4CustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_GetJobs4_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobVariableHistory">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobVariableHistory" message="tns:IJobService_GetJobVariableHistory_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobVariableHistoryResponse" message="tns:IJobService_GetJobVariableHistory_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobVariableHistoryCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_GetJobVariableHistory_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobMilestones">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobMilestones" message="tns:IJobService_GetJobMilestones_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobMilestonesResponse" message="tns:IJobService_GetJobMilestones_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobMilestonesCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_GetJobMilestones_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobNotes">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobNotes" message="tns:IJobService_GetJobNotes_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobNotesResponse" message="tns:IJobService_GetJobNotes_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobNotesCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_GetJobNotes_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobRoles">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobRoles" message="tns:IJobService_GetJobRoles_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobRolesResponse" message="tns:IJobService_GetJobRoles_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobRolesCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_GetJobRoles_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddRoleMember">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/AddRoleMember" message="tns:IJobService_AddRoleMember_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/AddRoleMemberResponse" message="tns:IJobService_AddRoleMember_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/AddRoleMemberCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_AddRoleMember_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddToNumericVarValue">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/AddToNumericVarValue" message="tns:IJobService_AddToNumericVarValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/AddToNumericVarValueResponse" message="tns:IJobService_AddToNumericVarValue_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/AddToNumericVarValueCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_AddToNumericVarValue_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteJobNote">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/DeleteJobNote" message="tns:IJobService_DeleteJobNote_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/DeleteJobNoteResponse" message="tns:IJobService_DeleteJobNote_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/DeleteJobNoteCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_DeleteJobNote_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRoleMember">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/DeleteRoleMember" message="tns:IJobService_DeleteRoleMember_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/DeleteRoleMemberResponse" message="tns:IJobService_DeleteRoleMember_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/DeleteRoleMemberCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_DeleteRoleMember_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJobMilestoneTargetDate">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/UpdateJobMilestoneTargetDate" message="tns:IJobService_UpdateJobMilestoneTargetDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/UpdateJobMilestoneTargetDateResponse" message="tns:IJobService_UpdateJobMilestoneTargetDate_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/UpdateJobMilestoneTargetDateCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_UpdateJobMilestoneTargetDate_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJobMilestoneActualDate">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/UpdateJobMilestoneActualDate" message="tns:IJobService_UpdateJobMilestoneActualDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/UpdateJobMilestoneActualDateResponse" message="tns:IJobService_UpdateJobMilestoneActualDate_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/UpdateJobMilestoneActualDateCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_UpdateJobMilestoneActualDate_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJobState">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/UpdateJobState" message="tns:IJobService_UpdateJobState_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/UpdateJobStateResponse" message="tns:IJobService_UpdateJobState_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/UpdateJobStateCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_UpdateJobState_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PurgeJobs">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/PurgeJobs" message="tns:IJobService_PurgeJobs_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/PurgeJobsResponse" message="tns:IJobService_PurgeJobs_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/PurgeJobsCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_PurgeJobs_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobLanguage">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobLanguage" message="tns:IJobService_GetJobLanguage_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobLanguageResponse" message="tns:IJobService_GetJobLanguage_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobLanguageCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_GetJobLanguage_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobSource">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobSource" message="tns:IJobService_GetJobSource_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobSourceResponse" message="tns:IJobService_GetJobSource_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobSourceCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_GetJobSource_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJobLanguage">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/UpdateJobLanguage" message="tns:IJobService_UpdateJobLanguage_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/UpdateJobLanguageResponse" message="tns:IJobService_UpdateJobLanguage_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/UpdateJobLanguageCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_UpdateJobLanguage_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJobSource">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/UpdateJobSource" message="tns:IJobService_UpdateJobSource_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/UpdateJobSourceResponse" message="tns:IJobService_UpdateJobSource_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/UpdateJobSourceCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_UpdateJobSource_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJobCustomerData">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/UpdateJobCustomerData" message="tns:IJobService_UpdateJobCustomerData_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/UpdateJobCustomerDataResponse" message="tns:IJobService_UpdateJobCustomerData_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/UpdateJobCustomerDataCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_UpdateJobCustomerData_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PerformSampling">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/PerformSampling" message="tns:IJobService_PerformSampling_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/PerformSamplingResponse" message="tns:IJobService_PerformSampling_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/PerformSamplingCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_PerformSampling_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PerformChecking">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/PerformChecking" message="tns:IJobService_PerformChecking_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/PerformCheckingResponse" message="tns:IJobService_PerformChecking_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/PerformCheckingCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_PerformChecking_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RecoverJob">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/RecoverJob" message="tns:IJobService_RecoverJob_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/RecoverJobResponse" message="tns:IJobService_RecoverJob_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/RecoverJobCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_RecoverJob_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RecoverJobs">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/RecoverJobs" message="tns:IJobService_RecoverJobs_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/RecoverJobsResponse" message="tns:IJobService_RecoverJobs_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/RecoverJobsCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_RecoverJobs_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateJobInCase">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/CreateJobInCase" message="tns:IJobService_CreateJobInCase_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/CreateJobInCaseResponse" message="tns:IJobService_CreateJobInCase_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/CreateJobInCaseCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_CreateJobInCase_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSubJobProperties">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetSubJobProperties" message="tns:IJobService_GetSubJobProperties_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetSubJobPropertiesResponse" message="tns:IJobService_GetSubJobProperties_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetSubJobPropertiesCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_GetSubJobProperties_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUpdatedMilestones">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetUpdatedMilestones" message="tns:IJobService_GetUpdatedMilestones_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetUpdatedMilestonesResponse" message="tns:IJobService_GetUpdatedMilestones_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetUpdatedMilestonesCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_GetUpdatedMilestones_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ResetJobVariables">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/ResetJobVariables" message="tns:IJobService_ResetJobVariables_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/ResetJobVariablesResponse" message="tns:IJobService_ResetJobVariables_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/ResetJobVariablesCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_ResetJobVariables_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJobOwnerUsingSearchCriteria">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/UpdateJobOwnerUsingSearchCriteria" message="tns:IJobService_UpdateJobOwnerUsingSearchCriteria_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/UpdateJobOwnerUsingSearchCriteriaResponse" message="tns:IJobService_UpdateJobOwnerUsingSearchCriteria_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/UpdateJobOwnerUsingSearchCriteriaCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_UpdateJobOwnerUsingSearchCriteria_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobVariablesValues">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobVariablesValues" message="tns:IJobService_GetJobVariablesValues_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobVariablesValuesResponse" message="tns:IJobService_GetJobVariablesValues_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobVariablesValuesCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_GetJobVariablesValues_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UnHoldJob">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/UnHoldJob" message="tns:IJobService_UnHoldJob_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/UnHoldJobResponse" message="tns:IJobService_UnHoldJob_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/UnHoldJobCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_UnHoldJob_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActivateJobs">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/ActivateJobs" message="tns:IJobService_ActivateJobs_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/ActivateJobsResponse" message="tns:IJobService_ActivateJobs_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/ActivateJobsCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_ActivateJobs_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SuspendJobs">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/SuspendJobs" message="tns:IJobService_SuspendJobs_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/SuspendJobsResponse" message="tns:IJobService_SuspendJobs_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/SuspendJobsCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_SuspendJobs_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TerminateJobs">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/TerminateJobs" message="tns:IJobService_TerminateJobs_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/TerminateJobsResponse" message="tns:IJobService_TerminateJobs_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/TerminateJobsCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_TerminateJobs_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HoldJobs">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/HoldJobs" message="tns:IJobService_HoldJobs_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/HoldJobsResponse" message="tns:IJobService_HoldJobs_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/HoldJobsCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_HoldJobs_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UnHoldJobs">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/UnHoldJobs" message="tns:IJobService_UnHoldJobs_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/UnHoldJobsResponse" message="tns:IJobService_UnHoldJobs_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/UnHoldJobsCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_UnHoldJobs_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateJobAndProgress">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/CreateJobAndProgress" message="tns:IJobService_CreateJobAndProgress_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/CreateJobAndProgressResponse" message="tns:IJobService_CreateJobAndProgress_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/CreateJobAndProgressCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_CreateJobAndProgress_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJobVariables">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/UpdateJobVariables" message="tns:IJobService_UpdateJobVariables_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/UpdateJobVariablesResponse" message="tns:IJobService_UpdateJobVariables_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/UpdateJobVariablesCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_UpdateJobVariables_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReevaluatePrecondition">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/ReevaluatePrecondition" message="tns:IJobService_ReevaluatePrecondition_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/ReevaluatePreconditionResponse" message="tns:IJobService_ReevaluatePrecondition_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/ReevaluatePreconditionCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_ReevaluatePrecondition_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateJobAndStartAt">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/CreateJobAndStartAt" message="tns:IJobService_CreateJobAndStartAt_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/CreateJobAndStartAtResponse" message="tns:IJobService_CreateJobAndStartAt_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/CreateJobAndStartAtCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_CreateJobAndStartAt_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateJobUsingProcessType">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/CreateJobUsingProcessType" message="tns:IJobService_CreateJobUsingProcessType_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/CreateJobUsingProcessTypeResponse" message="tns:IJobService_CreateJobUsingProcessType_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/CreateJobUsingProcessTypeCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_CreateJobUsingProcessType_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSubJobViewerData">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetSubJobViewerData" message="tns:IJobService_GetSubJobViewerData_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetSubJobViewerDataResponse" message="tns:IJobService_GetSubJobViewerData_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetSubJobViewerDataCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_GetSubJobViewerData_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSubJobViewerData2">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetSubJobViewerData2" message="tns:IJobService_GetSubJobViewerData2_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetSubJobViewerData2Response" message="tns:IJobService_GetSubJobViewerData2_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetSubJobViewerData2CustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_GetSubJobViewerData2_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EvaluateScore">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/EvaluateScore" message="tns:IJobService_EvaluateScore_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/EvaluateScoreResponse" message="tns:IJobService_EvaluateScore_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/EvaluateScoreCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_EvaluateScore_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateJobSync">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/CreateJobSync" message="tns:IJobService_CreateJobSync_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/CreateJobSyncResponse" message="tns:IJobService_CreateJobSync_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/CreateJobSyncCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_CreateJobSync_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobRole">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobRole" message="tns:IJobService_GetJobRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobRoleResponse" message="tns:IJobService_GetJobRole_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobRoleCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_GetJobRole_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobRole2">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobRole2" message="tns:IJobService_GetJobRole2_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobRole2Response" message="tns:IJobService_GetJobRole2_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobRole2CustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_GetJobRole2_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateCustomProcessForJob">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/CreateCustomProcessForJob" message="tns:IJobService_CreateCustomProcessForJob_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/CreateCustomProcessForJobResponse" message="tns:IJobService_CreateCustomProcessForJob_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/CreateCustomProcessForJobCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_CreateCustomProcessForJob_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpgradeJobs">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/UpgradeJobs" message="tns:IJobService_UpgradeJobs_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/UpgradeJobsResponse" message="tns:IJobService_UpgradeJobs_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/UpgradeJobsCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_UpgradeJobs_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpgradeJobs2">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/UpgradeJobs2" message="tns:IJobService_UpgradeJobs2_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/UpgradeJobs2Response" message="tns:IJobService_UpgradeJobs2_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/UpgradeJobs2CustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_UpgradeJobs2_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateJobInCaseAndProgress">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/CreateJobInCaseAndProgress" message="tns:IJobService_CreateJobInCaseAndProgress_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/CreateJobInCaseAndProgressResponse" message="tns:IJobService_CreateJobInCaseAndProgress_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/CreateJobInCaseAndProgressCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_CreateJobInCaseAndProgress_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobProperties2">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobProperties2" message="tns:IJobService_GetJobProperties2_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobProperties2Response" message="tns:IJobService_GetJobProperties2_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobProperties2CustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_GetJobProperties2_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobHistory2">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobHistory2" message="tns:IJobService_GetJobHistory2_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobHistory2Response" message="tns:IJobService_GetJobHistory2_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobHistory2CustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_GetJobHistory2_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobsSummary">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobsSummary" message="tns:IJobService_GetJobsSummary_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobsSummaryResponse" message="tns:IJobService_GetJobsSummary_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobsSummaryCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_GetJobsSummary_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobsSummaryWithQuery">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobsSummaryWithQuery" message="tns:IJobService_GetJobsSummaryWithQuery_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobsSummaryWithQueryResponse" message="tns:IJobService_GetJobsSummaryWithQuery_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobsSummaryWithQueryCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_GetJobsSummaryWithQuery_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobProcessIdentity2">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobProcessIdentity2" message="tns:IJobService_GetJobProcessIdentity2_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobProcessIdentity2Response" message="tns:IJobService_GetJobProcessIdentity2_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobProcessIdentity2CustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_GetJobProcessIdentity2_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExceptionMaps">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetExceptionMaps" message="tns:IJobService_GetExceptionMaps_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetExceptionMapsResponse" message="tns:IJobService_GetExceptionMaps_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetExceptionMapsCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_GetExceptionMaps_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobVariables">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobVariables" message="tns:IJobService_GetJobVariables_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobVariablesResponse" message="tns:IJobService_GetJobVariables_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobVariablesCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_GetJobVariables_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateJobInCaseWithDocumentsAndProgress">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/CreateJobInCaseWithDocumentsAndProgress" message="tns:IJobService_CreateJobInCaseWithDocumentsAndProgress_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/CreateJobInCaseWithDocumentsAndProgressResponse" message="tns:IJobService_CreateJobInCaseWithDocumentsAndProgress_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/CreateJobInCaseWithDocumentsAndProgressCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_CreateJobInCaseWithDocumentsAndProgress_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateJobInCaseWithDocumentsAndProgress2">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/CreateJobInCaseWithDocumentsAndProgress2" message="tns:IJobService_CreateJobInCaseWithDocumentsAndProgress2_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/CreateJobInCaseWithDocumentsAndProgress2Response" message="tns:IJobService_CreateJobInCaseWithDocumentsAndProgress2_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/CreateJobInCaseWithDocumentsAndProgress2CustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_CreateJobInCaseWithDocumentsAndProgress2_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateJobWithDocumentsAndProgress">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/CreateJobWithDocumentsAndProgress" message="tns:IJobService_CreateJobWithDocumentsAndProgress_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/CreateJobWithDocumentsAndProgressResponse" message="tns:IJobService_CreateJobWithDocumentsAndProgress_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/CreateJobWithDocumentsAndProgressCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_CreateJobWithDocumentsAndProgress_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateJobWithDocumentsAndProgress2">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/CreateJobWithDocumentsAndProgress2" message="tns:IJobService_CreateJobWithDocumentsAndProgress2_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/CreateJobWithDocumentsAndProgress2Response" message="tns:IJobService_CreateJobWithDocumentsAndProgress2_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/CreateJobWithDocumentsAndProgress2CustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_CreateJobWithDocumentsAndProgress2_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobsWithQuery">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobsWithQuery" message="tns:IJobService_GetJobsWithQuery_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobsWithQueryResponse" message="tns:IJobService_GetJobsWithQuery_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobsWithQueryCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_GetJobsWithQuery_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobsWithQueryAndFilter">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobsWithQueryAndFilter" message="tns:IJobService_GetJobsWithQueryAndFilter_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobsWithQueryAndFilterResponse" message="tns:IJobService_GetJobsWithQueryAndFilter_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobsWithQueryAndFilterCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_GetJobsWithQueryAndFilter_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobsWithQuery2">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobsWithQuery2" message="tns:IJobService_GetJobsWithQuery2_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobsWithQuery2Response" message="tns:IJobService_GetJobsWithQuery2_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobsWithQuery2CustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_GetJobsWithQuery2_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobsCountWithQuery">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobsCountWithQuery" message="tns:IJobService_GetJobsCountWithQuery_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobsCountWithQueryResponse" message="tns:IJobService_GetJobsCountWithQuery_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobsCountWithQueryCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_GetJobsCountWithQuery_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ForceValidJobDocument">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/ForceValidJobDocument" message="tns:IJobService_ForceValidJobDocument_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/ForceValidJobDocumentResponse" message="tns:IJobService_ForceValidJobDocument_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/ForceValidJobDocumentCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_ForceValidJobDocument_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReevaluateJobDocumentRequiredDates">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/ReevaluateJobDocumentRequiredDates" message="tns:IJobService_ReevaluateJobDocumentRequiredDates_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/ReevaluateJobDocumentRequiredDatesResponse" message="tns:IJobService_ReevaluateJobDocumentRequiredDates_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/ReevaluateJobDocumentRequiredDatesCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_ReevaluateJobDocumentRequiredDates_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobDocumentsUsingType">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobDocumentsUsingType" message="tns:IJobService_GetJobDocumentsUsingType_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobDocumentsUsingTypeResponse" message="tns:IJobService_GetJobDocumentsUsingType_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobDocumentsUsingTypeCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_GetJobDocumentsUsingType_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmJobDocument">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/ConfirmJobDocument" message="tns:IJobService_ConfirmJobDocument_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/ConfirmJobDocumentResponse" message="tns:IJobService_ConfirmJobDocument_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/ConfirmJobDocumentCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_ConfirmJobDocument_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReceivedJobDocument">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/ReceivedJobDocument" message="tns:IJobService_ReceivedJobDocument_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/ReceivedJobDocumentResponse" message="tns:IJobService_ReceivedJobDocument_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/ReceivedJobDocumentCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_ReceivedJobDocument_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReceivedJobDocuments">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/ReceivedJobDocuments" message="tns:IJobService_ReceivedJobDocuments_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/ReceivedJobDocumentsResponse" message="tns:IJobService_ReceivedJobDocuments_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/ReceivedJobDocumentsCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_ReceivedJobDocuments_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateReceivedJobDocumentsStatus">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/UpdateReceivedJobDocumentsStatus" message="tns:IJobService_UpdateReceivedJobDocumentsStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/UpdateReceivedJobDocumentsStatusResponse" message="tns:IJobService_UpdateReceivedJobDocumentsStatus_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/UpdateReceivedJobDocumentsStatusCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_UpdateReceivedJobDocumentsStatus_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobDocuments">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobDocuments" message="tns:IJobService_GetJobDocuments_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobDocumentsResponse" message="tns:IJobService_GetJobDocuments_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobDocumentsCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_GetJobDocuments_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobDocumentRules">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobDocumentRules" message="tns:IJobService_GetJobDocumentRules_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobDocumentRulesResponse" message="tns:IJobService_GetJobDocumentRules_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/GetJobDocumentRulesCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_GetJobDocumentRules_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJobDocumentRequiredDate">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/UpdateJobDocumentRequiredDate" message="tns:IJobService_UpdateJobDocumentRequiredDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/UpdateJobDocumentRequiredDateResponse" message="tns:IJobService_UpdateJobDocumentRequiredDate_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/UpdateJobDocumentRequiredDateCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_UpdateJobDocumentRequiredDate_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddJobDocumentRule">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/AddJobDocumentRule" message="tns:IJobService_AddJobDocumentRule_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/AddJobDocumentRuleResponse" message="tns:IJobService_AddJobDocumentRule_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/AddJobDocumentRuleCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_AddJobDocumentRule_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteJobDocumentRule">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/DeleteJobDocumentRule" message="tns:IJobService_DeleteJobDocumentRule_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/DeleteJobDocumentRuleResponse" message="tns:IJobService_DeleteJobDocumentRule_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/DeleteJobDocumentRuleCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_DeleteJobDocumentRule_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmJobDocuments">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/ConfirmJobDocuments" message="tns:IJobService_ConfirmJobDocuments_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/ConfirmJobDocumentsResponse" message="tns:IJobService_ConfirmJobDocuments_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/ConfirmJobDocumentsCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_ConfirmJobDocuments_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJobDocumentType">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/UpdateJobDocumentType" message="tns:IJobService_UpdateJobDocumentType_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/UpdateJobDocumentTypeResponse" message="tns:IJobService_UpdateJobDocumentType_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/UpdateJobDocumentTypeCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_UpdateJobDocumentType_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJobDocumentRule">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/UpdateJobDocumentRule" message="tns:IJobService_UpdateJobDocumentRule_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/UpdateJobDocumentRuleResponse" message="tns:IJobService_UpdateJobDocumentRule_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/UpdateJobDocumentRuleCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_UpdateJobDocumentRule_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateJobSyncWithDocuments">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/CreateJobSyncWithDocuments" message="tns:IJobService_CreateJobSyncWithDocuments_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/CreateJobSyncWithDocumentsResponse" message="tns:IJobService_CreateJobSyncWithDocuments_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/CreateJobSyncWithDocumentsCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_CreateJobSyncWithDocuments_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateJobSyncWithDocument">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/CreateJobSyncWithDocument" message="tns:IJobService_CreateJobSyncWithDocument_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/CreateJobSyncWithDocumentResponse" message="tns:IJobService_CreateJobSyncWithDocument_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/CreateJobSyncWithDocumentCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_CreateJobSyncWithDocument_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ArchiveJobs">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/ArchiveJobs" message="tns:IJobService_ArchiveJobs_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/ArchiveJobsResponse" message="tns:IJobService_ArchiveJobs_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/ArchiveJobsCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_ArchiveJobs_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpgradeJobsAsync">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/UpgradeJobsAsync" message="tns:IJobService_UpgradeJobsAsync_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/UpgradeJobsAsyncResponse" message="tns:IJobService_UpgradeJobsAsync_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/UpgradeJobsAsyncCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_UpgradeJobsAsync_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActivateJobsWithSuspendReason">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/ActivateJobsWithSuspendReason" message="tns:IJobService_ActivateJobsWithSuspendReason_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/ActivateJobsWithSuspendReasonResponse" message="tns:IJobService_ActivateJobsWithSuspendReason_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/ActivateJobsWithSuspendReasonCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_ActivateJobsWithSuspendReason_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SuspendJob2">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/SuspendJob2" message="tns:IJobService_SuspendJob2_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/SuspendJob2Response" message="tns:IJobService_SuspendJob2_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/SuspendJob2CustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_SuspendJob2_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SuspendJobs2">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/SuspendJobs2" message="tns:IJobService_SuspendJobs2_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/SuspendJobs2Response" message="tns:IJobService_SuspendJobs2_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/SuspendJobs2CustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_SuspendJobs2_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PurgeJobsByID">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/PurgeJobsByID" message="tns:IJobService_PurgeJobsByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/PurgeJobsByIDResponse" message="tns:IJobService_PurgeJobsByID_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IJobService/PurgeJobsByIDCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IJobService_PurgeJobsByID_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:service name="JobService">
+    <wsdl:port name="BasicHttpBinding_IJobService" binding="i0:BasicHttpBinding_IJobService">
+      <soap:address location="http://localhost/TotalAgility/Services/SDK/JobService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

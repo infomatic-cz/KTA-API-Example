@@ -1,0 +1,1516 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://www.kofax.com/agility/services/sdk" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="BasicHttpBinding_IJobService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <http:NegotiateAuthentication xmlns:http="http://schemas.microsoft.com/ws/06/2004/policy/http" />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:import namespace="http://www.kofax.com/agility/services/sdk" location="http://localhost/TotalAgility/Services/SDK/JobService.svc?wsdl" />
+  <wsdl:types />
+  <wsdl:binding name="BasicHttpBinding_IJobService" type="i0:IJobService">
+    <wsp:PolicyReference URI="#BasicHttpBinding_IJobService_policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetMinJobDetails">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/GetMinJobDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreateJob">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/CreateJob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreateJobWithDocuments">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/CreateJobWithDocuments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreateJobInCaseWithDocuments">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/CreateJobInCaseWithDocuments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetStateChangeHistory">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/GetStateChangeHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobProperties">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/GetJobProperties" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobProcessIdentity">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/GetJobProcessIdentity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJobExpectedFinishTime">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/UpdateJobExpectedFinishTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddJobNote">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/AddJobNote" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReplaceJobRoleMembers">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/ReplaceJobRoleMembers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReEvaluateSkin">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/ReEvaluateSkin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SuspendJob">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/SuspendJob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="TerminateJob">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/TerminateJob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ActivateJob">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/ActivateJob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="HoldJob">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/HoldJob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="HoldJob2">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/HoldJob2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobViewerData">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/GetJobViewerData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpgradeJob">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/UpgradeJob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJobSpend">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/UpdateJobSpend" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJobNote">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/UpdateJobNote" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJobPriority">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/UpdateJobPriority" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJobOwners">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/UpdateJobOwners" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJobOwner">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/UpdateJobOwner" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RestartJob">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/RestartJob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RaiseEvent">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/RaiseEvent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RaiseAnonymousEvent">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/RaiseAnonymousEvent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobCount">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/GetJobCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobCount2">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/GetJobCount2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobEvents">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/GetJobEvents" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobCaseRoles">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/GetJobCaseRoles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobVariableValue">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/GetJobVariableValue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="IsAccessPermitted">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/IsAccessPermitted" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobInfo">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/GetJobInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubJobId">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/GetSubJobId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobHistory">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/GetJobHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobs">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/GetJobs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobs2">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/GetJobs2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobs3">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/GetJobs3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobs4">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/GetJobs4" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobVariableHistory">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/GetJobVariableHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobMilestones">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/GetJobMilestones" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobNotes">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/GetJobNotes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobRoles">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/GetJobRoles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddRoleMember">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/AddRoleMember" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddToNumericVarValue">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/AddToNumericVarValue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteJobNote">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/DeleteJobNote" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRoleMember">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/DeleteRoleMember" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJobMilestoneTargetDate">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/UpdateJobMilestoneTargetDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJobMilestoneActualDate">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/UpdateJobMilestoneActualDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJobState">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/UpdateJobState" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="PurgeJobs">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/PurgeJobs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobLanguage">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/GetJobLanguage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobSource">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/GetJobSource" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJobLanguage">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/UpdateJobLanguage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJobSource">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/UpdateJobSource" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJobCustomerData">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/UpdateJobCustomerData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="PerformSampling">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/PerformSampling" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="PerformChecking">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/PerformChecking" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RecoverJob">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/RecoverJob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RecoverJobs">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/RecoverJobs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreateJobInCase">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/CreateJobInCase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubJobProperties">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/GetSubJobProperties" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetUpdatedMilestones">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/GetUpdatedMilestones" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ResetJobVariables">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/ResetJobVariables" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJobOwnerUsingSearchCriteria">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/UpdateJobOwnerUsingSearchCriteria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobVariablesValues">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/GetJobVariablesValues" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UnHoldJob">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/UnHoldJob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ActivateJobs">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/ActivateJobs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SuspendJobs">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/SuspendJobs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="TerminateJobs">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/TerminateJobs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="HoldJobs">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/HoldJobs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UnHoldJobs">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/UnHoldJobs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreateJobAndProgress">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/CreateJobAndProgress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJobVariables">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/UpdateJobVariables" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReevaluatePrecondition">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/ReevaluatePrecondition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreateJobAndStartAt">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/CreateJobAndStartAt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreateJobUsingProcessType">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/CreateJobUsingProcessType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubJobViewerData">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/GetSubJobViewerData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetSubJobViewerData2">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/GetSubJobViewerData2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="EvaluateScore">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/EvaluateScore" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreateJobSync">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/CreateJobSync" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobRole">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/GetJobRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobRole2">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/GetJobRole2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreateCustomProcessForJob">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/CreateCustomProcessForJob" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpgradeJobs">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/UpgradeJobs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpgradeJobs2">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/UpgradeJobs2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreateJobInCaseAndProgress">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/CreateJobInCaseAndProgress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobProperties2">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/GetJobProperties2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobHistory2">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/GetJobHistory2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobsSummary">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/GetJobsSummary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobsSummaryWithQuery">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/GetJobsSummaryWithQuery" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobProcessIdentity2">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/GetJobProcessIdentity2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetExceptionMaps">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/GetExceptionMaps" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobVariables">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/GetJobVariables" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreateJobInCaseWithDocumentsAndProgress">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/CreateJobInCaseWithDocumentsAndProgress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreateJobInCaseWithDocumentsAndProgress2">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/CreateJobInCaseWithDocumentsAndProgress2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreateJobWithDocumentsAndProgress">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/CreateJobWithDocumentsAndProgress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreateJobWithDocumentsAndProgress2">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/CreateJobWithDocumentsAndProgress2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobsWithQuery">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/GetJobsWithQuery" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobsWithQueryAndFilter">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/GetJobsWithQueryAndFilter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobsWithQuery2">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/GetJobsWithQuery2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobsCountWithQuery">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/GetJobsCountWithQuery" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ForceValidJobDocument">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/ForceValidJobDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReevaluateJobDocumentRequiredDates">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/ReevaluateJobDocumentRequiredDates" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobDocumentsUsingType">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/GetJobDocumentsUsingType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmJobDocument">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/ConfirmJobDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReceivedJobDocument">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/ReceivedJobDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReceivedJobDocuments">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/ReceivedJobDocuments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateReceivedJobDocumentsStatus">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/UpdateReceivedJobDocumentsStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobDocuments">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/GetJobDocuments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobDocumentRules">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/GetJobDocumentRules" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJobDocumentRequiredDate">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/UpdateJobDocumentRequiredDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddJobDocumentRule">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/AddJobDocumentRule" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteJobDocumentRule">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/DeleteJobDocumentRule" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmJobDocuments">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/ConfirmJobDocuments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJobDocumentType">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/UpdateJobDocumentType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJobDocumentRule">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/UpdateJobDocumentRule" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreateJobSyncWithDocuments">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/CreateJobSyncWithDocuments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreateJobSyncWithDocument">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/CreateJobSyncWithDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ArchiveJobs">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/ArchiveJobs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpgradeJobsAsync">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/UpgradeJobsAsync" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ActivateJobsWithSuspendReason">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/ActivateJobsWithSuspendReason" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SuspendJob2">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/SuspendJob2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SuspendJobs2">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/SuspendJobs2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="PurgeJobsByID">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/IJobService/PurgeJobsByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+</wsdl:definitions>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="75f4e33c-4b3c-431b-aee0-59bda6f987ec" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/totalagility/services/sdk/businessruleservice.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="BusinessRuleService.xsd" MetadataType="Schema" ID="b1092399-cf45-4864-ae89-e9a4148e6e8b" SourceId="1" SourceUrl="http://localhost/TotalAgility/Services/SDK/BusinessRuleService.svc?xsd=xsd0" />
+    <MetadataFile FileName="BusinessRuleService.wsdl" MetadataType="Wsdl" ID="af7573e9-e89f-40d7-979b-d56d6203cac4" SourceId="1" SourceUrl="http://localhost/TotalAgility/Services/SDK/BusinessRuleService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="BusinessRuleService1.xsd" MetadataType="Schema" ID="d838ead1-789f-4c9d-8490-236fd331e9c8" SourceId="1" SourceUrl="http://localhost/TotalAgility/Services/SDK/BusinessRuleService.svc?xsd=xsd3" />
+    <MetadataFile FileName="BusinessRuleService2.xsd" MetadataType="Schema" ID="73f3a1a7-8b63-49b2-8f41-4847273a32d9" SourceId="1" SourceUrl="http://localhost/TotalAgility/Services/SDK/BusinessRuleService.svc?xsd=xsd2" />
+    <MetadataFile FileName="BusinessRuleService1.wsdl" MetadataType="Wsdl" ID="465edb4f-92e8-4f3e-8058-8b6e52bbda84" SourceId="1" SourceUrl="http://localhost/TotalAgility/Services/SDK/BusinessRuleService.svc?wsdl" />
+    <MetadataFile FileName="BusinessRuleService3.xsd" MetadataType="Schema" ID="95fe03dc-073a-4820-8327-2e5a9c6245d3" SourceId="1" SourceUrl="http://localhost/TotalAgility/Services/SDK/BusinessRuleService.svc?xsd=xsd1" />
+    <MetadataFile FileName="BusinessRuleService.disco" MetadataType="Disco" ID="d7bf09b7-e480-43d2-a8b1-8d7999a62307" SourceId="1" SourceUrl="http://localhost/TotalAgility/Services/SDK/BusinessRuleService.svc?disco" />
+    <MetadataFile FileName="BusinessRuleService4.xsd" MetadataType="Schema" ID="d5dbcd9e-6d77-403f-ad3d-a68525d09cf8" SourceId="1" SourceUrl="http://localhost/TotalAgility/Services/SDK/BusinessRuleService.svc?xsd=xsd4" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

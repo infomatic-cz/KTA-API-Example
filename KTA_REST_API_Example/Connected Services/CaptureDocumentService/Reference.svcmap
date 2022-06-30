@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a19576d6-9b68-41cf-9da6-98a745007c72" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/totalagility/services/sdk/capturedocumentservice.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CaptureDocumentService.xsd" MetadataType="Schema" ID="dba55ea5-d717-47bf-b274-cd50f31ae042" SourceId="1" SourceUrl="http://localhost/TotalAgility/Services/SDK/CaptureDocumentService.svc?xsd=xsd1" />
+    <MetadataFile FileName="CaptureDocumentService.disco" MetadataType="Disco" ID="076fd4cf-87cd-4a6a-859e-a7b76c7c52fe" SourceId="1" SourceUrl="http://localhost/TotalAgility/Services/SDK/CaptureDocumentService.svc?disco" />
+    <MetadataFile FileName="CaptureDocumentService1.xsd" MetadataType="Schema" ID="6298bfae-3f3a-4457-b6dc-0b472403c9fe" SourceId="1" SourceUrl="http://localhost/TotalAgility/Services/SDK/CaptureDocumentService.svc?xsd=xsd8" />
+    <MetadataFile FileName="CaptureDocumentService2.xsd" MetadataType="Schema" ID="528b87ec-4cc1-4b1c-b09b-17de9d0121bc" SourceId="1" SourceUrl="http://localhost/TotalAgility/Services/SDK/CaptureDocumentService.svc?xsd=xsd4" />
+    <MetadataFile FileName="CaptureDocumentService3.xsd" MetadataType="Schema" ID="9eecbc03-593a-49be-a272-23dac7c66adb" SourceId="1" SourceUrl="http://localhost/TotalAgility/Services/SDK/CaptureDocumentService.svc?xsd=xsd0" />
+    <MetadataFile FileName="CaptureDocumentService.wsdl" MetadataType="Wsdl" ID="daacd483-2737-46de-b9be-b79eb55dc19d" SourceId="1" SourceUrl="http://localhost/TotalAgility/Services/SDK/CaptureDocumentService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="CaptureDocumentService4.xsd" MetadataType="Schema" ID="2a9948a0-2975-4a4d-b1b5-fc70982c5c1d" SourceId="1" SourceUrl="http://localhost/TotalAgility/Services/SDK/CaptureDocumentService.svc?xsd=xsd7" />
+    <MetadataFile FileName="CaptureDocumentService5.xsd" MetadataType="Schema" ID="d2fa90b0-a218-4017-887f-25cc11bf657c" SourceId="1" SourceUrl="http://localhost/TotalAgility/Services/SDK/CaptureDocumentService.svc?xsd=xsd3" />
+    <MetadataFile FileName="CaptureDocumentService6.xsd" MetadataType="Schema" ID="42e72910-38c5-4554-bdc6-15233a6ac4a0" SourceId="1" SourceUrl="http://localhost/TotalAgility/Services/SDK/CaptureDocumentService.svc?xsd=xsd6" />
+    <MetadataFile FileName="CaptureDocumentService7.xsd" MetadataType="Schema" ID="474b8864-4eb6-4f75-9b50-156618b4fd09" SourceId="1" SourceUrl="http://localhost/TotalAgility/Services/SDK/CaptureDocumentService.svc?xsd=xsd2" />
+    <MetadataFile FileName="CaptureDocumentService1.wsdl" MetadataType="Wsdl" ID="6b33a9e4-ba14-4042-be8c-3fb7ebdc89b3" SourceId="1" SourceUrl="http://localhost/TotalAgility/Services/SDK/CaptureDocumentService.svc?wsdl" />
+    <MetadataFile FileName="CaptureDocumentService8.xsd" MetadataType="Schema" ID="84a608e4-35be-4c75-93d4-9b517bd6242c" SourceId="1" SourceUrl="http://localhost/TotalAgility/Services/SDK/CaptureDocumentService.svc?xsd=xsd9" />
+    <MetadataFile FileName="CaptureDocumentService9.xsd" MetadataType="Schema" ID="16858cd9-20f1-4838-b082-586578989f9f" SourceId="1" SourceUrl="http://localhost/TotalAgility/Services/SDK/CaptureDocumentService.svc?xsd=xsd5" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

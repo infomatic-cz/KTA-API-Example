@@ -1,0 +1,17 @@
+C:\VS_Projects\KTA_REST_API_Example\KTA_REST_API_Example\bin\Debug\KTA_REST_API_Example.dll
+C:\VS_Projects\KTA_REST_API_Example\KTA_REST_API_Example\bin\Debug\KTA_REST_API_Example.pdb
+C:\VS_Projects\KTA_REST_API_Example\KTA_REST_API_Example\obj\Debug\KTA_REST_API_Example.csproj.CoreCompileInputs.cache
+C:\VS_Projects\KTA_REST_API_Example\KTA_REST_API_Example\obj\Debug\KTA_REST_API_Example.dll
+C:\VS_Projects\KTA_REST_API_Example\KTA_REST_API_Example\obj\Debug\KTA_REST_API_Example.pdb
+C:\VS_Projects\RESP_API_EXAMPLE\KTA_REST_API_Example\KTA_REST_API_Example\bin\Debug\KTA_REST_API_Example.dll
+C:\VS_Projects\RESP_API_EXAMPLE\KTA_REST_API_Example\KTA_REST_API_Example\bin\Debug\KTA_REST_API_Example.pdb
+C:\VS_Projects\RESP_API_EXAMPLE\KTA_REST_API_Example\KTA_REST_API_Example\obj\Debug\KTA_REST_API_Example.csprojResolveAssemblyReference.cache
+C:\VS_Projects\RESP_API_EXAMPLE\KTA_REST_API_Example\KTA_REST_API_Example\obj\Debug\KTA_REST_API_Example.csproj.CoreCompileInputs.cache
+C:\VS_Projects\RESP_API_EXAMPLE\KTA_REST_API_Example\KTA_REST_API_Example\obj\Debug\KTA_REST_API_Example.dll
+C:\VS_Projects\RESP_API_EXAMPLE\KTA_REST_API_Example\KTA_REST_API_Example\obj\Debug\KTA_REST_API_Example.pdb
+C:\VS_Projects\REST_API_EXAMPLE\KTA_REST_API_Example\KTA_REST_API_Example\bin\Debug\KTA_REST_API_Example.dll
+C:\VS_Projects\REST_API_EXAMPLE\KTA_REST_API_Example\KTA_REST_API_Example\bin\Debug\KTA_REST_API_Example.pdb
+C:\VS_Projects\REST_API_EXAMPLE\KTA_REST_API_Example\KTA_REST_API_Example\obj\Debug\KTA_REST_API_Example.csprojResolveAssemblyReference.cache
+C:\VS_Projects\REST_API_EXAMPLE\KTA_REST_API_Example\KTA_REST_API_Example\obj\Debug\KTA_REST_API_Example.csproj.CoreCompileInputs.cache
+C:\VS_Projects\REST_API_EXAMPLE\KTA_REST_API_Example\KTA_REST_API_Example\obj\Debug\KTA_REST_API_Example.dll
+C:\VS_Projects\REST_API_EXAMPLE\KTA_REST_API_Example\KTA_REST_API_Example\obj\Debug\KTA_REST_API_Example.pdb

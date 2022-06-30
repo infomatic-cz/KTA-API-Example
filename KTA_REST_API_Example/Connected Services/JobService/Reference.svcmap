@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="043051e3-c86f-4b60-8e2e-60b025a5910a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/totalagility/services/sdk/jobservice.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="JobService.xsd" MetadataType="Schema" ID="b252e9e0-ef09-42f2-a26f-f11f633863bb" SourceId="1" SourceUrl="http://localhost/TotalAgility/Services/SDK/JobService.svc?xsd=xsd5" />
+    <MetadataFile FileName="JobService1.xsd" MetadataType="Schema" ID="c4f6203e-b21d-4c89-8746-971f9bfa829c" SourceId="1" SourceUrl="http://localhost/TotalAgility/Services/SDK/JobService.svc?xsd=xsd4" />
+    <MetadataFile FileName="JobService.wsdl" MetadataType="Wsdl" ID="a146655a-38a9-4e68-8c6e-3dc503303a93" SourceId="1" SourceUrl="http://localhost/TotalAgility/Services/SDK/JobService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="JobService1.wsdl" MetadataType="Wsdl" ID="b4ed9503-429c-4596-b7a1-64f3eded6557" SourceId="1" SourceUrl="http://localhost/TotalAgility/Services/SDK/JobService.svc?wsdl" />
+    <MetadataFile FileName="JobService2.xsd" MetadataType="Schema" ID="46bc3a8d-7336-457f-bc64-cc2153514aaa" SourceId="1" SourceUrl="http://localhost/TotalAgility/Services/SDK/JobService.svc?xsd=xsd1" />
+    <MetadataFile FileName="JobService3.xsd" MetadataType="Schema" ID="b979ea05-8b38-43f7-8e8a-2617fbd480a7" SourceId="1" SourceUrl="http://localhost/TotalAgility/Services/SDK/JobService.svc?xsd=xsd0" />
+    <MetadataFile FileName="JobService4.xsd" MetadataType="Schema" ID="1a49b5ec-e9e2-4d2d-8493-733346a43798" SourceId="1" SourceUrl="http://localhost/TotalAgility/Services/SDK/JobService.svc?xsd=xsd3" />
+    <MetadataFile FileName="JobService.disco" MetadataType="Disco" ID="7e2a8449-c3f7-4afb-9395-39b99af37667" SourceId="1" SourceUrl="http://localhost/TotalAgility/Services/SDK/JobService.svc?disco" />
+    <MetadataFile FileName="JobService5.xsd" MetadataType="Schema" ID="9acb6e1a-c183-4954-b7e9-474aa6634ed1" SourceId="1" SourceUrl="http://localhost/TotalAgility/Services/SDK/JobService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

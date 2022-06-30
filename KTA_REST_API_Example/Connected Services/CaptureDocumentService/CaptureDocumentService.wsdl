@@ -1,0 +1,1546 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://www.kofax.com/agility/services/sdk" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="BasicHttpBinding_ICaptureDocumentService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <http:NegotiateAuthentication xmlns:http="http://schemas.microsoft.com/ws/06/2004/policy/http" />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:import namespace="http://www.kofax.com/agility/services/sdk" location="http://localhost/TotalAgility/Services/SDK/CaptureDocumentService.svc?wsdl" />
+  <wsdl:types />
+  <wsdl:binding name="BasicHttpBinding_ICaptureDocumentService" type="i0:ICaptureDocumentService">
+    <wsp:PolicyReference URI="#BasicHttpBinding_ICaptureDocumentService_policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RunDocumentFieldsValidation">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/RunDocumentFieldsValidation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetValidationExecutionContext">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetValidationExecutionContext" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreateDocument3">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/CreateDocument3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RotatePages">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/RotatePages" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RotatePagesRendition">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/RotatePagesRendition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateDocumentData">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/ValidateDocumentData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="TestFieldValidator">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/TestFieldValidator" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateDocument">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/ValidateDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateFolder">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/ValidateFolder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentFieldValues">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetDocumentFieldValues" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentFieldValue">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetDocumentFieldValue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFolderFieldValues">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetFolderFieldValues" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFolderFieldValue">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetFolderFieldValue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFolder">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetFolder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDocumentFieldValues">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/UpdateDocumentFieldValues" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDocumentFieldValue">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/UpdateDocumentFieldValue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetDocumentStatus">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/SetDocumentStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetFolderStatus">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/SetFolderStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="MoveDocument">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/MoveDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDocument">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/DeleteDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDocuments">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/DeleteDocuments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SplitDocument">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/SplitDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetImage">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetImage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPageImage">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetPageImage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="MovePages">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/MovePages" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePages">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/DeletePages" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateWords">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/UpdateWords" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetWordsInRectangle">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetWordsInRectangle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetDocumentFieldStatus">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/SetDocumentFieldStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetDocumentFieldsStatus">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/SetDocumentFieldsStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetFolderFieldStatus">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/SetFolderFieldStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFolder">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/DeleteFolder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SplitFolder">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/SplitFolder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="MoveFolder">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/MoveFolder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreateDocument">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/CreateDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreateDocument2">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/CreateDocument2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreateDocuments">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/CreateDocuments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreateDocuments2">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/CreateDocuments2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreateDocumentWithPages">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/CreateDocumentWithPages" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreatePage">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/CreatePage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetSourceFile">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetSourceFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocument">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreateFolder">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/CreateFolder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFolderFieldValue">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/UpdateFolderFieldValue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertTableFieldRow">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/InsertTableFieldRow" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTableFieldRow">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/DeleteTableFieldRow" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InterpolateTableField">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/InterpolateTableField" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFolderFieldValues">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/UpdateFolderFieldValues" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePages">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/UpdatePages" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestFieldFormatter">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/TestFieldFormatter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="TestFieldFormatter2">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/TestFieldFormatter2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateDocumentForReview">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/ValidateDocumentForReview" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateFolderForReview">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/ValidateFolderForReview" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateDocumentWithType">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/ValidateDocumentWithType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateFolderWithType">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/ValidateFolderWithType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateDocumentForReviewWithType">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/ValidateDocumentForReviewWithType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateFolderForReviewWithType">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/ValidateFolderForReviewWithType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateDocumentField">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/ValidateDocumentField" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateDocumentFields">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/ValidateDocumentFields" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateFolderField">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/ValidateFolderField" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateFolderFields">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/ValidateFolderFields" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="FormatField">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/FormatField" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="FormatField2">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/FormatField2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentAsFile">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetDocumentAsFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreateOnlineLearningFolder">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/CreateOnlineLearningFolder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SearchFuzzyDatabase">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/SearchFuzzyDatabase" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentsInOrder">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetDocumentsInOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentFieldAlternatives">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetDocumentFieldAlternatives" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentFieldAlternatives2">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetDocumentFieldAlternatives2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentFieldsAlternatives">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetDocumentFieldsAlternatives" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentFieldsAlternatives2">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetDocumentFieldsAlternatives2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveTextExtension">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/SaveTextExtension" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetTextExtension">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetTextExtension" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreatePageUsingStream">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/CreatePageUsingStream" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentTableFieldValue">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetDocumentTableFieldValue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetJobVariableLockStatus">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetJobVariableLockStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ForceUnlockItem">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/ForceUnlockItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentFile">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetDocumentFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentRenditionsFile">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetDocumentRenditionsFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDocumentType">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/UpdateDocumentType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDocumentType2">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/UpdateDocumentType2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="MergeDocuments">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/MergeDocuments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RejectDocuments">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/RejectDocuments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UnrejectDocuments">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/UnrejectDocuments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDocumentTypeWithConfidence">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/UpdateDocumentTypeWithConfidence" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDocumentTypeWithConfidence2">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/UpdateDocumentTypeWithConfidence2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDocumentTypeWithConfidence3">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/UpdateDocumentTypeWithConfidence3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CopyDocumentFieldValues">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/CopyDocumentFieldValues" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SplitDocumentAndClassify">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/SplitDocumentAndClassify" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDocumentsProcessingCompleted">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/UpdateDocumentsProcessingCompleted" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RejectDocument">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/RejectDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CopyDocument">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/CopyDocument" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RejectPages">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/RejectPages" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UnrejectPages">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/UnrejectPages" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRejectedPages">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetRejectedPages" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SavePageImage">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/SavePageImage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateAllDocumentFields">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/ValidateAllDocumentFields" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SavePageRendition">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/SavePageRendition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPageRendition">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetPageRendition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetPageSourceImageFromRendition">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/SetPageSourceImageFromRendition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePageRendition">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/DeletePageRendition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPageMaskForField">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/AddPageMaskForField" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPageMaskForRegion">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/AddPageMaskForRegion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemovePageMasks">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/RemovePageMasks" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveAllPageMasks">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/RemoveAllPageMasks" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsPageRenditionDefined">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/IsPageRenditionDefined" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentTypeImage">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetDocumentTypeImage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentFieldsProperties">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetDocumentFieldsProperties" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPageRenditionImageSummary">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetPageRenditionImageSummary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPageSummary">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetPageSummary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CopyDocumentWithPages">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/CopyDocumentWithPages" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDocumentFieldPropertyValues">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetDocumentFieldPropertyValues" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDocumentFieldPropertyValues">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/UpdateDocumentFieldPropertyValues" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAnnotations">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetAnnotations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteExtension">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/DeleteExtension" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveBinaryExtension">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/SaveBinaryExtension" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SavePageBinaryExtension">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/SavePageBinaryExtension" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPageBinaryExtension">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetPageBinaryExtension" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SavePageTextExtension">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/SavePageTextExtension" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPageTextExtension">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetPageTextExtension" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPagePropertyValues">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetPagePropertyValues" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePageExtension">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/DeletePageExtension" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetBinaryExtension">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetBinaryExtension" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveFolderBinaryExtension">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/SaveFolderBinaryExtension" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFolderBinaryExtension">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetFolderBinaryExtension" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveFolderTextExtension">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/SaveFolderTextExtension" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFolderTextExtension">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/GetFolderTextExtension" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFolderExtension">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/DeleteFolderExtension" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSourceFile">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/UpdateSourceFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSourceFile">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/DeleteSourceFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDocumentVariant">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/UpdateDocumentVariant" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RunFolderFieldsValidation">
+      <soap:operation soapAction="http://www.kofax.com/agility/services/sdk/ICaptureDocumentService/RunFolderFieldsValidation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomExceptionDetailFault">
+        <soap:fault use="literal" name="CustomExceptionDetailFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+</wsdl:definitions>

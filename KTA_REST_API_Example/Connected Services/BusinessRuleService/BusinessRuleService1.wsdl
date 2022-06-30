@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://www.kofax.com/agility/services/sdk" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://tempuri.org/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="BusinessRuleService" targetNamespace="http://www.kofax.com/agility/services/sdk" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="http://tempuri.org/" location="http://localhost/TotalAgility/Services/SDK/BusinessRuleService.svc?wsdl=wsdl0" />
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.kofax.com/agility/services/sdk/Imports">
+      <xsd:import schemaLocation="http://localhost/TotalAgility/Services/SDK/BusinessRuleService.svc?xsd=xsd0" namespace="http://www.kofax.com/agility/services/sdk" />
+      <xsd:import schemaLocation="http://localhost/TotalAgility/Services/SDK/BusinessRuleService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" />
+      <xsd:import schemaLocation="http://localhost/TotalAgility/Services/SDK/BusinessRuleService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost/TotalAgility/Services/SDK/BusinessRuleService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.ServiceModel" />
+      <xsd:import schemaLocation="http://localhost/TotalAgility/Services/SDK/BusinessRuleService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IBusinessRuleService_AddBusinessRule_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddBusinessRule" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessRuleService_AddBusinessRule_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddBusinessRuleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessRuleService_AddBusinessRule_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q1:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessRuleService_UpdateBusinessRule_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateBusinessRule" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessRuleService_UpdateBusinessRule_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateBusinessRuleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessRuleService_UpdateBusinessRule_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q2:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessRuleService_DeleteBusinessRule_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteBusinessRule" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessRuleService_DeleteBusinessRule_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteBusinessRuleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessRuleService_DeleteBusinessRule_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q3:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessRuleService_DoesBusinessRuleExist_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoesBusinessRuleExist" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessRuleService_DoesBusinessRuleExist_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoesBusinessRuleExistResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessRuleService_DoesBusinessRuleExist_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q4:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessRuleService_GetBusinessRuleAssociations_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBusinessRuleAssociations" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessRuleService_GetBusinessRuleAssociations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBusinessRuleAssociationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessRuleService_GetBusinessRuleAssociations_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q5:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessRuleService_EvaluateBusinessRule_InputMessage">
+    <wsdl:part name="parameters" element="tns:EvaluateBusinessRule" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessRuleService_EvaluateBusinessRule_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EvaluateBusinessRuleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessRuleService_EvaluateBusinessRule_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q6:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessRuleService_ExecuteBusinessRule_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExecuteBusinessRule" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessRuleService_ExecuteBusinessRule_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExecuteBusinessRuleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessRuleService_ExecuteBusinessRule_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q7:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessRuleService_GetBusinessRuleVersions_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBusinessRuleVersions" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessRuleService_GetBusinessRuleVersions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBusinessRuleVersionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessRuleService_GetBusinessRuleVersions_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q8:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessRuleService_GetBusinessRule_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBusinessRule" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessRuleService_GetBusinessRule_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBusinessRuleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessRuleService_GetBusinessRule_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q9:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessRuleService_GetBusinessRules_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBusinessRules" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessRuleService_GetBusinessRules_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBusinessRulesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessRuleService_GetBusinessRules_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q10:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessRuleService_EvaluateBusinessRule2_InputMessage">
+    <wsdl:part name="parameters" element="tns:EvaluateBusinessRule2" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessRuleService_EvaluateBusinessRule2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EvaluateBusinessRule2Response" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessRuleService_EvaluateBusinessRule2_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q11:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessRuleService_GetLoggingConfig_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLoggingConfig" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessRuleService_GetLoggingConfig_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLoggingConfigResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessRuleService_GetLoggingConfig_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q12:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessRuleService_UpdateLoggingConfig_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateLoggingConfig" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessRuleService_UpdateLoggingConfig_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateLoggingConfigResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessRuleService_UpdateLoggingConfig_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q13:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessRuleService_DeleteLogging_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteLogging" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessRuleService_DeleteLogging_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteLoggingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBusinessRuleService_DeleteLogging_CustomExceptionDetailFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" name="detail" element="q14:CustomExceptionDetail" />
+  </wsdl:message>
+  <wsdl:portType name="IBusinessRuleService">
+    <wsdl:operation name="AddBusinessRule">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IBusinessRuleService/AddBusinessRule" message="tns:IBusinessRuleService_AddBusinessRule_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IBusinessRuleService/AddBusinessRuleResponse" message="tns:IBusinessRuleService_AddBusinessRule_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IBusinessRuleService/AddBusinessRuleCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IBusinessRuleService_AddBusinessRule_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBusinessRule">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IBusinessRuleService/UpdateBusinessRule" message="tns:IBusinessRuleService_UpdateBusinessRule_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IBusinessRuleService/UpdateBusinessRuleResponse" message="tns:IBusinessRuleService_UpdateBusinessRule_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IBusinessRuleService/UpdateBusinessRuleCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IBusinessRuleService_UpdateBusinessRule_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBusinessRule">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IBusinessRuleService/DeleteBusinessRule" message="tns:IBusinessRuleService_DeleteBusinessRule_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IBusinessRuleService/DeleteBusinessRuleResponse" message="tns:IBusinessRuleService_DeleteBusinessRule_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IBusinessRuleService/DeleteBusinessRuleCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IBusinessRuleService_DeleteBusinessRule_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DoesBusinessRuleExist">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IBusinessRuleService/DoesBusinessRuleExist" message="tns:IBusinessRuleService_DoesBusinessRuleExist_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IBusinessRuleService/DoesBusinessRuleExistResponse" message="tns:IBusinessRuleService_DoesBusinessRuleExist_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IBusinessRuleService/DoesBusinessRuleExistCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IBusinessRuleService_DoesBusinessRuleExist_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBusinessRuleAssociations">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IBusinessRuleService/GetBusinessRuleAssociations" message="tns:IBusinessRuleService_GetBusinessRuleAssociations_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IBusinessRuleService/GetBusinessRuleAssociationsResponse" message="tns:IBusinessRuleService_GetBusinessRuleAssociations_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IBusinessRuleService/GetBusinessRuleAssociationsCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IBusinessRuleService_GetBusinessRuleAssociations_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EvaluateBusinessRule">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IBusinessRuleService/EvaluateBusinessRule" message="tns:IBusinessRuleService_EvaluateBusinessRule_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IBusinessRuleService/EvaluateBusinessRuleResponse" message="tns:IBusinessRuleService_EvaluateBusinessRule_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IBusinessRuleService/EvaluateBusinessRuleCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IBusinessRuleService_EvaluateBusinessRule_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteBusinessRule">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IBusinessRuleService/ExecuteBusinessRule" message="tns:IBusinessRuleService_ExecuteBusinessRule_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IBusinessRuleService/ExecuteBusinessRuleResponse" message="tns:IBusinessRuleService_ExecuteBusinessRule_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IBusinessRuleService/ExecuteBusinessRuleCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IBusinessRuleService_ExecuteBusinessRule_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBusinessRuleVersions">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IBusinessRuleService/GetBusinessRuleVersions" message="tns:IBusinessRuleService_GetBusinessRuleVersions_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IBusinessRuleService/GetBusinessRuleVersionsResponse" message="tns:IBusinessRuleService_GetBusinessRuleVersions_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IBusinessRuleService/GetBusinessRuleVersionsCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IBusinessRuleService_GetBusinessRuleVersions_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBusinessRule">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IBusinessRuleService/GetBusinessRule" message="tns:IBusinessRuleService_GetBusinessRule_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IBusinessRuleService/GetBusinessRuleResponse" message="tns:IBusinessRuleService_GetBusinessRule_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IBusinessRuleService/GetBusinessRuleCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IBusinessRuleService_GetBusinessRule_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBusinessRules">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IBusinessRuleService/GetBusinessRules" message="tns:IBusinessRuleService_GetBusinessRules_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IBusinessRuleService/GetBusinessRulesResponse" message="tns:IBusinessRuleService_GetBusinessRules_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IBusinessRuleService/GetBusinessRulesCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IBusinessRuleService_GetBusinessRules_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EvaluateBusinessRule2">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IBusinessRuleService/EvaluateBusinessRule2" message="tns:IBusinessRuleService_EvaluateBusinessRule2_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IBusinessRuleService/EvaluateBusinessRule2Response" message="tns:IBusinessRuleService_EvaluateBusinessRule2_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IBusinessRuleService/EvaluateBusinessRule2CustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IBusinessRuleService_EvaluateBusinessRule2_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLoggingConfig">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IBusinessRuleService/GetLoggingConfig" message="tns:IBusinessRuleService_GetLoggingConfig_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IBusinessRuleService/GetLoggingConfigResponse" message="tns:IBusinessRuleService_GetLoggingConfig_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IBusinessRuleService/GetLoggingConfigCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IBusinessRuleService_GetLoggingConfig_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLoggingConfig">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IBusinessRuleService/UpdateLoggingConfig" message="tns:IBusinessRuleService_UpdateLoggingConfig_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IBusinessRuleService/UpdateLoggingConfigResponse" message="tns:IBusinessRuleService_UpdateLoggingConfig_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IBusinessRuleService/UpdateLoggingConfigCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IBusinessRuleService_UpdateLoggingConfig_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteLogging">
+      <wsdl:input wsaw:Action="http://www.kofax.com/agility/services/sdk/IBusinessRuleService/DeleteLogging" message="tns:IBusinessRuleService_DeleteLogging_InputMessage" />
+      <wsdl:output wsaw:Action="http://www.kofax.com/agility/services/sdk/IBusinessRuleService/DeleteLoggingResponse" message="tns:IBusinessRuleService_DeleteLogging_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://www.kofax.com/agility/services/sdk/IBusinessRuleService/DeleteLoggingCustomExceptionDetailFault" name="CustomExceptionDetailFault" message="tns:IBusinessRuleService_DeleteLogging_CustomExceptionDetailFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:service name="BusinessRuleService">
+    <wsdl:port name="BasicHttpBinding_IBusinessRuleService" binding="i0:BasicHttpBinding_IBusinessRuleService">
+      <soap:address location="http://localhost/TotalAgility/Services/SDK/BusinessRuleService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Agility.Sdk.Model" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Agility.Sdk.Model" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="AnnotationLineCapStyle">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Arrow" />
+      <xs:enumeration value="FilledArrow" />
+      <xs:enumeration value="FilledEllipse" />
+      <xs:enumeration value="FilledDiamond" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AnnotationLineCapStyle" nillable="true" type="tns:AnnotationLineCapStyle" />
+</xs:schema>

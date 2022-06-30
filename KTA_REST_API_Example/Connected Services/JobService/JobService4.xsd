@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Agility.Server.Integration.Common.ErrorHandling" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/TotalAgility/Services/SDK/JobService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System.ServiceModel" />
+  <xs:complexType name="CustomExceptionDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CustomData" nillable="true" type="xs:anyType" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/System.ServiceModel" minOccurs="0" name="ExceptionDetail" nillable="true" type="q1:ExceptionDetail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CustomExceptionDetail" nillable="true" type="tns:CustomExceptionDetail" />
+</xs:schema>
