@@ -50,7 +50,7 @@ namespace KtaApiWebRequest
                             ""InputVariableCollection"":
                             [
                                 { ""Id"": ""STR1"", ""Value"": ""ahoj""},
-                                { ""Id"":""DYNCOM1"", ""Value"": ""[[1,2],[3,4]]"", ""VariableType"":""8204""}
+                                { ""Id"": ""DYNCOM1"", ""Value"": ""[[1,2],[3,4]]""}
                                 
                             ]
                         }
