@@ -17,6 +17,23 @@ namespace KtaApiWebRequest
             httpWebRequest.Method = "POST";
             httpWebRequest.Credentials = System.Net.CredentialCache.DefaultNetworkCredentials;
             httpWebRequest.Headers.Add("jsonendpoint", "true");
+            
+            // Anonymous
+            httpWebRequest.Credentials = System.Net.CredentialCache.DefaultNetworkCredentials;
+            
+            // Windows
+            //httpWebRequest.Credentials = new NetworkCredential("username", "password", "domain");
+
+            // Basic
+            //var username = "username";
+            //var password = "password";
+            //string encoded = System.Convert.ToBase64String(Encoding.GetEncoding("ISO-8859-1")
+            //                               .GetBytes(username + ":" + password));
+            //httpWebRequest.Headers.Add("Authorization", "Basic " + encoded);
+            
+            // Ignore SSL certificate error
+            httpWebRequest.ServerCertificateValidationCallback += (sender, certificate, chain, sslPolicyErrors) => true;
+            
             using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
             {
                 string json = @"
@@ -33,7 +50,7 @@ namespace KtaApiWebRequest
                             ""InputVariableCollection"":
                             [
                                 { ""Id"": ""STR1"", ""Value"": ""ahoj""},
-                                { ""Id"": ""DYNCOM1"", ""Value"": [[1,42],[1,42]]}
+                                { ""Id"":""DYNCOM1"", ""Value"": ""[[1,2],[3,4]]"", ""VariableType"":""8204""}
                                 
                             ]
                         }
@@ -52,15 +69,7 @@ namespace KtaApiWebRequest
                     Console.ReadLine();
                 }
             }
-            else
-            {
-                Console.WriteLine(httpResponse.Method);
-                Console.WriteLine(httpResponse.StatusCode);
-                Console.WriteLine(httpResponse.StatusDescription);
-                Console.ReadLine();
-
-            }
-
+            
 
         }
 
