@@ -42,7 +42,7 @@ namespace KtaApiWebRequest
                         ""processIdentity"":
                         {
                             ""Id"":""CAC8696155DFABE37347995E2C162DB2"",
-                            ""Version"":1,
+                            ""Version"":0,
                             ""Name"":""ApiWebRequestTest""
                         },
                         ""jobInitialization"":
