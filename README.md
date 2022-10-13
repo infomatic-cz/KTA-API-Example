@@ -7,3 +7,4 @@ More versions in https://github.com/infomatic-cz/KofaxTotalAgility
 - Commented code is in [Class1.cs](KTA_REST_API_Example/Class1.cs)
 #### Call using WebRequest
 - REST call using WebRequest is in [RestCall.cs](KTA_REST_API_Example/RestCall.cs)
+- My code above is also used by Kofax in knowledge base article https://knowledge.kofax.com/Smart_Process_Applications_-_TotalAgility/New_Articles/Passing_value_to_a_dynamic_complex_variable_using_JSON_string
